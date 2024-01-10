@@ -1,6 +1,7 @@
 import boto3
 import json
 import logging
+import uuid
 from timer import benchmark_timer, Timer
 from itertools import islice
 
@@ -20,42 +21,25 @@ class NeptuneAnalyticsSBOMWriter:
 
     def write_document(self, bom):
         logging.info("Writing bom metadata")
-        parent_component_id = self.write_bom(bom)
+        document_id = self.write_bom(bom)
 
         if "components" in bom:
             logging.info("Writing components")
-            self.write_components(bom["components"], parent_component_id)
+            self.write_components(bom["components"], document_id)
         if "dependencies" in bom:
             logging.info("Writing dependencies")
-            self.write_dependencies(bom["dependencies"], parent_component_id)
+            self.write_dependencies(bom["dependencies"], document_id)
         if "vulnerabilities" in bom:
             logging.info("Writing vulnerabilities")
             self.write_vulnerabilities(bom["vulnerabilities"])
 
+    @benchmark_timer
     def write_bom(self, bom):
-        parent_component_id = f"component_{bom['metadata']['component']['name']}"
-        self.__write_objects([bom], "document", "serialNumber")
-        self.__write_objects([bom["metadata"]], "metadata", "timestamp")
-        self.__write_objects([bom["metadata"]["component"]], "component", "name")
-        self.__write_rel(
-            [
-                {
-                    "fromId": f"document_{bom['serialNumber']}",
-                    "toId": f"metadata_{bom['metadata']['timestamp']}",
-                }
-            ],
-            "DETAILS_ABOUT",
-        )
-        self.__write_rel(
-            [
-                {
-                    "fromId": f"document_{bom['serialNumber']}",
-                    "toId": f"component_{bom['metadata']['component']['name']}",
-                }
-            ],
-            "DETAILS_OF",
-        )
-        return parent_component_id
+        document_id = f"document_{uuid.uuid4()}"
+        document = {**bom, **bom["metadata"], **bom["metadata"]["component"]}
+        self.__write_objects([document], "document", None, id=document_id)
+
+        return document_id
 
     @benchmark_timer
     def write_components(self, components: list, parent_component_id: str):
@@ -115,14 +99,32 @@ class NeptuneAnalyticsSBOMWriter:
         self.__write_objects(deps, "dependency", "ref")
         self.__write_rel(depends_on_edges, "DEPENDS_ON")
 
+    @benchmark_timer
     def write_vulnerabilities(self, vulnerabilities: list):
         self.__write_objects(vulnerabilities, "vulnerability", "id")
+        affects_edges = []
+        for v in vulnerabilities:
+            for a in v["affects"]:
+                affects_edges.append(
+                    {
+                        "from": v["id"],
+                        "to": a["ref"],
+                    }
+                )
+        self.__write_rel_match_on_property(affects_edges, "AFFECTS", "id", "bom-ref")
 
     def chunk(arr_range, arr_size):
         arr_range = iter(arr_range)
         return iter(lambda: tuple(islice(arr_range, arr_size)), ())
 
-    def __write_objects(self, objs: object, label: str, keyName: str):
+    def __write_objects(
+        self,
+        objs: object,
+        label: str,
+        keyName: str,
+        create_uuid_if_key_not_exists: bool = False,
+        id: str = None,
+    ):
         params = []
         logging.info(f"Writing {label}s")
         if len(objs) == 0:
@@ -139,12 +141,32 @@ class NeptuneAnalyticsSBOMWriter:
         )
 
         for o in objs:
-            params.append(
-                {
-                    "__id": f"{label}_{o[keyName]}",
-                    **self.__cleanup_map(o),
-                }
-            )
+            if keyName in o:
+                params.append(
+                    {
+                        "__id": f"{label}_{o[keyName]}",
+                        **self.__cleanup_map(o),
+                    }
+                )
+            elif create_uuid_if_key_not_exists:
+                params.append(
+                    {
+                        "__id": f"{label}_{uuid.uuid4()}",
+                        **self.__cleanup_map(o),
+                    }
+                )
+
+            elif id:
+                params.append(
+                    {
+                        "__id": id,
+                        **self.__cleanup_map(o),
+                    }
+                )
+            else:
+                raise AttributeError(
+                    f"The object {o} does not contain the key {keyName}"
+                )
 
         arr_range = iter(params)
         chunks = iter(lambda: tuple(islice(arr_range, self.batch_size)), ())
@@ -164,6 +186,34 @@ class NeptuneAnalyticsSBOMWriter:
                     UNWIND $rels as r
                     MATCH (from {`~id`: r.fromId})
                     MATCH (to {`~id`: r.toId})
+                    MERGE (from)-[s:"""
+            + label
+            + """]->(to) """
+        )
+
+        arr_range = iter(rels)
+        chunks = iter(lambda: tuple(islice(arr_range, self.batch_size)), ())
+        for chunk in chunks:
+            # This should not be needed but due to an issue with duplicate maps we have to guarantee uniqeness
+            res = list(map(dict, set(tuple(sorted(sub.items())) for sub in chunk)))
+            self.__execute_query(label, {"rels": res}, query)
+
+    def __write_rel_match_on_property(
+        self, rels: list, label: str, from_property: str, to_property: str
+    ):
+        logging.info(f"Writing {label}s")
+        if len(rels) == 0:
+            return
+
+        query = (
+            """                
+                    UNWIND $rels as r
+                    MATCH (from {`"""
+            + from_property
+            + """`: r.from})
+                    MATCH (to {`"""
+            + to_property
+            + """`: r.to})
                     MERGE (from)-[s:"""
             + label
             + """]->(to) """

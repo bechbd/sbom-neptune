@@ -1,0 +1,4502 @@
+{
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.4",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2024-01-09T01:27:55Z",
+    "component": {
+      "type": "operating-system",
+      "name": "AMAZON_LINUX_2023"
+    },
+    "properties": [
+      {
+        "name": "amazon:inspector:ami",
+        "value": "ami-0ccea833bf267252a"
+      },
+      {
+        "name": "amazon:inspector:arch",
+        "value": "x86_64"
+      },
+      {
+        "name": "amazon:inspector:account_id",
+        "value": "852474358610"
+      },
+      {
+        "name": "amazon:inspector:resource_type",
+        "value": "AWS_EC2_INSTANCE"
+      },
+      {
+        "name": "amazon:inspector:instance_id",
+        "value": "i-0dfd4132c0dd31532"
+      },
+      {
+        "name": "amazon:inspector:resource_arn",
+        "value": "arn:aws:ec2:us-west-2:852474358610:instance/i-0dfd4132c0dd31532"
+      }
+    ]
+  },
+  "components": [
+    {
+      "type": "application",
+      "name": "systemd",
+      "purl": "pkg:rpm/systemd@252.4-1161.amzn2023.0.4?arch=X86_64&epoch=0&upstream=systemd-252.4-1161.amzn2023.0.4.src.rpm",
+      "version": "252.4",
+      "bom-ref": "bf566dd18100dbab408dcc7db7e42aef"
+    },
+    {
+      "type": "application",
+      "name": "libedit",
+      "purl": "pkg:rpm/libedit@3.1-38.20210714cvs.amzn2023.0.2?arch=X86_64&epoch=0&upstream=libedit-3.1-38.20210714cvs.amzn2023.0.2.src.rpm",
+      "version": "3.1",
+      "bom-ref": "40853ebb7fa05c9370e08063b4fd6e94"
+    },
+    {
+      "type": "application",
+      "name": "libmnl",
+      "purl": "pkg:rpm/libmnl@1.0.4-13.amzn2023.0.2?arch=X86_64&epoch=0&upstream=libmnl-1.0.4-13.amzn2023.0.2.src.rpm",
+      "version": "1.0.4",
+      "bom-ref": "76ab9c75744dc8197478f2fcf8a8524a"
+    },
+    {
+      "type": "application",
+      "name": "dracut-config-ec2",
+      "purl": "pkg:rpm/dracut-config-ec2@3.0-4.amzn2023.0.2?arch=NOARCH&epoch=0&upstream=dracut-config-ec2-3.0-4.amzn2023.0.2.src.rpm",
+      "version": "3.0",
+      "bom-ref": "990b82436ab170908b91b0e44c113934"
+    },
+    {
+      "type": "application",
+      "name": "grub2-tools",
+      "purl": "pkg:rpm/grub2-tools@2.06-61.amzn2023.0.7?arch=X86_64&epoch=1&upstream=grub2-tools-2.06-61.amzn2023.0.7.src.rpm",
+      "version": "2.06",
+      "bom-ref": "203f14fa2ee9c1ffb30ca1de7cfaf8b6"
+    },
+    {
+      "type": "application",
+      "name": "libsigsegv",
+      "purl": "pkg:rpm/libsigsegv@2.13-2.amzn2023.0.2?arch=X86_64&epoch=0&upstream=libsigsegv-2.13-2.amzn2023.0.2.src.rpm",
+      "version": "2.13",
+      "bom-ref": "1240e64f6943435c1d15d8489656ed84"
+    },
+    {
+      "type": "application",
+      "name": "libsepol",
+      "purl": "pkg:rpm/libsepol@3.4-3.amzn2023.0.3?arch=X86_64&epoch=0&upstream=libsepol-3.4-3.amzn2023.0.3.src.rpm",
+      "version": "3.4",
+      "bom-ref": "ebe63364edf6348088d5a0a318296b49"
+    },
+    {
+      "type": "application",
+      "name": "libcom_err",
+      "purl": "pkg:rpm/libcom_err@1.46.5-2.amzn2023.0.2?arch=X86_64&epoch=0&upstream=libcom_err-1.46.5-2.amzn2023.0.2.src.rpm",
+      "version": "1.46.5",
+      "bom-ref": "d5ebd3d37e7dd61cfa13305ee71aa4c5"
+    },
+    {
+      "type": "application",
+      "name": "bind-license",
+      "purl": "pkg:rpm/bind-license@9.16.42-1.amzn2023.0.4?arch=NOARCH&epoch=32&upstream=bind-license-9.16.42-1.amzn2023.0.4.src.rpm",
+      "version": "9.16.42",
+      "bom-ref": "de73ae64e146dbbf3c40d85b5c9c88cb"
+    },
+    {
+      "type": "application",
+      "name": "libcap",
+      "purl": "pkg:rpm/libcap@2.48-2.amzn2023.0.3?arch=X86_64&epoch=0&upstream=libcap-2.48-2.amzn2023.0.3.src.rpm",
+      "version": "2.48",
+      "bom-ref": "f230b2df93ccbec142c59a9fe31d1356"
+    },
+    {
+      "type": "application",
+      "name": "rng-tools",
+      "purl": "pkg:rpm/rng-tools@6.14-1.git.56626083.amzn2023.0.3?arch=X86_64&epoch=0&upstream=rng-tools-6.14-1.git.56626083.amzn2023.0.3.src.rpm",
+      "version": "6.14",
+      "bom-ref": "1a65803fee4721ed2d3233fc9b673b06"
+    },
+    {
+      "type": "application",
+      "name": "python3-pyserial",
+      "purl": "pkg:rpm/python3-pyserial@3.4-10.amzn2023.0.2?arch=NOARCH&epoch=0&upstream=python3-pyserial-3.4-10.amzn2023.0.2.src.rpm",
+      "version": "3.4",
+      "bom-ref": "d6353b1cc6f05390b1f57b5532d26e08"
+    },
+    {
+      "type": "application",
+      "name": "libsss_idmap",
+      "purl": "pkg:rpm/libsss_idmap@2.5.0-1.amzn2023.0.3?arch=X86_64&epoch=0&upstream=libsss_idmap-2.5.0-1.amzn2023.0.3.src.rpm",
+      "version": "2.5.0",
+      "bom-ref": "f4d82cc9409298375404041c985605fb"
+    },
+    {
+      "type": "application",
+      "name": "newt",
+      "purl": "pkg:rpm/newt@0.52.21-9.amzn2023.0.3?arch=X86_64&epoch=0&upstream=newt-0.52.21-9.amzn2023.0.3.src.rpm",
+      "version": "0.52.21",
+      "bom-ref": "31be70e61c4b102cc3d13c0ceeb5f6ed"
+    },
+    {
+      "type": "application",
+      "name": "json-c",
+      "purl": "pkg:rpm/json-c@0.14-8.amzn2023.0.2?arch=X86_64&epoch=0&upstream=json-c-0.14-8.amzn2023.0.2.src.rpm",
+      "version": "0.14",
+      "bom-ref": "1af320651fa24f3f3962f35314291194"
+    },
+    {
+      "type": "application",
+      "name": "libss",
+      "purl": "pkg:rpm/libss@1.46.5-2.amzn2023.0.2?arch=X86_64&epoch=0&upstream=libss-1.46.5-2.amzn2023.0.2.src.rpm",
+      "version": "1.46.5",
+      "bom-ref": "4e5e5f7d7dbea824b7d7e44caaff1304"
+    },
+    {
+      "type": "application",
+      "name": "keyutils",
+      "purl": "pkg:rpm/keyutils@1.6.3-1.amzn2023?arch=X86_64&epoch=0&upstream=keyutils-1.6.3-1.amzn2023.src.rpm",
+      "version": "1.6.3",
+      "bom-ref": "d69bd1648f473f625529c3783fd36e6c"
+    },
+    {
+      "type": "application",
+      "name": "npth",
+      "purl": "pkg:rpm/npth@1.6-6.amzn2023.0.2?arch=X86_64&epoch=0&upstream=npth-1.6-6.amzn2023.0.2.src.rpm",
+      "version": "1.6",
+      "bom-ref": "ae6a4e4d79a6b6343632752542f5b97d"
+    },
+    {
+      "type": "application",
+      "name": "jansson",
+      "purl": "pkg:rpm/jansson@2.14-0.amzn2023?arch=X86_64&epoch=0&upstream=jansson-2.14-0.amzn2023.src.rpm",
+      "version": "2.14",
+      "bom-ref": "abe959c4165c674fa3c149c38662014c"
+    },
+    {
+      "type": "application",
+      "name": "python3-pyrsistent",
+      "purl": "pkg:rpm/python3-pyrsistent@0.17.3-6.amzn2023.0.2?arch=X86_64&epoch=0&upstream=python3-pyrsistent-0.17.3-6.amzn2023.0.2.src.rpm",
+      "version": "0.17.3",
+      "bom-ref": "78774ca08861c690e70a193cb73a1762"
+    },
+    {
+      "type": "application",
+      "name": "ed",
+      "purl": "pkg:rpm/ed@1.14.2-10.amzn2023.0.2?arch=X86_64&epoch=0&upstream=ed-1.14.2-10.amzn2023.0.2.src.rpm",
+      "version": "1.14.2",
+      "bom-ref": "a8b9d3d0ddcf5de9220afa5a024e1a63"
+    },
+    {
+      "type": "application",
+      "name": "policycoreutils-python-utils",
+      "purl": "pkg:rpm/policycoreutils-python-utils@3.4-6.amzn2023.0.2?arch=NOARCH&epoch=0&upstream=policycoreutils-python-utils-3.4-6.amzn2023.0.2.src.rpm",
+      "version": "3.4",
+      "bom-ref": "6717676e7cfc62d5fb42fca47a58a19b"
+    },
+    {
+      "type": "application",
+      "name": "python3-pysocks",
+      "purl": "pkg:rpm/python3-pysocks@1.7.1-8.amzn2023.0.2?arch=NOARCH&epoch=0&upstream=python3-pysocks-1.7.1-8.amzn2023.0.2.src.rpm",
+      "version": "1.7.1",
+      "bom-ref": "7d72416fa147556154108d25e90f3e7a"
+    },
+    {
+      "type": "application",
+      "name": "libbasicobjects",
+      "purl": "pkg:rpm/libbasicobjects@0.1.1-47.amzn2023.0.2?arch=X86_64&epoch=0&upstream=libbasicobjects-0.1.1-47.amzn2023.0.2.src.rpm",
+      "version": "0.1.1",
+      "bom-ref": "5551996215cc22546642049a6a3e9d56"
+    },
+    {
+      "type": "application",
+      "name": "checkpolicy",
+      "purl": "pkg:rpm/checkpolicy@3.4-3.amzn2023.0.2?arch=X86_64&epoch=0&upstream=checkpolicy-3.4-3.amzn2023.0.2.src.rpm",
+      "version": "3.4",
+      "bom-ref": "87fc51eaec218876adfe8b72985911f8"
+    },
+    {
+      "type": "application",
+      "name": "perl-libs",
+      "purl": "pkg:rpm/perl-libs@5.32.1-477.amzn2023.0.5?arch=X86_64&epoch=4&upstream=perl-libs-5.32.1-477.amzn2023.0.5.src.rpm",
+      "version": "5.32.1",
+      "bom-ref": "ac8d8f578e9be18ba9345b43a5cd616e"
+    },
+    {
+      "type": "application",
+      "name": "grub2-common",
+      "purl": "pkg:rpm/grub2-common@2.06-61.amzn2023.0.7?arch=NOARCH&epoch=1&upstream=grub2-common-2.06-61.amzn2023.0.7.src.rpm",
+      "version": "2.06",
+      "bom-ref": "a73d845f4a0af305a5847ecd9efce9ad"
+    },
+    {
+      "type": "application",
+      "name": "perl-POSIX",
+      "purl": "pkg:rpm/perl-POSIX@1.94-477.amzn2023.0.5?arch=X86_64&epoch=0&upstream=perl-POSIX-1.94-477.amzn2023.0.5.src.rpm",
+      "version": "1.94",
+      "bom-ref": "2c0a9752b47316af36fb37318a7f49d7"
+    },
+    {
+      "type": "application",
+      "name": "python3-setuptools-wheel",
+      "purl": "pkg:rpm/python3-setuptools-wheel@59.6.0-2.amzn2023.0.4?arch=NOARCH&epoch=0&upstream=python3-setuptools-wheel-59.6.0-2.amzn2023.0.4.src.rpm",
+      "version": "59.6.0",
+      "bom-ref": "d03344ab9bb084dd2aa7953365226312"
+    },
+    {
+      "type": "application",
+      "name": "libgpg-error",
+      "purl": "pkg:rpm/libgpg-error@1.42-1.amzn2023.0.2?arch=X86_64&epoch=0&upstream=libgpg-error-1.42-1.amzn2023.0.2.src.rpm",
+      "version": "1.42",
+      "bom-ref": "ce0c40ce459cc0875c8c1203d236e6c0"
+    },
+    {
+      "type": "application",
+      "name": "gdisk",
+      "purl": "pkg:rpm/gdisk@1.0.8-1.amzn2023.0.2?arch=X86_64&epoch=0&upstream=gdisk-1.0.8-1.amzn2023.0.2.src.rpm",
+      "version": "1.0.8",
+      "bom-ref": "0df637b7ff5cc86139c1cbfe6e1d62b8"
+    },
+    {
+      "type": "application",
+      "name": "groff-base",
+      "purl": "pkg:rpm/groff-base@1.22.4-7.amzn2023.0.2?arch=X86_64&epoch=0&upstream=groff-base-1.22.4-7.amzn2023.0.2.src.rpm",
+      "version": "1.22.4",
+      "bom-ref": "69184b8cc4998650c12f6fa9d4025c0e"
+    },
+    {
+      "type": "application",
+      "name": "libgomp",
+      "purl": "pkg:rpm/libgomp@11.4.1-2.amzn2023.0.2?arch=X86_64&epoch=0&upstream=libgomp-11.4.1-2.amzn2023.0.2.src.rpm",
+      "version": "11.4.1",
+      "bom-ref": "afc648f5d7b757e7137eb22124b0271d"
+    },
+    {
+      "type": "application",
+      "name": "libtextstyle",
+      "purl": "pkg:rpm/libtextstyle@0.21-4.amzn2023.0.2?arch=X86_64&epoch=0&upstream=libtextstyle-0.21-4.amzn2023.0.2.src.rpm",
+      "version": "0.21",
+      "bom-ref": "2f2a5b9791d4afb01a10d634d280f688"
+    },
+    {
+      "type": "application",
+      "name": "glibc-locale-source",
+      "purl": "pkg:rpm/glibc-locale-source@2.34-52.amzn2023.0.5?arch=X86_64&epoch=0&upstream=glibc-locale-source-2.34-52.amzn2023.0.5.src.rpm",
+      "version": "2.34",
+      "bom-ref": "61aa58745fc6cad83af72448bc81ddd7"
+    },
+    {
+      "type": "application",
+      "name": "libmount",
+      "purl": "pkg:rpm/libmount@2.37.4-1.amzn2023.0.3?arch=X86_64&epoch=0&upstream=libmount-2.37.4-1.amzn2023.0.3.src.rpm",
+      "version": "2.37.4",
+      "bom-ref": "57379c0a74dbbe8e2b6d7807cdd6263f"
+    },
+    {
+      "type": "application",
+      "name": "inspectorssmplugin",
+      "purl": "pkg:rpm/inspectorssmplugin@1.0.134-1?arch=X86_64&epoch=0&upstream=inspectorssmplugin-1.0.134-1.src.rpm",
+      "version": "1.0.134",
+      "bom-ref": "29f3246ea3f490659a4d6762806f926a"
+    },
+    {
+      "type": "application",
+      "name": "popt",
+      "purl": "pkg:rpm/popt@1.18-6.amzn2023.0.2?arch=X86_64&epoch=0&upstream=popt-1.18-6.amzn2023.0.2.src.rpm",
+      "version": "1.18",
+      "bom-ref": "999c9c339c200e895393f3b2355547cb"
+    },
+    {
+      "type": "application",
+      "name": "rpm-libs",
+      "purl": "pkg:rpm/rpm-libs@4.16.1.3-12.amzn2023.0.6?arch=X86_64&epoch=0&upstream=rpm-libs-4.16.1.3-12.amzn2023.0.6.src.rpm",
+      "version": "4.16.1.3",
+      "bom-ref": "3cd61dfd4793be8bb3771325ffdb4fe0"
+    },
+    {
+      "type": "application",
+      "name": "at",
+      "purl": "pkg:rpm/at@3.1.23-6.amzn2023.0.2?arch=X86_64&epoch=0&upstream=at-3.1.23-6.amzn2023.0.2.src.rpm",
+      "version": "3.1.23",
+      "bom-ref": "199ccaaaccbcdb4cb3ee890b7fa4119e"
+    },
+    {
+      "type": "application",
+      "name": "libdhash",
+      "purl": "pkg:rpm/libdhash@0.5.0-47.amzn2023.0.2?arch=X86_64&epoch=0&upstream=libdhash-0.5.0-47.amzn2023.0.2.src.rpm",
+      "version": "0.5.0",
+      "bom-ref": "5606584c09a5c904ca255574bedca49a"
+    },
+    {
+      "type": "application",
+      "name": "systemd-networkd",
+      "purl": "pkg:rpm/systemd-networkd@252.4-1161.amzn2023.0.4?arch=X86_64&epoch=0&upstream=systemd-networkd-252.4-1161.amzn2023.0.4.src.rpm",
+      "version": "252.4",
+      "bom-ref": "a94759893e5e2de74373ed29a53de6d3"
+    },
+    {
+      "type": "application",
+      "name": "wget",
+      "purl": "pkg:rpm/wget@1.21.3-1.amzn2023.0.3?arch=X86_64&epoch=0&upstream=wget-1.21.3-1.amzn2023.0.3.src.rpm",
+      "version": "1.21.3",
+      "bom-ref": "5c08b37d139d0a9fbf2c89057a63e5c7"
+    },
+    {
+      "type": "application",
+      "name": "irqbalance",
+      "purl": "pkg:rpm/irqbalance@1.9.0-1.amzn2023.0.3?arch=X86_64&epoch=2&upstream=irqbalance-1.9.0-1.amzn2023.0.3.src.rpm",
+      "version": "1.9.0",
+      "bom-ref": "896fa7edf488ce4d193c04a09c5ebb64"
+    },
+    {
+      "type": "application",
+      "name": "screen",
+      "purl": "pkg:rpm/screen@4.8.0-5.amzn2023.0.3?arch=X86_64&epoch=0&upstream=screen-4.8.0-5.amzn2023.0.3.src.rpm",
+      "version": "4.8.0",
+      "bom-ref": "2ef4d498cbdfd75e071b1c6d31155d0c"
+    },
+    {
+      "type": "application",
+      "name": "logrotate",
+      "purl": "pkg:rpm/logrotate@3.20.1-2.amzn2023.0.3?arch=X86_64&epoch=0&upstream=logrotate-3.20.1-2.amzn2023.0.3.src.rpm",
+      "version": "3.20.1",
+      "bom-ref": "e18474aac5ec75104bafe9fbaf26beab"
+    },
+    {
+      "type": "application",
+      "name": "perl-vars",
+      "purl": "pkg:rpm/perl-vars@1.05-477.amzn2023.0.5?arch=NOARCH&epoch=0&upstream=perl-vars-1.05-477.amzn2023.0.5.src.rpm",
+      "version": "1.05",
+      "bom-ref": "a2afe090186ad9f28fd9a1cc8fd7ea05"
+    },
+    {
+      "type": "application",
+      "name": "libattr",
+      "purl": "pkg:rpm/libattr@2.5.1-3.amzn2023.0.2?arch=X86_64&epoch=0&upstream=libattr-2.5.1-3.amzn2023.0.2.src.rpm",
+      "version": "2.5.1",
+      "bom-ref": "266085f4c76c6269e3272cff93ae72e7"
+    },
+    {
+      "type": "application",
+      "name": "elfutils-debuginfod-client",
+      "purl": "pkg:rpm/elfutils-debuginfod-client@0.188-3.amzn2023.0.2?arch=X86_64&epoch=0&upstream=elfutils-debuginfod-client-0.188-3.amzn2023.0.2.src.rpm",
+      "version": "0.188",
+      "bom-ref": "7717b5afda44521679b87c0145595813"
+    },
+    {
+      "type": "application",
+      "name": "python3-cryptography",
+      "purl": "pkg:rpm/python3-cryptography@36.0.1-1.amzn2023.0.3?arch=X86_64&epoch=0&upstream=python3-cryptography-36.0.1-1.amzn2023.0.3.src.rpm",
+      "version": "36.0.1",
+      "bom-ref": "ad777ced36cd64acd450072d210ee7c9"
+    },
+    {
+      "type": "application",
+      "name": "python3-pip-wheel",
+      "purl": "pkg:rpm/python3-pip-wheel@21.3.1-2.amzn2023.0.5?arch=NOARCH&epoch=0&upstream=python3-pip-wheel-21.3.1-2.amzn2023.0.5.src.rpm",
+      "version": "21.3.1",
+      "bom-ref": "a1f20890a500f4b373e3657b6ad9ee30"
+    },
+    {
+      "type": "application",
+      "name": "traceroute",
+      "purl": "pkg:rpm/traceroute@2.1.0-13.amzn2023.0.2?arch=X86_64&epoch=3&upstream=traceroute-2.1.0-13.amzn2023.0.2.src.rpm",
+      "version": "2.1.0",
+      "bom-ref": "4700391ccf060e8fefdbc851644884c4"
+    },
+    {
+      "type": "application",
+      "name": "krb5-libs",
+      "purl": "pkg:rpm/krb5-libs@1.21-3.amzn2023.0.3?arch=X86_64&epoch=0&upstream=krb5-libs-1.21-3.amzn2023.0.3.src.rpm",
+      "version": "1.21",
+      "bom-ref": "c2897c2dc775d595d5251affc2d32754"
+    },
+    {
+      "type": "application",
+      "name": "kernel",
+      "purl": "pkg:rpm/kernel@6.1.49-70.116.amzn2023?arch=X86_64&epoch=0&upstream=kernel-6.1.49-70.116.amzn2023.src.rpm",
+      "version": "6.1.49",
+      "bom-ref": "9ed530db935cb9e60e8142f158a9b321"
+    },
+    {
+      "type": "application",
+      "name": "coreutils",
+      "purl": "pkg:rpm/coreutils@8.32-30.amzn2023.0.3?arch=X86_64&epoch=0&upstream=coreutils-8.32-30.amzn2023.0.3.src.rpm",
+      "version": "8.32",
+      "bom-ref": "4fa09f11c64fb1d11a06c51aa895f5d9"
+    },
+    {
+      "type": "application",
+      "name": "python3-jsonpointer",
+      "purl": "pkg:rpm/python3-jsonpointer@2.0-2.amzn2023.0.2?arch=NOARCH&epoch=0&upstream=python3-jsonpointer-2.0-2.amzn2023.0.2.src.rpm",
+      "version": "2.0",
+      "bom-ref": "95451b24b9352006d2226a991a290610"
+    },
+    {
+      "type": "application",
+      "name": "perl-HTTP-Tiny",
+      "purl": "pkg:rpm/perl-HTTP-Tiny@0.078-1.amzn2023.0.3?arch=NOARCH&epoch=0&upstream=perl-HTTP-Tiny-0.078-1.amzn2023.0.3.src.rpm",
+      "version": "0.078",
+      "bom-ref": "49d3dc4c143c4a80b0159fb5e0174cc1"
+    },
+    {
+      "type": "application",
+      "name": "shadow-utils",
+      "purl": "pkg:rpm/shadow-utils@4.9-12.amzn2023.0.2?arch=X86_64&epoch=2&upstream=shadow-utils-4.9-12.amzn2023.0.2.src.rpm",
+      "version": "4.9",
+      "bom-ref": "789c683a0f9de7bff6574e0a97b65026"
+    },
+    {
+      "type": "application",
+      "name": "awscli-2",
+      "purl": "pkg:rpm/awscli-2@2.9.19-1.amzn2023.0.1?arch=NOARCH&epoch=0&upstream=awscli-2-2.9.19-1.amzn2023.0.1.src.rpm",
+      "version": "2.9.19",
+      "bom-ref": "9b93370b0b84ab898dd495e350d0618a"
+    },
+    {
+      "type": "application",
+      "name": "python3-attrs",
+      "purl": "pkg:rpm/python3-attrs@20.3.0-2.amzn2023.0.2?arch=NOARCH&epoch=0&upstream=python3-attrs-20.3.0-2.amzn2023.0.2.src.rpm",
+      "version": "20.3.0",
+      "bom-ref": "b4bc3428dbd7e931d63cf052dae3fb2c"
+    },
+    {
+      "type": "application",
+      "name": "python3-idna",
+      "purl": "pkg:rpm/python3-idna@2.10-3.amzn2023.0.2?arch=NOARCH&epoch=0&upstream=python3-idna-2.10-3.amzn2023.0.2.src.rpm",
+      "version": "2.10",
+      "bom-ref": "882e993514c0c66ac9ecf5bd71058fd6"
+    },
+    {
+      "type": "application",
+      "name": "perl-Getopt-Long",
+      "purl": "pkg:rpm/perl-Getopt-Long@2.52-2.amzn2023.0.2?arch=NOARCH&epoch=1&upstream=perl-Getopt-Long-2.52-2.amzn2023.0.2.src.rpm",
+      "version": "2.52",
+      "bom-ref": "2080ee2ace9e1194583cb35089d11d71"
+    },
+    {
+      "type": "application",
+      "name": "libuuid",
+      "purl": "pkg:rpm/libuuid@2.37.4-1.amzn2023.0.3?arch=X86_64&epoch=0&upstream=libuuid-2.37.4-1.amzn2023.0.3.src.rpm",
+      "version": "2.37.4",
+      "bom-ref": "7ad91c6a7ab8e93aa633ca97fe70e519"
+    },
+    {
+      "type": "library",
+      "name": "ruamel.yaml",
+      "purl": "pkg:pypi/ruamel.yaml@0.16.6",
+      "version": "0.16.6",
+      "properties": [
+        {
+          "name": "amazon:inspector:path",
+          "value": "/usr/lib/python3.9/site-packages/ruamel.yaml-0.16.6-py3.9.egg-info/PKG-INFO"
+        }
+      ],
+      "bom-ref": "ee86e53abcfabf519c8e7f33ed72709e"
+    },
+    {
+      "type": "application",
+      "name": "libyaml",
+      "purl": "pkg:rpm/libyaml@0.2.5-5.amzn2023.0.2?arch=X86_64&epoch=0&upstream=libyaml-0.2.5-5.amzn2023.0.2.src.rpm",
+      "version": "0.2.5",
+      "bom-ref": "fc79970273fd9c7eb42861240a0ed2d5"
+    },
+    {
+      "type": "application",
+      "name": "libpipeline",
+      "purl": "pkg:rpm/libpipeline@1.5.3-2.amzn2023.0.2?arch=X86_64&epoch=0&upstream=libpipeline-1.5.3-2.amzn2023.0.2.src.rpm",
+      "version": "1.5.3",
+      "bom-ref": "d3a006dcf1d29464fa1fdbd7c848397a"
+    },
+    {
+      "type": "application",
+      "name": "efi-filesystem",
+      "purl": "pkg:rpm/efi-filesystem@5-4.amzn2023.0.5?arch=NOARCH&epoch=0&upstream=efi-filesystem-5-4.amzn2023.0.5.src.rpm",
+      "version": "5",
+      "bom-ref": "e111f158661504b0548e8d06ad9517f6"
+    },
+    {
+      "type": "application",
+      "name": "dbus-libs",
+      "purl": "pkg:rpm/dbus-libs@1.12.28-1.amzn2023.0.1?arch=X86_64&epoch=1&upstream=dbus-libs-1.12.28-1.amzn2023.0.1.src.rpm",
+      "version": "1.12.28",
+      "bom-ref": "0e54c296e868916f318ff51b1540f1eb"
+    },
+    {
+      "type": "application",
+      "name": "gzip",
+      "purl": "pkg:rpm/gzip@1.12-1.amzn2023.0.1?arch=X86_64&epoch=0&upstream=gzip-1.12-1.amzn2023.0.1.src.rpm",
+      "version": "1.12",
+      "bom-ref": "9eeaf17cfa7f3ffa46a1ddd68a38c60c"
+    },
+    {
+      "type": "application",
+      "name": "perl-File-Basename",
+      "purl": "pkg:rpm/perl-File-Basename@2.85-477.amzn2023.0.5?arch=NOARCH&epoch=0&upstream=perl-File-Basename-2.85-477.amzn2023.0.5.src.rpm",
+      "version": "2.85",
+      "bom-ref": "f735ca28b4b75a800b28eced2ab434e6"
+    },
+    {
+      "type": "application",
+      "name": "libdb",
+      "purl": "pkg:rpm/libdb@5.3.28-49.amzn2023.0.2?arch=X86_64&epoch=0&upstream=libdb-5.3.28-49.amzn2023.0.2.src.rpm",
+      "version": "5.3.28",
+      "bom-ref": "4ed01d1475aeae27b6e2187e8d15f123"
+    },
+    {
+      "type": "application",
+      "name": "openssl",
+      "purl": "pkg:rpm/openssl@3.0.8-1.amzn2023.0.7?arch=X86_64&epoch=1&upstream=openssl-3.0.8-1.amzn2023.0.7.src.rpm",
+      "version": "3.0.8",
+      "bom-ref": "3966b17bdaf90346de6ee82f3e3f8ef4"
+    },
+    {
+      "type": "application",
+      "name": "openssh",
+      "purl": "pkg:rpm/openssh@8.7p1-8.amzn2023.0.8?arch=X86_64&epoch=0&upstream=openssh-8.7p1-8.amzn2023.0.8.src.rpm",
+      "version": "8.7p1",
+      "bom-ref": "94b963e2b349bd65df05c920ae16afdf"
+    },
+    {
+      "type": "application",
+      "name": "python3-libstoragemgmt",
+      "purl": "pkg:rpm/python3-libstoragemgmt@1.9.4-5.amzn2023.0.2?arch=X86_64&epoch=0&upstream=python3-libstoragemgmt-1.9.4-5.amzn2023.0.2.src.rpm",
+      "version": "1.9.4",
+      "bom-ref": "66468276db8984539492474efa158f77"
+    },
+    {
+      "type": "application",
+      "name": "perl-Carp",
+      "purl": "pkg:rpm/perl-Carp@1.50-458.amzn2023.0.2?arch=NOARCH&epoch=0&upstream=perl-Carp-1.50-458.amzn2023.0.2.src.rpm",
+      "version": "1.50",
+      "bom-ref": "c988daf4dc2c676865073494ceba4081"
+    },
+    {
+      "type": "application",
+      "name": "sysctl-defaults",
+      "purl": "pkg:rpm/sysctl-defaults@1.0-3.amzn2023?arch=NOARCH&epoch=0&upstream=sysctl-defaults-1.0-3.amzn2023.src.rpm",
+      "version": "1.0",
+      "bom-ref": "b44448509743587f84dbc32b91506ae4"
+    },
+    {
+      "type": "application",
+      "name": "python-chevron",
+      "purl": "pkg:rpm/python-chevron@0.13.1-1.amzn2023.0.3?arch=X86_64&epoch=0&upstream=python-chevron-0.13.1-1.amzn2023.0.3.src.rpm",
+      "version": "0.13.1",
+      "bom-ref": "d31dc5956fd35639534e5fa74b879586"
+    },
+    {
+      "type": "application",
+      "name": "crypto-policies",
+      "purl": "pkg:rpm/crypto-policies@20220428-1.gitdfb10ea.amzn2023.0.2?arch=NOARCH&epoch=0&upstream=crypto-policies-20220428-1.gitdfb10ea.amzn2023.0.2.src.rpm",
+      "version": "20220428",
+      "bom-ref": "f59457b6efb0ad742b7b3f604f610917"
+    },
+    {
+      "type": "application",
+      "name": "vim-enhanced",
+      "purl": "pkg:rpm/vim-enhanced@9.0.1592-1.amzn2023.0.1?arch=X86_64&epoch=2&upstream=vim-enhanced-9.0.1592-1.amzn2023.0.1.src.rpm",
+      "version": "9.0.1592",
+      "bom-ref": "1fcb82808eb4eb5a68869b79fe028ab1"
+    },
+    {
+      "type": "application",
+      "name": "audit-libs",
+      "purl": "pkg:rpm/audit-libs@3.0.6-1.amzn2023.0.2?arch=X86_64&epoch=0&upstream=audit-libs-3.0.6-1.amzn2023.0.2.src.rpm",
+      "version": "3.0.6",
+      "bom-ref": "7d374f86690d1311ac3b913308afc150"
+    },
+    {
+      "type": "application",
+      "name": "libstdc++",
+      "purl": "pkg:rpm/libstdc++@11.4.1-2.amzn2023.0.2?arch=X86_64&epoch=0&upstream=libstdc++-11.4.1-2.amzn2023.0.2.src.rpm",
+      "version": "11.4.1",
+      "bom-ref": "63debc984c4f9d1ee9d24c0c2efd45bb"
+    },
+    {
+      "type": "application",
+      "name": "perl-Pod-Escapes",
+      "purl": "pkg:rpm/perl-Pod-Escapes@1.07-458.amzn2023.0.2?arch=NOARCH&epoch=1&upstream=perl-Pod-Escapes-1.07-458.amzn2023.0.2.src.rpm",
+      "version": "1.07",
+      "bom-ref": "29c469e1984bfd81af26b07305d014cb"
+    },
+    {
+      "type": "application",
+      "name": "python3",
+      "purl": "pkg:rpm/python3@3.9.16-1.amzn2023.0.5?arch=X86_64&epoch=0&upstream=python3-3.9.16-1.amzn2023.0.5.src.rpm",
+      "version": "3.9.16",
+      "bom-ref": "79df07e170687509466b021f2f62d369"
+    },
+    {
+      "type": "application",
+      "name": "python3-wcwidth",
+      "purl": "pkg:rpm/python3-wcwidth@0.2.5-3.amzn2023.0.2?arch=NOARCH&epoch=0&upstream=python3-wcwidth-0.2.5-3.amzn2023.0.2.src.rpm",
+      "version": "0.2.5",
+      "bom-ref": "c956a3c84a8012c3ceb890a95949c5ad"
+    },
+    {
+      "type": "application",
+      "name": "sudo",
+      "purl": "pkg:rpm/sudo@1.9.13-1.p2.amzn2023.0.4?arch=X86_64&epoch=0&upstream=sudo-1.9.13-1.p2.amzn2023.0.4.src.rpm",
+      "version": "1.9.13",
+      "bom-ref": "3ade17450f4133af208fdb878ef231f6"
+    },
+    {
+      "type": "application",
+      "name": "libxcrypt-compat",
+      "purl": "pkg:rpm/libxcrypt-compat@4.4.33-7.amzn2023?arch=X86_64&epoch=0&upstream=libxcrypt-compat-4.4.33-7.amzn2023.src.rpm",
+      "version": "4.4.33",
+      "bom-ref": "5b7885d8e8be2cf41d6d5140332ecd87"
+    },
+    {
+      "type": "application",
+      "name": "perl-podlators",
+      "purl": "pkg:rpm/perl-podlators@4.14-458.amzn2023.0.2?arch=NOARCH&epoch=1&upstream=perl-podlators-4.14-458.amzn2023.0.2.src.rpm",
+      "version": "4.14",
+      "bom-ref": "ca001e7e5ca054f99023fd08b655d5f8"
+    },
+    {
+      "type": "application",
+      "name": "python3-pytz",
+      "purl": "pkg:rpm/python3-pytz@2022.7.1-1.amzn2023?arch=NOARCH&epoch=0&upstream=python3-pytz-2022.7.1-1.amzn2023.src.rpm",
+      "version": "2022.7.1",
+      "bom-ref": "1df61b45b8cf9afd98941b50527a0352"
+    },
+    {
+      "type": "application",
+      "name": "libtdb",
+      "purl": "pkg:rpm/libtdb@1.4.7-1.amzn2023.0.2?arch=X86_64&epoch=0&upstream=libtdb-1.4.7-1.amzn2023.0.2.src.rpm",
+      "version": "1.4.7",
+      "bom-ref": "471a1871e25d3c5082cd156688981a9f"
+    },
+    {
+      "type": "application",
+      "name": "rootfiles",
+      "purl": "pkg:rpm/rootfiles@8.1-29.amzn2023.0.2?arch=NOARCH&epoch=0&upstream=rootfiles-8.1-29.amzn2023.0.2.src.rpm",
+      "version": "8.1",
+      "bom-ref": "468a7eab87b1056d7cac3493b52e8bdc"
+    },
+    {
+      "type": "application",
+      "name": "rpm",
+      "purl": "pkg:rpm/rpm@4.16.1.3-12.amzn2023.0.6?arch=X86_64&epoch=0&upstream=rpm-4.16.1.3-12.amzn2023.0.6.src.rpm",
+      "version": "4.16.1.3",
+      "bom-ref": "56f742204f1f94cba94b6be40691e5e8"
+    },
+    {
+      "type": "application",
+      "name": "libpwquality",
+      "purl": "pkg:rpm/libpwquality@1.4.4-6.amzn2023.0.2?arch=X86_64&epoch=0&upstream=libpwquality-1.4.4-6.amzn2023.0.2.src.rpm",
+      "version": "1.4.4",
+      "bom-ref": "8ea5132b8686a94436498ff421e64711"
+    },
+    {
+      "type": "application",
+      "name": "perl-DynaLoader",
+      "purl": "pkg:rpm/perl-DynaLoader@1.47-477.amzn2023.0.5?arch=X86_64&epoch=0&upstream=perl-DynaLoader-1.47-477.amzn2023.0.5.src.rpm",
+      "version": "1.47",
+      "bom-ref": "0aca2238043eb411f67daad1c68f92ea"
+    },
+    {
+      "type": "application",
+      "name": "amazon-ec2-net-utils",
+      "purl": "pkg:rpm/amazon-ec2-net-utils@2.3.0-1.amzn2023.0.2?arch=NOARCH&epoch=0&upstream=amazon-ec2-net-utils-2.3.0-1.amzn2023.0.2.src.rpm",
+      "version": "2.3.0",
+      "bom-ref": "9004a5c04703497849e4d7867a5e3f52"
+    },
+    {
+      "type": "application",
+      "name": "libdnf",
+      "purl": "pkg:rpm/libdnf@0.67.0-1.amzn2023.0.5?arch=X86_64&epoch=0&upstream=libdnf-0.67.0-1.amzn2023.0.5.src.rpm",
+      "version": "0.67.0",
+      "bom-ref": "61fec12a2f71b087f1f2800c69eb6318"
+    },
+    {
+      "type": "application",
+      "name": "gettext",
+      "purl": "pkg:rpm/gettext@0.21-4.amzn2023.0.2?arch=X86_64&epoch=0&upstream=gettext-0.21-4.amzn2023.0.2.src.rpm",
+      "version": "0.21",
+      "bom-ref": "fb533ad530ddb91446d927e5009877cc"
+    },
+    {
+      "type": "application",
+      "name": "cloud-utils-growpart",
+      "purl": "pkg:rpm/cloud-utils-growpart@0.31-8.amzn2023.0.3?arch=X86_64&epoch=0&upstream=cloud-utils-growpart-0.31-8.amzn2023.0.3.src.rpm",
+      "version": "0.31",
+      "bom-ref": "10dbd58ffa76a579e8bb15be40a0b901"
+    },
+    {
+      "type": "application",
+      "name": "less",
+      "purl": "pkg:rpm/less@608-2.amzn2023.0.1?arch=X86_64&epoch=0&upstream=less-608-2.amzn2023.0.1.src.rpm",
+      "version": "608",
+      "bom-ref": "d5b460eb08a241083908ed16910c423e"
+    },
+    {
+      "type": "application",
+      "name": "libcurl-minimal",
+      "purl": "pkg:rpm/libcurl-minimal@8.2.1-1.amzn2023.0.3?arch=X86_64&epoch=0&upstream=libcurl-minimal-8.2.1-1.amzn2023.0.3.src.rpm",
+      "version": "8.2.1",
+      "bom-ref": "c34f2ee5c12ead4b9c45c0d5b8f83f74"
+    },
+    {
+      "type": "application",
+      "name": "pkgconf-pkg-config",
+      "purl": "pkg:rpm/pkgconf-pkg-config@1.8.0-4.amzn2023.0.2?arch=X86_64&epoch=0&upstream=pkgconf-pkg-config-1.8.0-4.amzn2023.0.2.src.rpm",
+      "version": "1.8.0",
+      "bom-ref": "671b466a9414e59d28841dd74d515fea"
+    },
+    {
+      "type": "application",
+      "name": "grubby",
+      "purl": "pkg:rpm/grubby@8.40-51.amzn2023.0.4?arch=X86_64&epoch=0&upstream=grubby-8.40-51.amzn2023.0.4.src.rpm",
+      "version": "8.40",
+      "bom-ref": "c2a3978ac80db71e521e2b51ae807e3d"
+    },
+    {
+      "type": "application",
+      "name": "libtalloc",
+      "purl": "pkg:rpm/libtalloc@2.3.4-1.amzn2023.0.2?arch=X86_64&epoch=0&upstream=libtalloc-2.3.4-1.amzn2023.0.2.src.rpm",
+      "version": "2.3.4",
+      "bom-ref": "5b419e910ce50cdee69cd22490deb76f"
+    },
+    {
+      "type": "application",
+      "name": "perl-if",
+      "purl": "pkg:rpm/perl-if@0.60.800-477.amzn2023.0.5?arch=NOARCH&epoch=0&upstream=perl-if-0.60.800-477.amzn2023.0.5.src.rpm",
+      "version": "0.60.800",
+      "bom-ref": "3999a704301ee352101c4c94ab11ee1a"
+    },
+    {
+      "type": "application",
+      "name": "dbus-broker",
+      "purl": "pkg:rpm/dbus-broker@32-1.amzn2023.0.2?arch=X86_64&epoch=0&upstream=dbus-broker-32-1.amzn2023.0.2.src.rpm",
+      "version": "32",
+      "bom-ref": "854842822e3d5d024e48efe3bca10fa0"
+    },
+    {
+      "type": "application",
+      "name": "curl-minimal",
+      "purl": "pkg:rpm/curl-minimal@8.2.1-1.amzn2023.0.3?arch=X86_64&epoch=0&upstream=curl-minimal-8.2.1-1.amzn2023.0.3.src.rpm",
+      "version": "8.2.1",
+      "bom-ref": "7c71178566e709bf5f045d4a076ff7b9"
+    },
+    {
+      "type": "application",
+      "name": "grub2-pc-modules",
+      "purl": "pkg:rpm/grub2-pc-modules@2.06-61.amzn2023.0.7?arch=NOARCH&epoch=1&upstream=grub2-pc-modules-2.06-61.amzn2023.0.7.src.rpm",
+      "version": "2.06",
+      "bom-ref": "a6d9a153b7a5d6e512691e489ab0d8ad"
+    },
+    {
+      "type": "application",
+      "name": "zstd",
+      "purl": "pkg:rpm/zstd@1.5.2-1.amzn2023.0.3?arch=X86_64&epoch=0&upstream=zstd-1.5.2-1.amzn2023.0.3.src.rpm",
+      "version": "1.5.2",
+      "bom-ref": "9e3623a675bec3423b01a390efc13a5f"
+    },
+    {
+      "type": "application",
+      "name": "jitterentropy",
+      "purl": "pkg:rpm/jitterentropy@3.4.1-4.amzn2023?arch=X86_64&epoch=0&upstream=jitterentropy-3.4.1-4.amzn2023.src.rpm",
+      "version": "3.4.1",
+      "bom-ref": "b278209bde80f86e500e680bac4bd3ea"
+    },
+    {
+      "type": "application",
+      "name": "sqlite-libs",
+      "purl": "pkg:rpm/sqlite-libs@3.40.0-1.amzn2023.0.3?arch=X86_64&epoch=0&upstream=sqlite-libs-3.40.0-1.amzn2023.0.3.src.rpm",
+      "version": "3.40.0",
+      "bom-ref": "cb61b297e62275b7b7eec21e045e907e"
+    },
+    {
+      "type": "application",
+      "name": "lua-srpm-macros",
+      "purl": "pkg:rpm/lua-srpm-macros@1-4.amzn2023.0.2?arch=NOARCH&epoch=0&upstream=lua-srpm-macros-1-4.amzn2023.0.2.src.rpm",
+      "version": "1",
+      "bom-ref": "bc19da128b584bafbd055b81588126ee"
+    },
+    {
+      "type": "application",
+      "name": "python3-cffi",
+      "purl": "pkg:rpm/python3-cffi@1.14.5-1.amzn2023.0.2?arch=X86_64&epoch=0&upstream=python3-cffi-1.14.5-1.amzn2023.0.2.src.rpm",
+      "version": "1.14.5",
+      "bom-ref": "05146b35470d69639cd3988e51e39c3b"
+    },
+    {
+      "type": "application",
+      "name": "system-release",
+      "purl": "pkg:rpm/system-release@2023.3.20231218-0.amzn2023?arch=NOARCH&epoch=0&upstream=system-release-2023.3.20231218-0.amzn2023.src.rpm",
+      "version": "2023.3.20231218",
+      "bom-ref": "86341ef7a09b931143aafb50981731d8"
+    },
+    {
+      "type": "application",
+      "name": "bzip2",
+      "purl": "pkg:rpm/bzip2@1.0.8-6.amzn2023.0.2?arch=X86_64&epoch=0&upstream=bzip2-1.0.8-6.amzn2023.0.2.src.rpm",
+      "version": "1.0.8",
+      "bom-ref": "ebd6f6ece9cdf54bdb5bb677709bb2fb"
+    },
+    {
+      "type": "application",
+      "name": "python-srpm-macros",
+      "purl": "pkg:rpm/python-srpm-macros@3.9-41.amzn2023.0.5?arch=NOARCH&epoch=0&upstream=python-srpm-macros-3.9-41.amzn2023.0.5.src.rpm",
+      "version": "3.9",
+      "bom-ref": "c8695e591d478d2acf269593f2a15785"
+    },
+    {
+      "type": "application",
+      "name": "c-ares",
+      "purl": "pkg:rpm/c-ares@1.19.0-1.amzn2023?arch=X86_64&epoch=0&upstream=c-ares-1.19.0-1.amzn2023.src.rpm",
+      "version": "1.19.0",
+      "bom-ref": "f40640820c483afe7bc414ee1e5b9e9f"
+    },
+    {
+      "type": "application",
+      "name": "cryptsetup",
+      "purl": "pkg:rpm/cryptsetup@2.6.1-1.amzn2023.0.1?arch=X86_64&epoch=0&upstream=cryptsetup-2.6.1-1.amzn2023.0.1.src.rpm",
+      "version": "2.6.1",
+      "bom-ref": "1ef9b4a224d1991bb3d58ce8dcfcbac3"
+    },
+    {
+      "type": "application",
+      "name": "xxd",
+      "purl": "pkg:rpm/xxd@9.0.1592-1.amzn2023.0.1?arch=X86_64&epoch=2&upstream=xxd-9.0.1592-1.amzn2023.0.1.src.rpm",
+      "version": "9.0.1592",
+      "bom-ref": "6a30d04ae7a08dcc6d88b63fd1d92b8d"
+    },
+    {
+      "type": "application",
+      "name": "libutempter",
+      "purl": "pkg:rpm/libutempter@1.2.1-4.amzn2023.0.2?arch=X86_64&epoch=0&upstream=libutempter-1.2.1-4.amzn2023.0.2.src.rpm",
+      "version": "1.2.1",
+      "bom-ref": "68d84fcc9dec3dc7e8b0dc198fd12358"
+    },
+    {
+      "type": "application",
+      "name": "dnf-plugin-support-info",
+      "purl": "pkg:rpm/dnf-plugin-support-info@1.2-1.amzn2023?arch=NOARCH&epoch=0&upstream=dnf-plugin-support-info-1.2-1.amzn2023.src.rpm",
+      "version": "1.2",
+      "bom-ref": "275402546900fb2c03ab81d1dc7aa399"
+    },
+    {
+      "type": "application",
+      "name": "libnfsidmap",
+      "purl": "pkg:rpm/libnfsidmap@2.5.4-2.rc3.amzn2023.0.3?arch=X86_64&epoch=1&upstream=libnfsidmap-2.5.4-2.rc3.amzn2023.0.3.src.rpm",
+      "version": "2.5.4",
+      "bom-ref": "7a13f7fd5e3d3211e872b263f7850b3a"
+    },
+    {
+      "type": "application",
+      "name": "python3-prompt-toolkit",
+      "purl": "pkg:rpm/python3-prompt-toolkit@3.0.24-1.amzn2023.0.2?arch=NOARCH&epoch=0&upstream=python3-prompt-toolkit-3.0.24-1.amzn2023.0.2.src.rpm",
+      "version": "3.0.24",
+      "bom-ref": "a88c761705008736602f342296e56c7a"
+    },
+    {
+      "type": "application",
+      "name": "libidn2",
+      "purl": "pkg:rpm/libidn2@2.3.2-1.amzn2023.0.5?arch=X86_64&epoch=0&upstream=libidn2-2.3.2-1.amzn2023.0.5.src.rpm",
+      "version": "2.3.2",
+      "bom-ref": "70ceea96ef9aae4bb17239153caaeebe"
+    },
+    {
+      "type": "application",
+      "name": "kbd-misc",
+      "purl": "pkg:rpm/kbd-misc@2.4.0-2.amzn2023.0.3?arch=NOARCH&epoch=0&upstream=kbd-misc-2.4.0-2.amzn2023.0.3.src.rpm",
+      "version": "2.4.0",
+      "bom-ref": "f5116b4dfb0b84880ead0a97206ac5c2"
+    },
+    {
+      "type": "application",
+      "name": "dnf-data",
+      "purl": "pkg:rpm/dnf-data@4.12.0-2.amzn2023.0.4?arch=NOARCH&epoch=0&upstream=dnf-data-4.12.0-2.amzn2023.0.4.src.rpm",
+      "version": "4.12.0",
+      "bom-ref": "bdbf375e1daadd3dd2fcbb7bca3d8966"
+    },
+    {
+      "type": "application",
+      "name": "nss-util",
+      "purl": "pkg:rpm/nss-util@3.90.0-3.amzn2023.0.3?arch=X86_64&epoch=0&upstream=nss-util-3.90.0-3.amzn2023.0.3.src.rpm",
+      "version": "3.90.0",
+      "bom-ref": "8478d16909e1e728b51f8187d621d01a"
+    },
+    {
+      "type": "application",
+      "name": "perl-Socket",
+      "purl": "pkg:rpm/perl-Socket@2.032-1.amzn2023.0.2?arch=X86_64&epoch=4&upstream=perl-Socket-2.032-1.amzn2023.0.2.src.rpm",
+      "version": "2.032",
+      "bom-ref": "931a9b3878d919b9a4ca96ced3fa2f7f"
+    },
+    {
+      "type": "application",
+      "name": "libaio",
+      "purl": "pkg:rpm/libaio@0.3.111-11.amzn2023.0.2?arch=X86_64&epoch=0&upstream=libaio-0.3.111-11.amzn2023.0.2.src.rpm",
+      "version": "0.3.111",
+      "bom-ref": "a6acab442b64e1161c9b397defaac0dd"
+    },
+    {
+      "type": "application",
+      "name": "python3-jsonschema",
+      "purl": "pkg:rpm/python3-jsonschema@3.2.0-9.amzn2023.0.3?arch=NOARCH&epoch=0&upstream=python3-jsonschema-3.2.0-9.amzn2023.0.3.src.rpm",
+      "version": "3.2.0",
+      "bom-ref": "5689ada7492d1d492cd27c69a7d08090"
+    },
+    {
+      "type": "application",
+      "name": "pkgconf-m4",
+      "purl": "pkg:rpm/pkgconf-m4@1.8.0-4.amzn2023.0.2?arch=NOARCH&epoch=0&upstream=pkgconf-m4-1.8.0-4.amzn2023.0.2.src.rpm",
+      "version": "1.8.0",
+      "bom-ref": "d41f218d80bf0241a718e04773227119"
+    },
+    {
+      "type": "application",
+      "name": "passwd",
+      "purl": "pkg:rpm/passwd@0.80-10.amzn2023.0.2?arch=X86_64&epoch=0&upstream=passwd-0.80-10.amzn2023.0.2.src.rpm",
+      "version": "0.80",
+      "bom-ref": "a3ca52f402bdac1bb022633a217037bc"
+    },
+    {
+      "type": "application",
+      "name": "sssd-client",
+      "purl": "pkg:rpm/sssd-client@2.5.0-1.amzn2023.0.3?arch=X86_64&epoch=0&upstream=sssd-client-2.5.0-1.amzn2023.0.3.src.rpm",
+      "version": "2.5.0",
+      "bom-ref": "4762eaebf3795ba74a68143de4269c6b"
+    },
+    {
+      "type": "application",
+      "name": "sssd-common",
+      "purl": "pkg:rpm/sssd-common@2.5.0-1.amzn2023.0.3?arch=X86_64&epoch=0&upstream=sssd-common-2.5.0-1.amzn2023.0.3.src.rpm",
+      "version": "2.5.0",
+      "bom-ref": "3fd86f2f46e3b64ff097e1171678045d"
+    },
+    {
+      "type": "application",
+      "name": "kbd",
+      "purl": "pkg:rpm/kbd@2.4.0-2.amzn2023.0.3?arch=X86_64&epoch=0&upstream=kbd-2.4.0-2.amzn2023.0.3.src.rpm",
+      "version": "2.4.0",
+      "bom-ref": "2aa95468a574bbd732f661e78e42bd1c"
+    },
+    {
+      "type": "application",
+      "name": "cyrus-sasl-lib",
+      "purl": "pkg:rpm/cyrus-sasl-lib@2.1.27-18.amzn2023.0.3?arch=X86_64&epoch=0&upstream=cyrus-sasl-lib-2.1.27-18.amzn2023.0.3.src.rpm",
+      "version": "2.1.27",
+      "bom-ref": "76c7fb3ce2a7a3687fedc3e170043ac6"
+    },
+    {
+      "type": "application",
+      "name": "p11-kit",
+      "purl": "pkg:rpm/p11-kit@0.24.1-2.amzn2023.0.2?arch=X86_64&epoch=0&upstream=p11-kit-0.24.1-2.amzn2023.0.2.src.rpm",
+      "version": "0.24.1",
+      "bom-ref": "5fc4f9154f247362e64b8fb655b0413a"
+    },
+    {
+      "type": "application",
+      "name": "man-pages",
+      "purl": "pkg:rpm/man-pages@5.10-2.amzn2023.0.3?arch=NOARCH&epoch=0&upstream=man-pages-5.10-2.amzn2023.0.3.src.rpm",
+      "version": "5.10",
+      "bom-ref": "587bcbf9b4cd285a1861b0ea312cc5a6"
+    },
+    {
+      "type": "application",
+      "name": "libffi",
+      "purl": "pkg:rpm/libffi@3.1-28.amzn2023.0.2?arch=X86_64&epoch=0&upstream=libffi-3.1-28.amzn2023.0.2.src.rpm",
+      "version": "3.1",
+      "bom-ref": "f07fb5e739fbcee7b912e1b0362d2083"
+    },
+    {
+      "type": "application",
+      "name": "sbsigntools",
+      "purl": "pkg:rpm/sbsigntools@0.9.4-8.amzn2023.0.2?arch=X86_64&epoch=0&upstream=sbsigntools-0.9.4-8.amzn2023.0.2.src.rpm",
+      "version": "0.9.4",
+      "bom-ref": "e0fcfa196f32c210698c1374ad0c6410"
+    },
+    {
+      "type": "application",
+      "name": "perl-interpreter",
+      "purl": "pkg:rpm/perl-interpreter@5.32.1-477.amzn2023.0.5?arch=X86_64&epoch=4&upstream=perl-interpreter-5.32.1-477.amzn2023.0.5.src.rpm",
+      "version": "5.32.1",
+      "bom-ref": "e99c1497e1156f2b9bb5ed5ca7b1b277"
+    },
+    {
+      "type": "application",
+      "name": "libzstd",
+      "purl": "pkg:rpm/libzstd@1.5.2-1.amzn2023.0.3?arch=X86_64&epoch=0&upstream=libzstd-1.5.2-1.amzn2023.0.3.src.rpm",
+      "version": "1.5.2",
+      "bom-ref": "c2727a4cd92b249f54e97dedee1fb856"
+    },
+    {
+      "type": "application",
+      "name": "yum",
+      "purl": "pkg:rpm/yum@4.12.0-2.amzn2023.0.4?arch=NOARCH&epoch=0&upstream=yum-4.12.0-2.amzn2023.0.4.src.rpm",
+      "version": "4.12.0",
+      "bom-ref": "2b65e4b7b5ac860aa3f258e8a596bfef"
+    },
+    {
+      "type": "application",
+      "name": "perl-Class-Struct",
+      "purl": "pkg:rpm/perl-Class-Struct@0.66-477.amzn2023.0.5?arch=NOARCH&epoch=0&upstream=perl-Class-Struct-0.66-477.amzn2023.0.5.src.rpm",
+      "version": "0.66",
+      "bom-ref": "854e59740bc0fabd23cfe496e498ac1f"
+    },
+    {
+      "type": "application",
+      "name": "ntsysv",
+      "purl": "pkg:rpm/ntsysv@1.15-2.amzn2023.0.2?arch=X86_64&epoch=0&upstream=ntsysv-1.15-2.amzn2023.0.2.src.rpm",
+      "version": "1.15",
+      "bom-ref": "aeb65c63b7d146e5ec1265a72adc6de5"
+    },
+    {
+      "type": "application",
+      "name": "libgcrypt",
+      "purl": "pkg:rpm/libgcrypt@1.10.1-7.amzn2023.0.1?arch=X86_64&epoch=0&upstream=libgcrypt-1.10.1-7.amzn2023.0.1.src.rpm",
+      "version": "1.10.1",
+      "bom-ref": "d3fdfe0914ffa7c3fefb626b2465bae6"
+    },
+    {
+      "type": "application",
+      "name": "dracut",
+      "purl": "pkg:rpm/dracut@055-6.amzn2023.0.8?arch=X86_64&epoch=0&upstream=dracut-055-6.amzn2023.0.8.src.rpm",
+      "version": "055",
+      "bom-ref": "e4d141e11327c2be4961bac4f9ab218b"
+    },
+    {
+      "type": "application",
+      "name": "hunspell",
+      "purl": "pkg:rpm/hunspell@1.7.0-9.amzn2023.0.3?arch=X86_64&epoch=0&upstream=hunspell-1.7.0-9.amzn2023.0.3.src.rpm",
+      "version": "1.7.0",
+      "bom-ref": "f79d28b3d073df9bf1e589d254cd1e86"
+    },
+    {
+      "type": "application",
+      "name": "libconfig",
+      "purl": "pkg:rpm/libconfig@1.7.2-7.amzn2023.0.2?arch=X86_64&epoch=0&upstream=libconfig-1.7.2-7.amzn2023.0.2.src.rpm",
+      "version": "1.7.2",
+      "bom-ref": "ab066c53533544884ecd1860566c676a"
+    },
+    {
+      "type": "application",
+      "name": "systemd-pam",
+      "purl": "pkg:rpm/systemd-pam@252.4-1161.amzn2023.0.4?arch=X86_64&epoch=0&upstream=systemd-pam-252.4-1161.amzn2023.0.4.src.rpm",
+      "version": "252.4",
+      "bom-ref": "5c8802a478fb77bc3056bb0611cf226a"
+    },
+    {
+      "type": "application",
+      "name": "bzip2-libs",
+      "purl": "pkg:rpm/bzip2-libs@1.0.8-6.amzn2023.0.2?arch=X86_64&epoch=0&upstream=bzip2-libs-1.0.8-6.amzn2023.0.2.src.rpm",
+      "version": "1.0.8",
+      "bom-ref": "a7960cca54dc1156e547462411035972"
+    },
+    {
+      "type": "application",
+      "name": "bash",
+      "purl": "pkg:rpm/bash@5.2.15-1.amzn2023.0.2?arch=X86_64&epoch=0&upstream=bash-5.2.15-1.amzn2023.0.2.src.rpm",
+      "version": "5.2.15",
+      "bom-ref": "8c12ee537ad5051c598ccfd372144d0c"
+    },
+    {
+      "type": "application",
+      "name": "python3-awscrt",
+      "purl": "pkg:rpm/python3-awscrt@0.16.7-1.amzn2023.0.1?arch=X86_64&epoch=0&upstream=python3-awscrt-0.16.7-1.amzn2023.0.1.src.rpm",
+      "version": "0.16.7",
+      "bom-ref": "6a7cfc2f48579fa028ce8be7e8277463"
+    },
+    {
+      "type": "application",
+      "name": "nspr",
+      "purl": "pkg:rpm/nspr@4.35.0-5.amzn2023.0.3?arch=X86_64&epoch=0&upstream=nspr-4.35.0-5.amzn2023.0.3.src.rpm",
+      "version": "4.35.0",
+      "bom-ref": "6e8b0b5046d24bc6377c178d037f23d2"
+    },
+    {
+      "type": "application",
+      "name": "python3-libs",
+      "purl": "pkg:rpm/python3-libs@3.9.16-1.amzn2023.0.5?arch=X86_64&epoch=0&upstream=python3-libs-3.9.16-1.amzn2023.0.5.src.rpm",
+      "version": "3.9.16",
+      "bom-ref": "ae724c871f526c68bcb001c50c4e2111"
+    },
+    {
+      "type": "application",
+      "name": "file",
+      "purl": "pkg:rpm/file@5.39-7.amzn2023.0.4?arch=X86_64&epoch=0&upstream=file-5.39-7.amzn2023.0.4.src.rpm",
+      "version": "5.39",
+      "bom-ref": "48a0db297e1da587d74be3adc8140d76"
+    },
+    {
+      "type": "application",
+      "name": "lz4-libs",
+      "purl": "pkg:rpm/lz4-libs@1.9.4-1.amzn2023.0.2?arch=X86_64&epoch=0&upstream=lz4-libs-1.9.4-1.amzn2023.0.2.src.rpm",
+      "version": "1.9.4",
+      "bom-ref": "059392077dee8fe89fe8d8911b5bb1a8"
+    },
+    {
+      "type": "application",
+      "name": "selinux-policy",
+      "purl": "pkg:rpm/selinux-policy@36.18-1.amzn2023.0.1?arch=NOARCH&epoch=0&upstream=selinux-policy-36.18-1.amzn2023.0.1.src.rpm",
+      "version": "36.18",
+      "bom-ref": "dc3ea0d958fcde3488f5b4ac85fc1d6f"
+    },
+    {
+      "type": "application",
+      "name": "amazon-linux-sb-keys",
+      "purl": "pkg:rpm/amazon-linux-sb-keys@2023.1-1.amzn2023.0.3?arch=NOARCH&epoch=0&upstream=amazon-linux-sb-keys-2023.1-1.amzn2023.0.3.src.rpm",
+      "version": "2023.1",
+      "bom-ref": "a380c63a5036cb57b4e237545479c946"
+    },
+    {
+      "type": "application",
+      "name": "acpid",
+      "purl": "pkg:rpm/acpid@2.0.32-4.amzn2023.0.2?arch=X86_64&epoch=0&upstream=acpid-2.0.32-4.amzn2023.0.2.src.rpm",
+      "version": "2.0.32",
+      "bom-ref": "1e0021edd89cbd20157a000c51001233"
+    },
+    {
+      "type": "application",
+      "name": "libfdisk",
+      "purl": "pkg:rpm/libfdisk@2.37.4-1.amzn2023.0.3?arch=X86_64&epoch=0&upstream=libfdisk-2.37.4-1.amzn2023.0.3.src.rpm",
+      "version": "2.37.4",
+      "bom-ref": "2260f41bdd2a74c5228157f2c20e1b66"
+    },
+    {
+      "type": "application",
+      "name": "libmaxminddb",
+      "purl": "pkg:rpm/libmaxminddb@1.5.2-1.amzn2023.0.2?arch=X86_64&epoch=0&upstream=libmaxminddb-1.5.2-1.amzn2023.0.2.src.rpm",
+      "version": "1.5.2",
+      "bom-ref": "f72b2865653cd293558958ae0f033bed"
+    },
+    {
+      "type": "application",
+      "name": "python3-audit",
+      "purl": "pkg:rpm/python3-audit@3.0.6-1.amzn2023.0.2?arch=X86_64&epoch=0&upstream=python3-audit-3.0.6-1.amzn2023.0.2.src.rpm",
+      "version": "3.0.6",
+      "bom-ref": "e4348cf9605c58e2448ab185ead61fd3"
+    },
+    {
+      "type": "application",
+      "name": "libref_array",
+      "purl": "pkg:rpm/libref_array@0.1.5-47.amzn2023.0.2?arch=X86_64&epoch=0&upstream=libref_array-0.1.5-47.amzn2023.0.2.src.rpm",
+      "version": "0.1.5",
+      "bom-ref": "26843fe499f70709f4016f395fb11975"
+    },
+    {
+      "type": "application",
+      "name": "libevent",
+      "purl": "pkg:rpm/libevent@2.1.12-3.amzn2023.0.3?arch=X86_64&epoch=0&upstream=libevent-2.1.12-3.amzn2023.0.3.src.rpm",
+      "version": "2.1.12",
+      "bom-ref": "21ff19102aa0cc787da85af13c3c1a14"
+    },
+    {
+      "type": "application",
+      "name": "boost-filesystem",
+      "purl": "pkg:rpm/boost-filesystem@1.75.0-4.amzn2023.0.2?arch=X86_64&epoch=0&upstream=boost-filesystem-1.75.0-4.amzn2023.0.2.src.rpm",
+      "version": "1.75.0",
+      "bom-ref": "d827a483ff3c1ce5b6a9dc96b64335b4"
+    },
+    {
+      "type": "application",
+      "name": "libsss_certmap",
+      "purl": "pkg:rpm/libsss_certmap@2.5.0-1.amzn2023.0.3?arch=X86_64&epoch=0&upstream=libsss_certmap-2.5.0-1.amzn2023.0.3.src.rpm",
+      "version": "2.5.0",
+      "bom-ref": "aeeed115740ea2845c2147f4c7b7fa5c"
+    },
+    {
+      "type": "application",
+      "name": "cracklib",
+      "purl": "pkg:rpm/cracklib@2.9.6-27.amzn2023.0.2?arch=X86_64&epoch=0&upstream=cracklib-2.9.6-27.amzn2023.0.2.src.rpm",
+      "version": "2.9.6",
+      "bom-ref": "d226c50dc4215351cac3959e0ca6e783"
+    },
+    {
+      "type": "application",
+      "name": "python3-libsemanage",
+      "purl": "pkg:rpm/python3-libsemanage@3.4-5.amzn2023.0.2?arch=X86_64&epoch=0&upstream=python3-libsemanage-3.4-5.amzn2023.0.2.src.rpm",
+      "version": "3.4",
+      "bom-ref": "0ac86d30b3c62b6134a16483f5e023c7"
+    },
+    {
+      "type": "application",
+      "name": "iputils",
+      "purl": "pkg:rpm/iputils@20210202-2.amzn2023.0.3?arch=X86_64&epoch=0&upstream=iputils-20210202-2.amzn2023.0.3.src.rpm",
+      "version": "20210202",
+      "bom-ref": "96183866c5a56cc6d186d0722aa30e72"
+    },
+    {
+      "type": "application",
+      "name": "hunspell-en",
+      "purl": "pkg:rpm/hunspell-en@0.20140811.1-18.amzn2023.0.3?arch=NOARCH&epoch=0&upstream=hunspell-en-0.20140811.1-18.amzn2023.0.3.src.rpm",
+      "version": "0.20140811.1",
+      "bom-ref": "7fbaf3216c2ff06c1657fa645f01380e"
+    },
+    {
+      "type": "application",
+      "name": "unzip",
+      "purl": "pkg:rpm/unzip@6.0-57.amzn2023.0.2?arch=X86_64&epoch=0&upstream=unzip-6.0-57.amzn2023.0.2.src.rpm",
+      "version": "6.0",
+      "bom-ref": "96081cf0faac07203ded7bf32fab5984"
+    },
+    {
+      "type": "application",
+      "name": "glibc-gconv-extra",
+      "purl": "pkg:rpm/glibc-gconv-extra@2.34-52.amzn2023.0.5?arch=X86_64&epoch=0&upstream=glibc-gconv-extra-2.34-52.amzn2023.0.5.src.rpm",
+      "version": "2.34",
+      "bom-ref": "8220cf9e4c6f1fa2d50299be7848c1a7"
+    },
+    {
+      "type": "application",
+      "name": "boost-system",
+      "purl": "pkg:rpm/boost-system@1.75.0-4.amzn2023.0.2?arch=X86_64&epoch=0&upstream=boost-system-1.75.0-4.amzn2023.0.2.src.rpm",
+      "version": "1.75.0",
+      "bom-ref": "eca48ac814968fa008da6901f600cc1e"
+    },
+    {
+      "type": "application",
+      "name": "libargon2",
+      "purl": "pkg:rpm/libargon2@20171227-9.amzn2023.0.2?arch=X86_64&epoch=0&upstream=libargon2-20171227-9.amzn2023.0.2.src.rpm",
+      "version": "20171227",
+      "bom-ref": "eaf5f7a33d1cfe1d165c3971b9a4bdcc"
+    },
+    {
+      "type": "application",
+      "name": "libfido2",
+      "purl": "pkg:rpm/libfido2@1.10.0-2.amzn2023.0.2?arch=X86_64&epoch=0&upstream=libfido2-1.10.0-2.amzn2023.0.2.src.rpm",
+      "version": "1.10.0",
+      "bom-ref": "c05bb815be4e6ae5cb8f004836cb76b8"
+    },
+    {
+      "type": "application",
+      "name": "sed",
+      "purl": "pkg:rpm/sed@4.8-7.amzn2023.0.2?arch=X86_64&epoch=0&upstream=sed-4.8-7.amzn2023.0.2.src.rpm",
+      "version": "4.8",
+      "bom-ref": "38dfed441f4f6953589776f472bd66f0"
+    },
+    {
+      "type": "application",
+      "name": "perl-Text-Tabs+Wrap",
+      "purl": "pkg:rpm/perl-Text-Tabs+Wrap@2021.0726-1.amzn2023.0.1?arch=NOARCH&epoch=0&upstream=perl-Text-Tabs+Wrap-2021.0726-1.amzn2023.0.1.src.rpm",
+      "version": "2021.0726",
+      "bom-ref": "5999ece77a15fdeff85cf480d29cf5f3"
+    },
+    {
+      "type": "application",
+      "name": "python3-libselinux",
+      "purl": "pkg:rpm/python3-libselinux@3.4-5.amzn2023.0.2?arch=X86_64&epoch=0&upstream=python3-libselinux-3.4-5.amzn2023.0.2.src.rpm",
+      "version": "3.4",
+      "bom-ref": "dd05104291ebc62d84285194676dc737"
+    },
+    {
+      "type": "application",
+      "name": "libsmartcols",
+      "purl": "pkg:rpm/libsmartcols@2.37.4-1.amzn2023.0.3?arch=X86_64&epoch=0&upstream=libsmartcols-2.37.4-1.amzn2023.0.3.src.rpm",
+      "version": "2.37.4",
+      "bom-ref": "9d69ccce2ccca5f481152abc079a2fe9"
+    },
+    {
+      "type": "application",
+      "name": "libsss_nss_idmap",
+      "purl": "pkg:rpm/libsss_nss_idmap@2.5.0-1.amzn2023.0.3?arch=X86_64&epoch=0&upstream=libsss_nss_idmap-2.5.0-1.amzn2023.0.3.src.rpm",
+      "version": "2.5.0",
+      "bom-ref": "21ca30ed472701b38d607732ab92991f"
+    },
+    {
+      "type": "application",
+      "name": "efivar-libs",
+      "purl": "pkg:rpm/efivar-libs@38-2.amzn2023.0.1?arch=X86_64&epoch=0&upstream=efivar-libs-38-2.amzn2023.0.1.src.rpm",
+      "version": "38",
+      "bom-ref": "9c133e4fa31889e6e86a6e601bb63eff"
+    },
+    {
+      "type": "application",
+      "name": "gssproxy",
+      "purl": "pkg:rpm/gssproxy@0.8.4-2.amzn2023.0.3?arch=X86_64&epoch=0&upstream=gssproxy-0.8.4-2.amzn2023.0.3.src.rpm",
+      "version": "0.8.4",
+      "bom-ref": "eb62d8e9a7089b1e9d6f88df19739bf9"
+    },
+    {
+      "type": "application",
+      "name": "openssh-server",
+      "purl": "pkg:rpm/openssh-server@8.7p1-8.amzn2023.0.8?arch=X86_64&epoch=0&upstream=openssh-server-8.7p1-8.amzn2023.0.8.src.rpm",
+      "version": "8.7p1",
+      "bom-ref": "79d263a7484b1fa58879c61751a7ad2c"
+    },
+    {
+      "type": "application",
+      "name": "libkcapi-hmaccalc",
+      "purl": "pkg:rpm/libkcapi-hmaccalc@1.4.0-105.amzn2023.0.1?arch=X86_64&epoch=0&upstream=libkcapi-hmaccalc-1.4.0-105.amzn2023.0.1.src.rpm",
+      "version": "1.4.0",
+      "bom-ref": "b88598bd25be2a05aea921fcff3baa8d"
+    },
+    {
+      "type": "library",
+      "name": "sepolicy",
+      "purl": "pkg:pypi/sepolicy@3.4",
+      "version": "3.4",
+      "properties": [
+        {
+          "name": "amazon:inspector:path",
+          "value": "/usr/lib/python3.9/site-packages/sepolicy-3.4-py3.9.egg-info"
+        }
+      ],
+      "bom-ref": "acaedb9096df3d8c64eb8987fb0ffeab"
+    },
+    {
+      "type": "application",
+      "name": "gdbm-libs",
+      "purl": "pkg:rpm/gdbm-libs@1.19-2.amzn2023.0.2?arch=X86_64&epoch=1&upstream=gdbm-libs-1.19-2.amzn2023.0.2.src.rpm",
+      "version": "1.19",
+      "bom-ref": "29ac17a07355cf5194ccc6d43e543f27"
+    },
+    {
+      "type": "application",
+      "name": "libassuan",
+      "purl": "pkg:rpm/libassuan@2.5.5-1.amzn2023.0.2?arch=X86_64&epoch=0&upstream=libassuan-2.5.5-1.amzn2023.0.2.src.rpm",
+      "version": "2.5.5",
+      "bom-ref": "e6502d66efb73aec2d91a95f3453cc4c"
+    },
+    {
+      "type": "application",
+      "name": "python3-gpg",
+      "purl": "pkg:rpm/python3-gpg@1.15.1-6.amzn2023.0.3?arch=X86_64&epoch=0&upstream=python3-gpg-1.15.1-6.amzn2023.0.3.src.rpm",
+      "version": "1.15.1",
+      "bom-ref": "2b879460301f7d0ef024fdcdb97fde24"
+    },
+    {
+      "type": "library",
+      "name": "ec2-hibinit-agent",
+      "purl": "pkg:pypi/ec2-hibinit-agent@1.0.2",
+      "version": "1.0.2",
+      "properties": [
+        {
+          "name": "amazon:inspector:path",
+          "value": "/usr/lib/python3.9/site-packages/ec2_hibinit_agent-1.0.2-py3.9.egg-info/PKG-INFO"
+        }
+      ],
+      "bom-ref": "a5294de06d245de33155985a4b699f4c"
+    },
+    {
+      "type": "application",
+      "name": "dracut-config-generic",
+      "purl": "pkg:rpm/dracut-config-generic@055-6.amzn2023.0.8?arch=X86_64&epoch=0&upstream=dracut-config-generic-055-6.amzn2023.0.8.src.rpm",
+      "version": "055",
+      "bom-ref": "468d6c7fe6b86332208f27fbdb7be326"
+    },
+    {
+      "type": "application",
+      "name": "elfutils-libs",
+      "purl": "pkg:rpm/elfutils-libs@0.188-3.amzn2023.0.2?arch=X86_64&epoch=0&upstream=elfutils-libs-0.188-3.amzn2023.0.2.src.rpm",
+      "version": "0.188",
+      "bom-ref": "c2366bdefb88c28e61c04a7704c96e8b"
+    },
+    {
+      "type": "application",
+      "name": "python3-oauthlib",
+      "purl": "pkg:rpm/python3-oauthlib@3.0.2-9.amzn2023.0.3?arch=NOARCH&epoch=0&upstream=python3-oauthlib-3.0.2-9.amzn2023.0.3.src.rpm",
+      "version": "3.0.2",
+      "bom-ref": "7af8f310e9b4e88cdd9d3159a8548a50"
+    },
+    {
+      "type": "application",
+      "name": "perl-File-Temp",
+      "purl": "pkg:rpm/perl-File-Temp@0.231.100-2.amzn2023.0.2?arch=NOARCH&epoch=1&upstream=perl-File-Temp-0.231.100-2.amzn2023.0.2.src.rpm",
+      "version": "0.231.100",
+      "bom-ref": "b09bed1c93ef239d3f72cdab70b0f4ad"
+    },
+    {
+      "type": "application",
+      "name": "basesystem",
+      "purl": "pkg:rpm/basesystem@11-11.amzn2023.0.2?arch=NOARCH&epoch=0&upstream=basesystem-11-11.amzn2023.0.2.src.rpm",
+      "version": "11",
+      "bom-ref": "d70b3d693b88fecc3c0531ce44afcafb"
+    },
+    {
+      "type": "application",
+      "name": "xz-libs",
+      "purl": "pkg:rpm/xz-libs@5.2.5-9.amzn2023.0.2?arch=X86_64&epoch=0&upstream=xz-libs-5.2.5-9.amzn2023.0.2.src.rpm",
+      "version": "5.2.5",
+      "bom-ref": "c16a5cfc3d139aea60e689e5b6a31ea7"
+    },
+    {
+      "type": "application",
+      "name": "vim-common",
+      "purl": "pkg:rpm/vim-common@9.0.1592-1.amzn2023.0.1?arch=X86_64&epoch=2&upstream=vim-common-9.0.1592-1.amzn2023.0.1.src.rpm",
+      "version": "9.0.1592",
+      "bom-ref": "abc14ecd0cb417e1f8f91b6f2a8ad534"
+    },
+    {
+      "type": "application",
+      "name": "python3-jmespath",
+      "purl": "pkg:rpm/python3-jmespath@0.10.0-1.amzn2023.0.3?arch=NOARCH&epoch=0&upstream=python3-jmespath-0.10.0-1.amzn2023.0.3.src.rpm",
+      "version": "0.10.0",
+      "bom-ref": "422d547ea9f0607adf5e5792b03d5437"
+    },
+    {
+      "type": "application",
+      "name": "perl-overload",
+      "purl": "pkg:rpm/perl-overload@1.31-477.amzn2023.0.5?arch=NOARCH&epoch=0&upstream=perl-overload-1.31-477.amzn2023.0.5.src.rpm",
+      "version": "1.31",
+      "bom-ref": "ea1e9cae3c6492b772ab707d859273da"
+    },
+    {
+      "type": "application",
+      "name": "python3-setools",
+      "purl": "pkg:rpm/python3-setools@4.4.1-1.amzn2023?arch=X86_64&epoch=0&upstream=python3-setools-4.4.1-1.amzn2023.src.rpm",
+      "version": "4.4.1",
+      "bom-ref": "eb8358840f06db5e587ade9974b60525"
+    },
+    {
+      "type": "application",
+      "name": "quota-nls",
+      "purl": "pkg:rpm/quota-nls@4.06-4.amzn2023.0.2?arch=NOARCH&epoch=1&upstream=quota-nls-4.06-4.amzn2023.0.2.src.rpm",
+      "version": "4.06",
+      "bom-ref": "75d61ac2a50250b217ee65108e969bf1"
+    },
+    {
+      "type": "application",
+      "name": "libxml2",
+      "purl": "pkg:rpm/libxml2@2.10.4-1.amzn2023.0.5?arch=X86_64&epoch=0&upstream=libxml2-2.10.4-1.amzn2023.0.5.src.rpm",
+      "version": "2.10.4",
+      "bom-ref": "76f7f163b04c69c5c24ac66fc5bc06e6"
+    },
+    {
+      "type": "application",
+      "name": "elfutils-libelf",
+      "purl": "pkg:rpm/elfutils-libelf@0.188-3.amzn2023.0.2?arch=X86_64&epoch=0&upstream=elfutils-libelf-0.188-3.amzn2023.0.2.src.rpm",
+      "version": "0.188",
+      "bom-ref": "e5cfd065e71c85109cf1660fc4ae918b"
+    },
+    {
+      "type": "application",
+      "name": "util-linux",
+      "purl": "pkg:rpm/util-linux@2.37.4-1.amzn2023.0.3?arch=X86_64&epoch=0&upstream=util-linux-2.37.4-1.amzn2023.0.3.src.rpm",
+      "version": "2.37.4",
+      "bom-ref": "ad3bec134c0a8aac50e888a85976b021"
+    },
+    {
+      "type": "application",
+      "name": "libselinux-utils",
+      "purl": "pkg:rpm/libselinux-utils@3.4-5.amzn2023.0.2?arch=X86_64&epoch=0&upstream=libselinux-utils-3.4-5.amzn2023.0.2.src.rpm",
+      "version": "3.4",
+      "bom-ref": "1e519ddca9aebe35358020e1f5551554"
+    },
+    {
+      "type": "application",
+      "name": "hunspell-filesystem",
+      "purl": "pkg:rpm/hunspell-filesystem@1.7.0-9.amzn2023.0.3?arch=X86_64&epoch=0&upstream=hunspell-filesystem-1.7.0-9.amzn2023.0.3.src.rpm",
+      "version": "1.7.0",
+      "bom-ref": "7a62a44fd70c242584b916534eae2bd0"
+    },
+    {
+      "type": "application",
+      "name": "libldb",
+      "purl": "pkg:rpm/libldb@2.6.2-1.amzn2023.0.2?arch=X86_64&epoch=0&upstream=libldb-2.6.2-1.amzn2023.0.2.src.rpm",
+      "version": "2.6.2",
+      "bom-ref": "66577c5e5baf5bc83f873b1f1f25c478"
+    },
+    {
+      "type": "application",
+      "name": "tcsh",
+      "purl": "pkg:rpm/tcsh@6.24.07-1.amzn2023?arch=X86_64&epoch=0&upstream=tcsh-6.24.07-1.amzn2023.src.rpm",
+      "version": "6.24.07",
+      "bom-ref": "68f2baccf3e6c485b034a01999aa4bd5"
+    },
+    {
+      "type": "application",
+      "name": "libverto",
+      "purl": "pkg:rpm/libverto@0.3.2-1.amzn2023.0.2?arch=X86_64&epoch=0&upstream=libverto-0.3.2-1.amzn2023.0.2.src.rpm",
+      "version": "0.3.2",
+      "bom-ref": "431c3c05632f379ccfbac50634a5c65c"
+    },
+    {
+      "type": "application",
+      "name": "gnutls",
+      "purl": "pkg:rpm/gnutls@3.8.0-376.amzn2023.0.2?arch=X86_64&epoch=0&upstream=gnutls-3.8.0-376.amzn2023.0.2.src.rpm",
+      "version": "3.8.0",
+      "bom-ref": "60cda5e05f5e5baae1d08da2b91aa262"
+    },
+    {
+      "type": "library",
+      "name": "selinux",
+      "purl": "pkg:pypi/selinux@3.4",
+      "version": "3.4",
+      "properties": [
+        {
+          "name": "amazon:inspector:path",
+          "value": "/usr/lib64/python3.9/site-packages/selinux-3.4-py3.9.egg-info"
+        }
+      ],
+      "bom-ref": "2b831133cbc4cf40aff4c9bb09e83189"
+    },
+    {
+      "type": "application",
+      "name": "tcpdump",
+      "purl": "pkg:rpm/tcpdump@4.99.1-1.amzn2023.0.2?arch=X86_64&epoch=14&upstream=tcpdump-4.99.1-1.amzn2023.0.2.src.rpm",
+      "version": "4.99.1",
+      "bom-ref": "40ff193ca16fd5a2a8f1c1b7d132a31f"
+    },
+    {
+      "type": "application",
+      "name": "filesystem",
+      "purl": "pkg:rpm/filesystem@3.14-5.amzn2023.0.3?arch=X86_64&epoch=0&upstream=filesystem-3.14-5.amzn2023.0.3.src.rpm",
+      "version": "3.14",
+      "bom-ref": "473e8423cfd8d37b95bb29b0db8345f9"
+    },
+    {
+      "type": "application",
+      "name": "perl-parent",
+      "purl": "pkg:rpm/perl-parent@0.238-458.amzn2023.0.2?arch=NOARCH&epoch=1&upstream=perl-parent-0.238-458.amzn2023.0.2.src.rpm",
+      "version": "0.238",
+      "bom-ref": "76af6936ced81aaf5379a95873e96125"
+    },
+    {
+      "type": "application",
+      "name": "which",
+      "purl": "pkg:rpm/which@2.21-26.amzn2023.0.2?arch=X86_64&epoch=0&upstream=which-2.21-26.amzn2023.0.2.src.rpm",
+      "version": "2.21",
+      "bom-ref": "f85a42501aa01edb3d42526d4742244f"
+    },
+    {
+      "type": "application",
+      "name": "nss",
+      "purl": "pkg:rpm/nss@3.90.0-3.amzn2023.0.3?arch=X86_64&epoch=0&upstream=nss-3.90.0-3.amzn2023.0.3.src.rpm",
+      "version": "3.90.0",
+      "bom-ref": "802474c8e297b46374af16aefaf38e1a"
+    },
+    {
+      "type": "application",
+      "name": "amazon-cloudwatch-agent",
+      "purl": "pkg:rpm/amazon-cloudwatch-agent@1.300032.2b361-1?arch=X86_64&epoch=0&upstream=amazon-cloudwatch-agent-1.300032.2b361-1.src.rpm",
+      "version": "1.300032.2b361",
+      "bom-ref": "a874426e6050132d5f389eacb8dbb3e0"
+    },
+    {
+      "type": "application",
+      "name": "cracklib-dicts",
+      "purl": "pkg:rpm/cracklib-dicts@2.9.6-27.amzn2023.0.2?arch=X86_64&epoch=0&upstream=cracklib-dicts-2.9.6-27.amzn2023.0.2.src.rpm",
+      "version": "2.9.6",
+      "bom-ref": "e04e6e3a53b2beaf9f90b0d02c47d41f"
+    },
+    {
+      "type": "application",
+      "name": "dyninst",
+      "purl": "pkg:rpm/dyninst@10.2.1-6.amzn2023.0.2?arch=X86_64&epoch=0&upstream=dyninst-10.2.1-6.amzn2023.0.2.src.rpm",
+      "version": "10.2.1",
+      "bom-ref": "4ce47ba79605cd810386e83aca050fb8"
+    },
+    {
+      "type": "application",
+      "name": "gawk",
+      "purl": "pkg:rpm/gawk@5.1.0-3.amzn2023.0.3?arch=X86_64&epoch=0&upstream=gawk-5.1.0-3.amzn2023.0.3.src.rpm",
+      "version": "5.1.0",
+      "bom-ref": "a8efb8624a1c75af694cac05d15f18b3"
+    },
+    {
+      "type": "application",
+      "name": "ethtool",
+      "purl": "pkg:rpm/ethtool@5.15-1.amzn2023.0.2?arch=X86_64&epoch=2&upstream=ethtool-5.15-1.amzn2023.0.2.src.rpm",
+      "version": "5.15",
+      "bom-ref": "8c686aeeba47118e1c0d2d612eb22d95"
+    },
+    {
+      "type": "application",
+      "name": "gnupg2-minimal",
+      "purl": "pkg:rpm/gnupg2-minimal@2.3.7-1.amzn2023.0.4?arch=X86_64&epoch=0&upstream=gnupg2-minimal-2.3.7-1.amzn2023.0.4.src.rpm",
+      "version": "2.3.7",
+      "bom-ref": "5fc086b2698731c8da87a8928b61ce7c"
+    },
+    {
+      "type": "application",
+      "name": "alternatives",
+      "purl": "pkg:rpm/alternatives@1.15-2.amzn2023.0.2?arch=X86_64&epoch=0&upstream=alternatives-1.15-2.amzn2023.0.2.src.rpm",
+      "version": "1.15",
+      "bom-ref": "813975a86aafd13b824f42c89aff44e3"
+    },
+    {
+      "type": "application",
+      "name": "python3-markupsafe",
+      "purl": "pkg:rpm/python3-markupsafe@1.1.1-10.amzn2023.0.2?arch=X86_64&epoch=0&upstream=python3-markupsafe-1.1.1-10.amzn2023.0.2.src.rpm",
+      "version": "1.1.1",
+      "bom-ref": "b2e0e1e627c184909e72cb15f0e80689"
+    },
+    {
+      "type": "application",
+      "name": "cloud-init",
+      "purl": "pkg:rpm/cloud-init@22.2.2-1.amzn2023.1.8?arch=NOARCH&epoch=0&upstream=cloud-init-22.2.2-1.amzn2023.1.8.src.rpm",
+      "version": "22.2.2",
+      "bom-ref": "4e890817af077365cd7f51646f2c28f6"
+    },
+    {
+      "type": "application",
+      "name": "python3-lockfile",
+      "purl": "pkg:rpm/python3-lockfile@0.12.2-5.amzn2023.0.3?arch=NOARCH&epoch=1&upstream=python3-lockfile-0.12.2-5.amzn2023.0.3.src.rpm",
+      "version": "0.12.2",
+      "bom-ref": "7532847645bfda7042f08e8c4a43122c"
+    },
+    {
+      "type": "application",
+      "name": "libstoragemgmt",
+      "purl": "pkg:rpm/libstoragemgmt@1.9.4-5.amzn2023.0.2?arch=X86_64&epoch=0&upstream=libstoragemgmt-1.9.4-5.amzn2023.0.2.src.rpm",
+      "version": "1.9.4",
+      "bom-ref": "70e827ae6ad9c4d457f1f6530da2773b"
+    },
+    {
+      "type": "application",
+      "name": "python3-six",
+      "purl": "pkg:rpm/python3-six@1.15.0-5.amzn2023.0.2?arch=NOARCH&epoch=0&upstream=python3-six-1.15.0-5.amzn2023.0.2.src.rpm",
+      "version": "1.15.0",
+      "bom-ref": "54d60c9579fdf49be5d0321e7b1031f9"
+    },
+    {
+      "type": "application",
+      "name": "ec2-utils",
+      "purl": "pkg:rpm/ec2-utils@2.1.0-1.amzn2023.0.1?arch=NOARCH&epoch=0&upstream=ec2-utils-2.1.0-1.amzn2023.0.1.src.rpm",
+      "version": "2.1.0",
+      "bom-ref": "4dea3ddb22d49036adca5c2da19b2269"
+    },
+    {
+      "type": "application",
+      "name": "libibverbs",
+      "purl": "pkg:rpm/libibverbs@37.0-1.amzn2023.0.3?arch=X86_64&epoch=0&upstream=libibverbs-37.0-1.amzn2023.0.3.src.rpm",
+      "version": "37.0",
+      "bom-ref": "9b0381309317adfb94174267d7c840cd"
+    },
+    {
+      "type": "application",
+      "name": "libseccomp",
+      "purl": "pkg:rpm/libseccomp@2.5.3-1.amzn2023.0.2?arch=X86_64&epoch=0&upstream=libseccomp-2.5.3-1.amzn2023.0.2.src.rpm",
+      "version": "2.5.3",
+      "bom-ref": "49def3c7601e75720e0145a72b173a8f"
+    },
+    {
+      "type": "application",
+      "name": "crypto-policies-scripts",
+      "purl": "pkg:rpm/crypto-policies-scripts@20220428-1.gitdfb10ea.amzn2023.0.2?arch=NOARCH&epoch=0&upstream=crypto-policies-scripts-20220428-1.gitdfb10ea.amzn2023.0.2.src.rpm",
+      "version": "20220428",
+      "bom-ref": "f78f1b6e7a31a54a58b10a1fa5412375"
+    },
+    {
+      "type": "application",
+      "name": "boost-thread",
+      "purl": "pkg:rpm/boost-thread@1.75.0-4.amzn2023.0.2?arch=X86_64&epoch=0&upstream=boost-thread-1.75.0-4.amzn2023.0.2.src.rpm",
+      "version": "1.75.0",
+      "bom-ref": "c8d149ecb2938f38e154ab1ec7b211f3"
+    },
+    {
+      "type": "application",
+      "name": "libnghttp2",
+      "purl": "pkg:rpm/libnghttp2@1.55.1-1.amzn2023.0.4?arch=X86_64&epoch=0&upstream=libnghttp2-1.55.1-1.amzn2023.0.4.src.rpm",
+      "version": "1.55.1",
+      "bom-ref": "175ca6cb426c4ba45fafd779a492bff3"
+    },
+    {
+      "type": "application",
+      "name": "libpcap",
+      "purl": "pkg:rpm/libpcap@1.10.1-1.amzn2023.0.2?arch=X86_64&epoch=14&upstream=libpcap-1.10.1-1.amzn2023.0.2.src.rpm",
+      "version": "1.10.1",
+      "bom-ref": "90207da7d81a00533fb1585cc39983ed"
+    },
+    {
+      "type": "application",
+      "name": "p11-kit-trust",
+      "purl": "pkg:rpm/p11-kit-trust@0.24.1-2.amzn2023.0.2?arch=X86_64&epoch=0&upstream=p11-kit-trust-0.24.1-2.amzn2023.0.2.src.rpm",
+      "version": "0.24.1",
+      "bom-ref": "dbd9e411d4d5f0b2f02c2bd2fab77baf"
+    },
+    {
+      "type": "application",
+      "name": "amazon-linux-repo-s3",
+      "purl": "pkg:rpm/amazon-linux-repo-s3@2023.1.20230912-0.amzn2023?arch=NOARCH&epoch=0&upstream=amazon-linux-repo-s3-2023.1.20230912-0.amzn2023.src.rpm",
+      "version": "2023.1.20230912",
+      "bom-ref": "26acd5daf5cca0e8803309bf049c4c93"
+    },
+    {
+      "type": "application",
+      "name": "ocaml-srpm-macros",
+      "purl": "pkg:rpm/ocaml-srpm-macros@6-6.amzn2023.0.2?arch=NOARCH&epoch=0&upstream=ocaml-srpm-macros-6-6.amzn2023.0.2.src.rpm",
+      "version": "6",
+      "bom-ref": "2255825d92cacde9ae695a00415b79d4"
+    },
+    {
+      "type": "application",
+      "name": "hostname",
+      "purl": "pkg:rpm/hostname@3.23-4.amzn2023.0.3?arch=X86_64&epoch=0&upstream=hostname-3.23-4.amzn2023.0.3.src.rpm",
+      "version": "3.23",
+      "bom-ref": "a8e9c06754786ce605a56dc8273e3faa"
+    },
+    {
+      "type": "application",
+      "name": "nss-softokn",
+      "purl": "pkg:rpm/nss-softokn@3.90.0-3.amzn2023.0.3?arch=X86_64&epoch=0&upstream=nss-softokn-3.90.0-3.amzn2023.0.3.src.rpm",
+      "version": "3.90.0",
+      "bom-ref": "78d2f5e838956ba234b1b894d2f70bcc"
+    },
+    {
+      "type": "application",
+      "name": "attr",
+      "purl": "pkg:rpm/attr@2.5.1-3.amzn2023.0.2?arch=X86_64&epoch=0&upstream=attr-2.5.1-3.amzn2023.0.2.src.rpm",
+      "version": "2.5.1",
+      "bom-ref": "9516c1a8a8c29209f1f08aaad79fea37"
+    },
+    {
+      "type": "application",
+      "name": "diffutils",
+      "purl": "pkg:rpm/diffutils@3.8-1.amzn2023.0.2?arch=X86_64&epoch=0&upstream=diffutils-3.8-1.amzn2023.0.2.src.rpm",
+      "version": "3.8",
+      "bom-ref": "16258b778234cccae72ac47d2a1b61e2"
+    },
+    {
+      "type": "application",
+      "name": "libtirpc",
+      "purl": "pkg:rpm/libtirpc@1.3.3-0.amzn2023?arch=X86_64&epoch=0&upstream=libtirpc-1.3.3-0.amzn2023.src.rpm",
+      "version": "1.3.3",
+      "bom-ref": "de0b51658f5f169f7ea0decc1207f0ba"
+    },
+    {
+      "type": "application",
+      "name": "initscripts",
+      "purl": "pkg:rpm/initscripts@10.09-1.amzn2023.0.2?arch=X86_64&epoch=0&upstream=initscripts-10.09-1.amzn2023.0.2.src.rpm",
+      "version": "10.09",
+      "bom-ref": "f706c5622405cac36cb531b93617d274"
+    },
+    {
+      "type": "application",
+      "name": "python3-pyyaml",
+      "purl": "pkg:rpm/python3-pyyaml@5.4.1-2.amzn2023.0.2?arch=X86_64&epoch=0&upstream=python3-pyyaml-5.4.1-2.amzn2023.0.2.src.rpm",
+      "version": "5.4.1",
+      "bom-ref": "0360ec2dfcd99018b7d5ae71dba44a2c"
+    },
+    {
+      "type": "application",
+      "name": "kernel-tools",
+      "purl": "pkg:rpm/kernel-tools@6.1.49-70.116.amzn2023?arch=X86_64&epoch=0&upstream=kernel-tools-6.1.49-70.116.amzn2023.src.rpm",
+      "version": "6.1.49",
+      "bom-ref": "b1a5c6a527e46d545b764e65dc5ad4c5"
+    },
+    {
+      "type": "application",
+      "name": "python3-distro",
+      "purl": "pkg:rpm/python3-distro@1.5.0-5.amzn2023.0.2?arch=NOARCH&epoch=0&upstream=python3-distro-1.5.0-5.amzn2023.0.2.src.rpm",
+      "version": "1.5.0",
+      "bom-ref": "0b60194b11fae3db96266366e4dca8ca"
+    },
+    {
+      "type": "application",
+      "name": "libcbor",
+      "purl": "pkg:rpm/libcbor@0.7.0-3.amzn2023.0.2?arch=X86_64&epoch=0&upstream=libcbor-0.7.0-3.amzn2023.0.2.src.rpm",
+      "version": "0.7.0",
+      "bom-ref": "1b0e66ab98bf3ef89d8aa24580336736"
+    },
+    {
+      "type": "application",
+      "name": "keyutils-libs",
+      "purl": "pkg:rpm/keyutils-libs@1.6.3-1.amzn2023?arch=X86_64&epoch=0&upstream=keyutils-libs-1.6.3-1.amzn2023.src.rpm",
+      "version": "1.6.3",
+      "bom-ref": "c1da90bd21543a3e77939992aa588892"
+    },
+    {
+      "type": "application",
+      "name": "python3-jinja2",
+      "purl": "pkg:rpm/python3-jinja2@2.11.3-1.amzn2023.0.2?arch=NOARCH&epoch=0&upstream=python3-jinja2-2.11.3-1.amzn2023.0.2.src.rpm",
+      "version": "2.11.3",
+      "bom-ref": "716972e421579f94aa30029fcc76d45f"
+    },
+    {
+      "type": "application",
+      "name": "gpg-pubkey",
+      "purl": "pkg:rpm/gpg-pubkey@d832c631-63977702?arch=ALL&epoch=0&upstream=gpg-pubkey-d832c631-63977702.src.rpm",
+      "version": "d832c631",
+      "bom-ref": "fe553e8e38d418bf4af3ccfb0ad5cb5c"
+    },
+    {
+      "type": "application",
+      "name": "xxhash-libs",
+      "purl": "pkg:rpm/xxhash-libs@0.8.0-3.amzn2023.0.2?arch=X86_64&epoch=0&upstream=xxhash-libs-0.8.0-3.amzn2023.0.2.src.rpm",
+      "version": "0.8.0",
+      "bom-ref": "f88aafc2cf292340f5f0e4e7b37254e7"
+    },
+    {
+      "type": "application",
+      "name": "update-motd",
+      "purl": "pkg:rpm/update-motd@2.1-1.amzn2023.0.1?arch=NOARCH&epoch=0&upstream=update-motd-2.1-1.amzn2023.0.1.src.rpm",
+      "version": "2.1",
+      "bom-ref": "e60561b1d133661cca9c611f38314916"
+    },
+    {
+      "type": "application",
+      "name": "python3-requests",
+      "purl": "pkg:rpm/python3-requests@2.25.1-1.amzn2023.0.3?arch=NOARCH&epoch=0&upstream=python3-requests-2.25.1-1.amzn2023.0.3.src.rpm",
+      "version": "2.25.1",
+      "bom-ref": "6961dd6e4dc0685f16be093d25580731"
+    },
+    {
+      "type": "application",
+      "name": "python3-dbus",
+      "purl": "pkg:rpm/python3-dbus@1.2.18-1.amzn2023.0.2?arch=X86_64&epoch=0&upstream=python3-dbus-1.2.18-1.amzn2023.0.2.src.rpm",
+      "version": "1.2.18",
+      "bom-ref": "fb90148e40be9aebba4f6d6d26ebada0"
+    },
+    {
+      "type": "application",
+      "name": "python3-libcomps",
+      "purl": "pkg:rpm/python3-libcomps@0.1.18-1.amzn2023.0.2?arch=X86_64&epoch=0&upstream=python3-libcomps-0.1.18-1.amzn2023.0.2.src.rpm",
+      "version": "0.1.18",
+      "bom-ref": "b124d2679c2bc8283d81d3f068ccf62a"
+    },
+    {
+      "type": "application",
+      "name": "glibc-all-langpacks",
+      "purl": "pkg:rpm/glibc-all-langpacks@2.34-52.amzn2023.0.5?arch=X86_64&epoch=0&upstream=glibc-all-langpacks-2.34-52.amzn2023.0.5.src.rpm",
+      "version": "2.34",
+      "bom-ref": "b2649f6fe1eb9297c14aa897b21cf372"
+    },
+    {
+      "type": "application",
+      "name": "nss-sysinit",
+      "purl": "pkg:rpm/nss-sysinit@3.90.0-3.amzn2023.0.3?arch=X86_64&epoch=0&upstream=nss-sysinit-3.90.0-3.amzn2023.0.3.src.rpm",
+      "version": "3.90.0",
+      "bom-ref": "322679560855bc01c741c5aad3dff118"
+    },
+    {
+      "type": "application",
+      "name": "libini_config",
+      "purl": "pkg:rpm/libini_config@1.3.1-47.amzn2023.0.2?arch=X86_64&epoch=0&upstream=libini_config-1.3.1-47.amzn2023.0.2.src.rpm",
+      "version": "1.3.1",
+      "bom-ref": "9f6e770448a1f0d34b9d15df21387aec"
+    },
+    {
+      "type": "application",
+      "name": "openldap",
+      "purl": "pkg:rpm/openldap@2.4.57-6.amzn2023.0.6?arch=X86_64&epoch=0&upstream=openldap-2.4.57-6.amzn2023.0.6.src.rpm",
+      "version": "2.4.57",
+      "bom-ref": "57bbf1aa18d0e24c858cfb5074294092"
+    },
+    {
+      "type": "application",
+      "name": "cyrus-sasl-plain",
+      "purl": "pkg:rpm/cyrus-sasl-plain@2.1.27-18.amzn2023.0.3?arch=X86_64&epoch=0&upstream=cyrus-sasl-plain-2.1.27-18.amzn2023.0.3.src.rpm",
+      "version": "2.1.27",
+      "bom-ref": "bc5563cf29a102994c930d1ab7b9f57b"
+    },
+    {
+      "type": "application",
+      "name": "dnf-plugins-core",
+      "purl": "pkg:rpm/dnf-plugins-core@4.1.0-1.amzn2023.0.3?arch=NOARCH&epoch=0&upstream=dnf-plugins-core-4.1.0-1.amzn2023.0.3.src.rpm",
+      "version": "4.1.0",
+      "bom-ref": "dd7c1e0a9ac2c48710d9d0e364497a78"
+    },
+    {
+      "type": "application",
+      "name": "kpatch-runtime",
+      "purl": "pkg:rpm/kpatch-runtime@0.9.7-12.amzn2023.0.3?arch=NOARCH&epoch=0&upstream=kpatch-runtime-0.9.7-12.amzn2023.0.3.src.rpm",
+      "version": "0.9.7",
+      "bom-ref": "d3f5656b914d7c27716f8842d9228bfc"
+    },
+    {
+      "type": "application",
+      "name": "amazon-ssm-agent",
+      "purl": "pkg:rpm/amazon-ssm-agent@3.2.2016.0-1?arch=X86_64&epoch=0&upstream=amazon-ssm-agent-3.2.2016.0-1.src.rpm",
+      "version": "3.2.2016.0",
+      "bom-ref": "6c37c414444d5acb1ca79e7095878c15"
+    },
+    {
+      "type": "application",
+      "name": "efi-srpm-macros",
+      "purl": "pkg:rpm/efi-srpm-macros@5-4.amzn2023.0.5?arch=NOARCH&epoch=0&upstream=efi-srpm-macros-5-4.amzn2023.0.5.src.rpm",
+      "version": "5",
+      "bom-ref": "2c011725aac58d6498a9ec4122bcaff4"
+    },
+    {
+      "type": "application",
+      "name": "perl-Fcntl",
+      "purl": "pkg:rpm/perl-Fcntl@1.13-477.amzn2023.0.5?arch=X86_64&epoch=0&upstream=perl-Fcntl-1.13-477.amzn2023.0.5.src.rpm",
+      "version": "1.13",
+      "bom-ref": "a5b48d3f9ec75c95f03b6d9ff19e8778"
+    },
+    {
+      "type": "application",
+      "name": "openssl-pkcs11",
+      "purl": "pkg:rpm/openssl-pkcs11@0.4.12-3.amzn2023.0.1?arch=X86_64&epoch=0&upstream=openssl-pkcs11-0.4.12-3.amzn2023.0.1.src.rpm",
+      "version": "0.4.12",
+      "bom-ref": "d9730f8bdddd6b0b4fecbac5e5ae5bb9"
+    },
+    {
+      "type": "application",
+      "name": "tar",
+      "purl": "pkg:rpm/tar@1.34-1.amzn2023.0.3?arch=X86_64&epoch=2&upstream=tar-1.34-1.amzn2023.0.3.src.rpm",
+      "version": "1.34",
+      "bom-ref": "e47bcd47bc403b2b64be714305d33177"
+    },
+    {
+      "type": "application",
+      "name": "package-notes-srpm-macros",
+      "purl": "pkg:rpm/package-notes-srpm-macros@0.4-18.amzn2023.0.5?arch=NOARCH&epoch=0&upstream=package-notes-srpm-macros-0.4-18.amzn2023.0.5.src.rpm",
+      "version": "0.4",
+      "bom-ref": "0049e60431034d38799b1a6c5d36c3bf"
+    },
+    {
+      "type": "application",
+      "name": "userspace-rcu",
+      "purl": "pkg:rpm/userspace-rcu@0.12.1-3.amzn2023.0.4?arch=X86_64&epoch=0&upstream=userspace-rcu-0.12.1-3.amzn2023.0.4.src.rpm",
+      "version": "0.12.1",
+      "bom-ref": "a9f8812053a4ef557962263f287fe8eb"
+    },
+    {
+      "type": "application",
+      "name": "fstrm",
+      "purl": "pkg:rpm/fstrm@0.6.1-2.amzn2023.0.2?arch=X86_64&epoch=0&upstream=fstrm-0.6.1-2.amzn2023.0.2.src.rpm",
+      "version": "0.6.1",
+      "bom-ref": "f4f07eeb59021f76a451f7a2918af366"
+    },
+    {
+      "type": "application",
+      "name": "zlib",
+      "purl": "pkg:rpm/zlib@1.2.11-33.amzn2023.0.4?arch=X86_64&epoch=0&upstream=zlib-1.2.11-33.amzn2023.0.4.src.rpm",
+      "version": "1.2.11",
+      "bom-ref": "7931793e5c9b8a74bd81b3356fc03db8"
+    },
+    {
+      "type": "application",
+      "name": "pcre2-syntax",
+      "purl": "pkg:rpm/pcre2-syntax@10.40-1.amzn2023.0.3?arch=NOARCH&epoch=0&upstream=pcre2-syntax-10.40-1.amzn2023.0.3.src.rpm",
+      "version": "10.40",
+      "bom-ref": "b731e4bec23288528ffa83eb62aeedb9"
+    },
+    {
+      "type": "application",
+      "name": "file-libs",
+      "purl": "pkg:rpm/file-libs@5.39-7.amzn2023.0.4?arch=X86_64&epoch=0&upstream=file-libs-5.39-7.amzn2023.0.4.src.rpm",
+      "version": "5.39",
+      "bom-ref": "b028fc070f196eb10ae51c20128eb9b1"
+    },
+    {
+      "type": "application",
+      "name": "systemtap-runtime",
+      "purl": "pkg:rpm/systemtap-runtime@4.8-3.amzn2023.0.5?arch=X86_64&epoch=0&upstream=systemtap-runtime-4.8-3.amzn2023.0.5.src.rpm",
+      "version": "4.8",
+      "bom-ref": "27e1b96b9682e2693bb1dab9b3f57b78"
+    },
+    {
+      "type": "application",
+      "name": "efivar",
+      "purl": "pkg:rpm/efivar@38-2.amzn2023.0.1?arch=X86_64&epoch=0&upstream=efivar-38-2.amzn2023.0.1.src.rpm",
+      "version": "38",
+      "bom-ref": "1ff4c6870e087f73f6accd3a7fb350e9"
+    },
+    {
+      "type": "application",
+      "name": "elfutils-default-yama-scope",
+      "purl": "pkg:rpm/elfutils-default-yama-scope@0.188-3.amzn2023.0.2?arch=NOARCH&epoch=0&upstream=elfutils-default-yama-scope-0.188-3.amzn2023.0.2.src.rpm",
+      "version": "0.188",
+      "bom-ref": "e8cc237e9e5b086d8849e577780717e9"
+    },
+    {
+      "type": "application",
+      "name": "python3-babel",
+      "purl": "pkg:rpm/python3-babel@2.9.1-1.amzn2023.0.2?arch=NOARCH&epoch=0&upstream=python3-babel-2.9.1-1.amzn2023.0.2.src.rpm",
+      "version": "2.9.1",
+      "bom-ref": "88d3f8c780ccfd16f140494ad4cf968c"
+    },
+    {
+      "type": "library",
+      "name": "python-dateutil",
+      "purl": "pkg:pypi/python-dateutil@2.8.1",
+      "version": "2.8.1",
+      "properties": [
+        {
+          "name": "amazon:inspector:path",
+          "value": "/usr/lib/python3.9/site-packages/python_dateutil-2.8.1-py3.9.egg-info/PKG-INFO"
+        }
+      ],
+      "bom-ref": "aab2997ccfcdfb55889ccbda2b3c6163"
+    },
+    {
+      "type": "library",
+      "name": "awscli",
+      "purl": "pkg:pypi/awscli@2.9.19",
+      "version": "2.9.19",
+      "properties": [
+        {
+          "name": "amazon:inspector:path",
+          "value": "/usr/lib/python3.9/site-packages/awscli-2.9.19.dist-info/METADATA"
+        }
+      ],
+      "bom-ref": "835dc1c64dee11cc1ffa64ca112d416d"
+    },
+    {
+      "type": "application",
+      "name": "cryptsetup-libs",
+      "purl": "pkg:rpm/cryptsetup-libs@2.6.1-1.amzn2023.0.1?arch=X86_64&epoch=0&upstream=cryptsetup-libs-2.6.1-1.amzn2023.0.1.src.rpm",
+      "version": "2.6.1",
+      "bom-ref": "d985ba6d104dbedd66299708d63236a5"
+    },
+    {
+      "type": "application",
+      "name": "selinux-policy-targeted",
+      "purl": "pkg:rpm/selinux-policy-targeted@36.18-1.amzn2023.0.1?arch=NOARCH&epoch=0&upstream=selinux-policy-targeted-36.18-1.amzn2023.0.1.src.rpm",
+      "version": "36.18",
+      "bom-ref": "5203f1c634ac8faaa1622e998690e7c8"
+    },
+    {
+      "type": "application",
+      "name": "jq",
+      "purl": "pkg:rpm/jq@1.6-10.amzn2023.0.2?arch=X86_64&epoch=0&upstream=jq-1.6-10.amzn2023.0.2.src.rpm",
+      "version": "1.6",
+      "bom-ref": "eed3045910bdb6ef3fade71db39175f6"
+    },
+    {
+      "type": "application",
+      "name": "nfs-utils",
+      "purl": "pkg:rpm/nfs-utils@2.5.4-2.rc3.amzn2023.0.3?arch=X86_64&epoch=1&upstream=nfs-utils-2.5.4-2.rc3.amzn2023.0.3.src.rpm",
+      "version": "2.5.4",
+      "bom-ref": "9c17300f337c03a16c97b87cd42b0258"
+    },
+    {
+      "type": "application",
+      "name": "python3-hawkey",
+      "purl": "pkg:rpm/python3-hawkey@0.67.0-1.amzn2023.0.5?arch=X86_64&epoch=0&upstream=python3-hawkey-0.67.0-1.amzn2023.0.5.src.rpm",
+      "version": "0.67.0",
+      "bom-ref": "e6d41cb4ea200559bdb2ee5648951245"
+    },
+    {
+      "type": "application",
+      "name": "python3-dnf-plugins-core",
+      "purl": "pkg:rpm/python3-dnf-plugins-core@4.1.0-1.amzn2023.0.3?arch=NOARCH&epoch=0&upstream=python3-dnf-plugins-core-4.1.0-1.amzn2023.0.3.src.rpm",
+      "version": "4.1.0",
+      "bom-ref": "e6c6fc3c3b62e16c216866208c4ed8b6"
+    },
+    {
+      "type": "application",
+      "name": "sssd-kcm",
+      "purl": "pkg:rpm/sssd-kcm@2.5.0-1.amzn2023.0.3?arch=X86_64&epoch=0&upstream=sssd-kcm-2.5.0-1.amzn2023.0.3.src.rpm",
+      "version": "2.5.0",
+      "bom-ref": "c1de2e884a6310a16d04cf593897d9a5"
+    },
+    {
+      "type": "application",
+      "name": "vim-filesystem",
+      "purl": "pkg:rpm/vim-filesystem@9.0.1592-1.amzn2023.0.1?arch=NOARCH&epoch=2&upstream=vim-filesystem-9.0.1592-1.amzn2023.0.1.src.rpm",
+      "version": "9.0.1592",
+      "bom-ref": "0521b32f8be6269e937ddefbf3117211"
+    },
+    {
+      "type": "application",
+      "name": "inih",
+      "purl": "pkg:rpm/inih@49-3.amzn2023.0.2?arch=X86_64&epoch=0&upstream=inih-49-3.amzn2023.0.2.src.rpm",
+      "version": "49",
+      "bom-ref": "c4e1ae7a83022c64c86094be696d61f7"
+    },
+    {
+      "type": "application",
+      "name": "dosfstools",
+      "purl": "pkg:rpm/dosfstools@4.2-1.amzn2023.0.2?arch=X86_64&epoch=0&upstream=dosfstools-4.2-1.amzn2023.0.2.src.rpm",
+      "version": "4.2",
+      "bom-ref": "6f3385a91dee046c05aa14a54ed78d70"
+    },
+    {
+      "type": "application",
+      "name": "libmetalink",
+      "purl": "pkg:rpm/libmetalink@0.1.3-14.amzn2023.0.2?arch=X86_64&epoch=0&upstream=libmetalink-0.1.3-14.amzn2023.0.2.src.rpm",
+      "version": "0.1.3",
+      "bom-ref": "faec58ae9426590180e2676fbd5a33a8"
+    },
+    {
+      "type": "application",
+      "name": "e2fsprogs",
+      "purl": "pkg:rpm/e2fsprogs@1.46.5-2.amzn2023.0.2?arch=X86_64&epoch=0&upstream=e2fsprogs-1.46.5-2.amzn2023.0.2.src.rpm",
+      "version": "1.46.5",
+      "bom-ref": "f74f65228d373036359d1fae64099b2c"
+    },
+    {
+      "type": "application",
+      "name": "microcode_ctl",
+      "purl": "pkg:rpm/microcode_ctl@2.1-53.amzn2023.0.2?arch=X86_64&epoch=2&upstream=microcode_ctl-2.1-53.amzn2023.0.2.src.rpm",
+      "version": "2.1",
+      "bom-ref": "f4f67faded74e4cecc6e0b9340043234"
+    },
+    {
+      "type": "application",
+      "name": "glibc",
+      "purl": "pkg:rpm/glibc@2.34-52.amzn2023.0.5?arch=X86_64&epoch=0&upstream=glibc-2.34-52.amzn2023.0.5.src.rpm",
+      "version": "2.34",
+      "bom-ref": "0ab252afd63197f58d419ae053078871"
+    },
+    {
+      "type": "application",
+      "name": "python3-pycparser",
+      "purl": "pkg:rpm/python3-pycparser@2.20-3.amzn2023.0.2?arch=NOARCH&epoch=0&upstream=python3-pycparser-2.20-3.amzn2023.0.2.src.rpm",
+      "version": "2.20",
+      "bom-ref": "37d1640e3f68088474e97c68486d7db1"
+    },
+    {
+      "type": "application",
+      "name": "tzdata",
+      "purl": "pkg:rpm/tzdata@2023c-1.amzn2023.0.1?arch=NOARCH&epoch=0&upstream=tzdata-2023c-1.amzn2023.0.1.src.rpm",
+      "version": "2023c",
+      "bom-ref": "ea69cf72653e01983225ca51dde47465"
+    },
+    {
+      "type": "application",
+      "name": "perl-Term-Cap",
+      "purl": "pkg:rpm/perl-Term-Cap@1.17-458.amzn2023.0.2?arch=NOARCH&epoch=0&upstream=perl-Term-Cap-1.17-458.amzn2023.0.2.src.rpm",
+      "version": "1.17",
+      "bom-ref": "dfdf1d9d05515d92c032cf905497af45"
+    },
+    {
+      "type": "application",
+      "name": "xfsdump",
+      "purl": "pkg:rpm/xfsdump@3.1.11-2.amzn2023.0.2?arch=X86_64&epoch=0&upstream=xfsdump-3.1.11-2.amzn2023.0.2.src.rpm",
+      "version": "3.1.11",
+      "bom-ref": "40478dfb0f8942d784cb71c4398be13c"
+    },
+    {
+      "type": "application",
+      "name": "ghc-srpm-macros",
+      "purl": "pkg:rpm/ghc-srpm-macros@1.5.0-4.amzn2023.0.2?arch=NOARCH&epoch=0&upstream=ghc-srpm-macros-1.5.0-4.amzn2023.0.2.src.rpm",
+      "version": "1.5.0",
+      "bom-ref": "905e4a5cf12f11905568546925ca82b2"
+    },
+    {
+      "type": "application",
+      "name": "coreutils-common",
+      "purl": "pkg:rpm/coreutils-common@8.32-30.amzn2023.0.3?arch=X86_64&epoch=0&upstream=coreutils-common-8.32-30.amzn2023.0.3.src.rpm",
+      "version": "8.32",
+      "bom-ref": "41be95d55840f456b4084715043586af"
+    },
+    {
+      "type": "application",
+      "name": "openblas-srpm-macros",
+      "purl": "pkg:rpm/openblas-srpm-macros@2-9.amzn2023.0.2?arch=NOARCH&epoch=0&upstream=openblas-srpm-macros-2-9.amzn2023.0.2.src.rpm",
+      "version": "2",
+      "bom-ref": "b20448328612e4535f27a8da6d6f6c6d"
+    },
+    {
+      "type": "application",
+      "name": "expat",
+      "purl": "pkg:rpm/expat@2.5.0-1.amzn2023.0.2?arch=X86_64&epoch=0&upstream=expat-2.5.0-1.amzn2023.0.2.src.rpm",
+      "version": "2.5.0",
+      "bom-ref": "9826b86016c8319d8f871c7fdd3cd33f"
+    },
+    {
+      "type": "application",
+      "name": "rpcbind",
+      "purl": "pkg:rpm/rpcbind@1.2.6-0.amzn2023.0.2?arch=X86_64&epoch=0&upstream=rpcbind-1.2.6-0.amzn2023.0.2.src.rpm",
+      "version": "1.2.6",
+      "bom-ref": "605943d314ed8890e0c8309905b50248"
+    },
+    {
+      "type": "application",
+      "name": "pciutils",
+      "purl": "pkg:rpm/pciutils@3.7.0-3.amzn2023.0.2?arch=X86_64&epoch=0&upstream=pciutils-3.7.0-3.amzn2023.0.2.src.rpm",
+      "version": "3.7.0",
+      "bom-ref": "010bd1582e2c9a07410ff3dbd9c09416"
+    },
+    {
+      "type": "application",
+      "name": "dbus-common",
+      "purl": "pkg:rpm/dbus-common@1.12.28-1.amzn2023.0.1?arch=NOARCH&epoch=1&upstream=dbus-common-1.12.28-1.amzn2023.0.1.src.rpm",
+      "version": "1.12.28",
+      "bom-ref": "40db62ec2adc9fe94388811d51aa8028"
+    },
+    {
+      "type": "application",
+      "name": "info",
+      "purl": "pkg:rpm/info@6.7-10.amzn2023.0.2?arch=X86_64&epoch=0&upstream=info-6.7-10.amzn2023.0.2.src.rpm",
+      "version": "6.7",
+      "bom-ref": "8f6791f891fe75061a066a383b71b6da"
+    },
+    {
+      "type": "application",
+      "name": "ncurses-libs",
+      "purl": "pkg:rpm/ncurses-libs@6.2-4.20200222.amzn2023.0.4?arch=X86_64&epoch=0&upstream=ncurses-libs-6.2-4.20200222.amzn2023.0.4.src.rpm",
+      "version": "6.2",
+      "bom-ref": "ae374aef947795f1125a8592f849ab67"
+    },
+    {
+      "type": "application",
+      "name": "perl-Pod-Usage",
+      "purl": "pkg:rpm/perl-Pod-Usage@2.01-2.amzn2023.0.2?arch=NOARCH&epoch=4&upstream=perl-Pod-Usage-2.01-2.amzn2023.0.2.src.rpm",
+      "version": "2.01",
+      "bom-ref": "b95850e1d77c9c368f25a44d7754c414"
+    },
+    {
+      "type": "application",
+      "name": "libgcc",
+      "purl": "pkg:rpm/libgcc@11.4.1-2.amzn2023.0.2?arch=X86_64&epoch=0&upstream=libgcc-11.4.1-2.amzn2023.0.2.src.rpm",
+      "version": "11.4.1",
+      "bom-ref": "22c1c36482c4a38a2990f6056037ecf1"
+    },
+    {
+      "type": "application",
+      "name": "man-db",
+      "purl": "pkg:rpm/man-db@2.9.3-3.amzn2023.0.3?arch=X86_64&epoch=0&upstream=man-db-2.9.3-3.amzn2023.0.3.src.rpm",
+      "version": "2.9.3",
+      "bom-ref": "44aa5c31e48c7d2672a039b23f7469d1"
+    },
+    {
+      "type": "application",
+      "name": "time",
+      "purl": "pkg:rpm/time@1.9-16.amzn2023.0.2?arch=X86_64&epoch=0&upstream=time-1.9-16.amzn2023.0.2.src.rpm",
+      "version": "1.9",
+      "bom-ref": "2eb945329b8ca11fbeacb38b669d3257"
+    },
+    {
+      "type": "application",
+      "name": "e2fsprogs-libs",
+      "purl": "pkg:rpm/e2fsprogs-libs@1.46.5-2.amzn2023.0.2?arch=X86_64&epoch=0&upstream=e2fsprogs-libs-1.46.5-2.amzn2023.0.2.src.rpm",
+      "version": "1.46.5",
+      "bom-ref": "b97eb43c1239c98f108f3a839c4831d4"
+    },
+    {
+      "type": "application",
+      "name": "libarchive",
+      "purl": "pkg:rpm/libarchive@3.5.3-2.amzn2023.0.3?arch=X86_64&epoch=0&upstream=libarchive-3.5.3-2.amzn2023.0.3.src.rpm",
+      "version": "3.5.3",
+      "bom-ref": "784af0ce96f035a175af585ba9eb1502"
+    },
+    {
+      "type": "application",
+      "name": "python3-dateutil",
+      "purl": "pkg:rpm/python3-dateutil@2.8.1-3.amzn2023.0.2?arch=NOARCH&epoch=1&upstream=python3-dateutil-2.8.1-3.amzn2023.0.2.src.rpm",
+      "version": "2.8.1",
+      "bom-ref": "656517bdc99275bb6f14a17805877c2e"
+    },
+    {
+      "type": "application",
+      "name": "psmisc",
+      "purl": "pkg:rpm/psmisc@23.4-1.amzn2023.0.2?arch=X86_64&epoch=0&upstream=psmisc-23.4-1.amzn2023.0.2.src.rpm",
+      "version": "23.4",
+      "bom-ref": "7e8208b54e97a05cfb55edc379e6dbbb"
+    },
+    {
+      "type": "application",
+      "name": "perl-overloading",
+      "purl": "pkg:rpm/perl-overloading@0.02-477.amzn2023.0.5?arch=NOARCH&epoch=0&upstream=perl-overloading-0.02-477.amzn2023.0.5.src.rpm",
+      "version": "0.02",
+      "bom-ref": "bf2bc858d970b3e220cc31ac7b4d5db8"
+    },
+    {
+      "type": "application",
+      "name": "gettext-libs",
+      "purl": "pkg:rpm/gettext-libs@0.21-4.amzn2023.0.2?arch=X86_64&epoch=0&upstream=gettext-libs-0.21-4.amzn2023.0.2.src.rpm",
+      "version": "0.21",
+      "bom-ref": "6bfafcc4e5682a93250bed1498119e81"
+    },
+    {
+      "type": "application",
+      "name": "rust-srpm-macros",
+      "purl": "pkg:rpm/rust-srpm-macros@21-42.amzn2023.0.2?arch=NOARCH&epoch=0&upstream=rust-srpm-macros-21-42.amzn2023.0.2.src.rpm",
+      "version": "21",
+      "bom-ref": "38094a68a0acd2b6d59331eed57b0030"
+    },
+    {
+      "type": "application",
+      "name": "python3-setuptools",
+      "purl": "pkg:rpm/python3-setuptools@59.6.0-2.amzn2023.0.4?arch=NOARCH&epoch=0&upstream=python3-setuptools-59.6.0-2.amzn2023.0.4.src.rpm",
+      "version": "59.6.0",
+      "bom-ref": "cabb642a9038f39ce731dda02d74d7b2"
+    },
+    {
+      "type": "application",
+      "name": "libnl3",
+      "purl": "pkg:rpm/libnl3@3.5.0-6.amzn2023.0.2?arch=X86_64&epoch=0&upstream=libnl3-3.5.0-6.amzn2023.0.2.src.rpm",
+      "version": "3.5.0",
+      "bom-ref": "3c6827997e75a1fceb985b4a80a57278"
+    },
+    {
+      "type": "application",
+      "name": "binutils",
+      "purl": "pkg:rpm/binutils@2.39-6.amzn2023.0.9?arch=X86_64&epoch=0&upstream=binutils-2.39-6.amzn2023.0.9.src.rpm",
+      "version": "2.39",
+      "bom-ref": "3278c30b76da51140dd6fcca0e143693"
+    },
+    {
+      "type": "application",
+      "name": "libuv",
+      "purl": "pkg:rpm/libuv@1.44.1-156.amzn2023.0.2?arch=X86_64&epoch=1&upstream=libuv-1.44.1-156.amzn2023.0.2.src.rpm",
+      "version": "1.44.1",
+      "bom-ref": "d9b4414146b2fd132c3ae64878fc6484"
+    },
+    {
+      "type": "application",
+      "name": "perl-Text-ParseWords",
+      "purl": "pkg:rpm/perl-Text-ParseWords@3.30-458.amzn2023.0.2?arch=NOARCH&epoch=0&upstream=perl-Text-ParseWords-3.30-458.amzn2023.0.2.src.rpm",
+      "version": "3.30",
+      "bom-ref": "7217b0afd96462cc07d3c0ed3eb498f4"
+    },
+    {
+      "type": "application",
+      "name": "python3-ruamel-yaml-clib",
+      "purl": "pkg:rpm/python3-ruamel-yaml-clib@0.1.2-6.amzn2023.0.2?arch=X86_64&epoch=0&upstream=python3-ruamel-yaml-clib-0.1.2-6.amzn2023.0.2.src.rpm",
+      "version": "0.1.2",
+      "bom-ref": "ee60ac7217b5073004dde7e04a95f6a1"
+    },
+    {
+      "type": "application",
+      "name": "perl-Time-Local",
+      "purl": "pkg:rpm/perl-Time-Local@1.300-5.amzn2023.0.2?arch=NOARCH&epoch=2&upstream=perl-Time-Local-1.300-5.amzn2023.0.2.src.rpm",
+      "version": "1.300",
+      "bom-ref": "a2de9a8008e05e904683f8ca9207f7d7"
+    },
+    {
+      "type": "application",
+      "name": "go-srpm-macros",
+      "purl": "pkg:rpm/go-srpm-macros@3.2.0-37.amzn2023?arch=NOARCH&epoch=0&upstream=go-srpm-macros-3.2.0-37.amzn2023.src.rpm",
+      "version": "3.2.0",
+      "bom-ref": "8a0e86afc36f7b2bddeda693c30457a9"
+    },
+    {
+      "type": "application",
+      "name": "oniguruma",
+      "purl": "pkg:rpm/oniguruma@6.9.7.1-1.amzn2023.0.2?arch=X86_64&epoch=0&upstream=oniguruma-6.9.7.1-1.amzn2023.0.2.src.rpm",
+      "version": "6.9.7.1",
+      "bom-ref": "a12d018d2bafef935333d42948f108d5"
+    },
+    {
+      "type": "application",
+      "name": "aws-cfn-bootstrap",
+      "purl": "pkg:rpm/aws-cfn-bootstrap@2.0-23.amzn2023?arch=NOARCH&epoch=0&upstream=aws-cfn-bootstrap-2.0-23.amzn2023.src.rpm",
+      "version": "2.0",
+      "bom-ref": "e0c1c0afb449bfd676016d3d858f8cf9"
+    },
+    {
+      "type": "application",
+      "name": "perl-constant",
+      "purl": "pkg:rpm/perl-constant@1.33-459.amzn2023.0.2?arch=NOARCH&epoch=0&upstream=perl-constant-1.33-459.amzn2023.0.2.src.rpm",
+      "version": "1.33",
+      "bom-ref": "cafbca1162bc97db2228646ecf1dde93"
+    },
+    {
+      "type": "application",
+      "name": "xz",
+      "purl": "pkg:rpm/xz@5.2.5-9.amzn2023.0.2?arch=X86_64&epoch=0&upstream=xz-5.2.5-9.amzn2023.0.2.src.rpm",
+      "version": "5.2.5",
+      "bom-ref": "8ed01faf7bed9ba78fd8aa3ec43c8a7c"
+    },
+    {
+      "type": "application",
+      "name": "python3-rpm",
+      "purl": "pkg:rpm/python3-rpm@4.16.1.3-12.amzn2023.0.6?arch=X86_64&epoch=0&upstream=python3-rpm-4.16.1.3-12.amzn2023.0.6.src.rpm",
+      "version": "4.16.1.3",
+      "bom-ref": "5599f22c43090540a3e7e97da19ab753"
+    },
+    {
+      "type": "application",
+      "name": "python3-colorama",
+      "purl": "pkg:rpm/python3-colorama@0.4.4-2.amzn2023.0.2?arch=NOARCH&epoch=0&upstream=python3-colorama-0.4.4-2.amzn2023.0.2.src.rpm",
+      "version": "0.4.4",
+      "bom-ref": "2552ac67a318a31367d0803599bdf2fa"
+    },
+    {
+      "type": "application",
+      "name": "policycoreutils",
+      "purl": "pkg:rpm/policycoreutils@3.4-6.amzn2023.0.2?arch=X86_64&epoch=0&upstream=policycoreutils-3.4-6.amzn2023.0.2.src.rpm",
+      "version": "3.4",
+      "bom-ref": "c04b150bb579a82a781eb2d70ffa85de"
+    },
+    {
+      "type": "application",
+      "name": "libpkgconf",
+      "purl": "pkg:rpm/libpkgconf@1.8.0-4.amzn2023.0.2?arch=X86_64&epoch=0&upstream=libpkgconf-1.8.0-4.amzn2023.0.2.src.rpm",
+      "version": "1.8.0",
+      "bom-ref": "a0a3a96e95d225709cb7a465c4f7e6f4"
+    },
+    {
+      "type": "library",
+      "name": "release-notification",
+      "purl": "pkg:pypi/release-notification@1.2",
+      "version": "1.2",
+      "properties": [
+        {
+          "name": "amazon:inspector:path",
+          "value": "/usr/lib/python3.9/site-packages/release_notification-1.2-py3.9.egg-info/PKG-INFO"
+        }
+      ],
+      "bom-ref": "e6e0977a9526e6256e77bee3202639e3"
+    },
+    {
+      "type": "application",
+      "name": "grub2-tools-minimal",
+      "purl": "pkg:rpm/grub2-tools-minimal@2.06-61.amzn2023.0.7?arch=X86_64&epoch=1&upstream=grub2-tools-minimal-2.06-61.amzn2023.0.7.src.rpm",
+      "version": "2.06",
+      "bom-ref": "cfed3eaea9243e9b3e85539f1be038c2"
+    },
+    {
+      "type": "application",
+      "name": "hunspell-en-US",
+      "purl": "pkg:rpm/hunspell-en-US@0.20140811.1-18.amzn2023.0.3?arch=NOARCH&epoch=0&upstream=hunspell-en-US-0.20140811.1-18.amzn2023.0.3.src.rpm",
+      "version": "0.20140811.1",
+      "bom-ref": "fbfe016285c6bffd9a3aa9b4848a6434"
+    },
+    {
+      "type": "application",
+      "name": "libacl",
+      "purl": "pkg:rpm/libacl@2.3.1-2.amzn2023.0.2?arch=X86_64&epoch=0&upstream=libacl-2.3.1-2.amzn2023.0.2.src.rpm",
+      "version": "2.3.1",
+      "bom-ref": "fcc3788821cdf66203cd0679f46986ba"
+    },
+    {
+      "type": "application",
+      "name": "fuse-libs",
+      "purl": "pkg:rpm/fuse-libs@2.9.9-13.amzn2023.0.2?arch=X86_64&epoch=0&upstream=fuse-libs-2.9.9-13.amzn2023.0.2.src.rpm",
+      "version": "2.9.9",
+      "bom-ref": "ba366ce8776b9ee7869c4e544c01c232"
+    },
+    {
+      "type": "application",
+      "name": "pkgconf",
+      "purl": "pkg:rpm/pkgconf@1.8.0-4.amzn2023.0.2?arch=X86_64&epoch=0&upstream=pkgconf-1.8.0-4.amzn2023.0.2.src.rpm",
+      "version": "1.8.0",
+      "bom-ref": "6604043167b3a9843ac427e7fc7a98b4"
+    },
+    {
+      "type": "library",
+      "name": "ruamel.yaml.clib",
+      "purl": "pkg:pypi/ruamel.yaml.clib@0.1.2",
+      "version": "0.1.2",
+      "properties": [
+        {
+          "name": "amazon:inspector:path",
+          "value": "/usr/lib64/python3.9/site-packages/ruamel.yaml.clib-0.1.2-py3.9.egg-info/PKG-INFO"
+        }
+      ],
+      "bom-ref": "c5201a7792e3bd26a26cd6da323a5fc4"
+    },
+    {
+      "type": "application",
+      "name": "xfsprogs",
+      "purl": "pkg:rpm/xfsprogs@5.18.0-1.amzn2023.0.3?arch=X86_64&epoch=0&upstream=xfsprogs-5.18.0-1.amzn2023.0.3.src.rpm",
+      "version": "5.18.0",
+      "bom-ref": "a7c295181522c3cae01812569f1850d9"
+    },
+    {
+      "type": "application",
+      "name": "rpm-sign-libs",
+      "purl": "pkg:rpm/rpm-sign-libs@4.16.1.3-12.amzn2023.0.6?arch=X86_64&epoch=0&upstream=rpm-sign-libs-4.16.1.3-12.amzn2023.0.6.src.rpm",
+      "version": "4.16.1.3",
+      "bom-ref": "04fc48a92ce008ffc7deef279432bc64"
+    },
+    {
+      "type": "application",
+      "name": "perl-srpm-macros",
+      "purl": "pkg:rpm/perl-srpm-macros@1-39.amzn2023.0.2?arch=NOARCH&epoch=0&upstream=perl-srpm-macros-1-39.amzn2023.0.2.src.rpm",
+      "version": "1",
+      "bom-ref": "83b8a30908ca2219712ff1faafdac4fc"
+    },
+    {
+      "type": "application",
+      "name": "python3-ply",
+      "purl": "pkg:rpm/python3-ply@3.11-11.amzn2023.0.2?arch=NOARCH&epoch=0&upstream=python3-ply-3.11-11.amzn2023.0.2.src.rpm",
+      "version": "3.11",
+      "bom-ref": "5d1e4d71120db6d2bfe91e4bdce77ae9"
+    },
+    {
+      "type": "application",
+      "name": "zip",
+      "purl": "pkg:rpm/zip@3.0-28.amzn2023.0.2?arch=X86_64&epoch=0&upstream=zip-3.0-28.amzn2023.0.2.src.rpm",
+      "version": "3.0",
+      "bom-ref": "4a5c462acf1ee659aad1c4a4515cfe47"
+    },
+    {
+      "type": "application",
+      "name": "perl-File-stat",
+      "purl": "pkg:rpm/perl-File-stat@1.09-477.amzn2023.0.5?arch=NOARCH&epoch=0&upstream=perl-File-stat-1.09-477.amzn2023.0.5.src.rpm",
+      "version": "1.09",
+      "bom-ref": "313a91d204c483c0cbc819c4eb8d86c4"
+    },
+    {
+      "type": "application",
+      "name": "libreport-filesystem",
+      "purl": "pkg:rpm/libreport-filesystem@2.15.2-2.amzn2023.0.2?arch=NOARCH&epoch=0&upstream=libreport-filesystem-2.15.2-2.amzn2023.0.2.src.rpm",
+      "version": "2.15.2",
+      "bom-ref": "d6779cc066728c82db2fb9a042c4bd07"
+    },
+    {
+      "type": "application",
+      "name": "perl-Symbol",
+      "purl": "pkg:rpm/perl-Symbol@1.08-477.amzn2023.0.5?arch=NOARCH&epoch=0&upstream=perl-Symbol-1.08-477.amzn2023.0.5.src.rpm",
+      "version": "1.08",
+      "bom-ref": "77ab66bb6f292e31d6ab0dc56f882737"
+    },
+    {
+      "type": "application",
+      "name": "grep",
+      "purl": "pkg:rpm/grep@3.8-1.amzn2023.0.4?arch=X86_64&epoch=0&upstream=grep-3.8-1.amzn2023.0.4.src.rpm",
+      "version": "3.8",
+      "bom-ref": "0b52f613ce3404f4767072719bc8c3ba"
+    },
+    {
+      "type": "application",
+      "name": "python3-prettytable",
+      "purl": "pkg:rpm/python3-prettytable@0.7.2-25.amzn2023.0.2?arch=NOARCH&epoch=0&upstream=python3-prettytable-0.7.2-25.amzn2023.0.2.src.rpm",
+      "version": "0.7.2",
+      "bom-ref": "648f3a41f8fe400c617be7cc5d0ece71"
+    },
+    {
+      "type": "application",
+      "name": "python3-jsonpatch",
+      "purl": "pkg:rpm/python3-jsonpatch@1.21-14.amzn2023.0.2?arch=NOARCH&epoch=0&upstream=python3-jsonpatch-1.21-14.amzn2023.0.2.src.rpm",
+      "version": "1.21",
+      "bom-ref": "61e6561f9a841bed5b6da91bd2947db5"
+    },
+    {
+      "type": "application",
+      "name": "python3-libdnf",
+      "purl": "pkg:rpm/python3-libdnf@0.67.0-1.amzn2023.0.5?arch=X86_64&epoch=0&upstream=python3-libdnf-0.67.0-1.amzn2023.0.5.src.rpm",
+      "version": "0.67.0",
+      "bom-ref": "81a8f2333549f8ba5da56b770108ee98"
+    },
+    {
+      "type": "application",
+      "name": "nano",
+      "purl": "pkg:rpm/nano@5.8-3.amzn2023.0.3?arch=X86_64&epoch=0&upstream=nano-5.8-3.amzn2023.0.3.src.rpm",
+      "version": "5.8",
+      "bom-ref": "08f38d96c96af375868146b2d28753d0"
+    },
+    {
+      "type": "application",
+      "name": "grub2-efi-x64-ec2",
+      "purl": "pkg:rpm/grub2-efi-x64-ec2@2.06-61.amzn2023.0.7?arch=X86_64&epoch=1&upstream=grub2-efi-x64-ec2-2.06-61.amzn2023.0.7.src.rpm",
+      "version": "2.06",
+      "bom-ref": "36713d9a9750211e48ca02686f3c6096"
+    },
+    {
+      "type": "application",
+      "name": "words",
+      "purl": "pkg:rpm/words@3.0-37.amzn2023.0.2?arch=NOARCH&epoch=0&upstream=words-3.0-37.amzn2023.0.2.src.rpm",
+      "version": "3.0",
+      "bom-ref": "1d13090b10ba46049cb97500121dfe1c"
+    },
+    {
+      "type": "application",
+      "name": "gmp",
+      "purl": "pkg:rpm/gmp@6.2.1-2.amzn2023.0.2?arch=X86_64&epoch=1&upstream=gmp-6.2.1-2.amzn2023.0.2.src.rpm",
+      "version": "6.2.1",
+      "bom-ref": "fa2f22bf78dd046e6a1e88b5ee378230"
+    },
+    {
+      "type": "application",
+      "name": "bc",
+      "purl": "pkg:rpm/bc@1.07.1-14.amzn2023.0.2?arch=X86_64&epoch=0&upstream=bc-1.07.1-14.amzn2023.0.2.src.rpm",
+      "version": "1.07.1",
+      "bom-ref": "a2afc739458b5bd7befcd6be977c9a35"
+    },
+    {
+      "type": "application",
+      "name": "gpgme",
+      "purl": "pkg:rpm/gpgme@1.15.1-6.amzn2023.0.3?arch=X86_64&epoch=0&upstream=gpgme-1.15.1-6.amzn2023.0.3.src.rpm",
+      "version": "1.15.1",
+      "bom-ref": "1ff36e6c3480c989031a8a2a77d87ad2"
+    },
+    {
+      "type": "application",
+      "name": "perl-MIME-Base64",
+      "purl": "pkg:rpm/perl-MIME-Base64@3.16-2.amzn2023.0.2?arch=X86_64&epoch=0&upstream=perl-MIME-Base64-3.16-2.amzn2023.0.2.src.rpm",
+      "version": "3.16",
+      "bom-ref": "6c8b66334e5eda7005e0a83b24948fab"
+    },
+    {
+      "type": "application",
+      "name": "numactl-libs",
+      "purl": "pkg:rpm/numactl-libs@2.0.14-3.amzn2023.0.3?arch=X86_64&epoch=0&upstream=numactl-libs-2.0.14-3.amzn2023.0.3.src.rpm",
+      "version": "2.0.14",
+      "bom-ref": "07e94f2cc245bd121a4dab6b75119747"
+    },
+    {
+      "type": "application",
+      "name": "rpm-plugin-systemd-inhibit",
+      "purl": "pkg:rpm/rpm-plugin-systemd-inhibit@4.16.1.3-12.amzn2023.0.6?arch=X86_64&epoch=0&upstream=rpm-plugin-systemd-inhibit-4.16.1.3-12.amzn2023.0.6.src.rpm",
+      "version": "4.16.1.3",
+      "bom-ref": "2768f1ec7ebdf13a23420e33ca5af6fe"
+    },
+    {
+      "type": "application",
+      "name": "librepo",
+      "purl": "pkg:rpm/librepo@1.14.2-1.amzn2023.0.4?arch=X86_64&epoch=0&upstream=librepo-1.14.2-1.amzn2023.0.4.src.rpm",
+      "version": "1.14.2",
+      "bom-ref": "b93723cf4e66c18ae239e437c5aa72b7"
+    },
+    {
+      "type": "application",
+      "name": "python3-ruamel-yaml",
+      "purl": "pkg:rpm/python3-ruamel-yaml@0.16.6-5.amzn2023.0.2?arch=X86_64&epoch=0&upstream=python3-ruamel-yaml-0.16.6-5.amzn2023.0.2.src.rpm",
+      "version": "0.16.6",
+      "bom-ref": "79229b73c4b14699ddbde765c3f7495e"
+    },
+    {
+      "type": "application",
+      "name": "perl-IPC-Open3",
+      "purl": "pkg:rpm/perl-IPC-Open3@1.21-477.amzn2023.0.5?arch=NOARCH&epoch=0&upstream=perl-IPC-Open3-1.21-477.amzn2023.0.5.src.rpm",
+      "version": "1.21",
+      "bom-ref": "31ecc60b68d3c03c51b1310e6a05048b"
+    },
+    {
+      "type": "application",
+      "name": "libverto-libev",
+      "purl": "pkg:rpm/libverto-libev@0.3.2-1.amzn2023.0.2?arch=X86_64&epoch=0&upstream=libverto-libev-0.3.2-1.amzn2023.0.2.src.rpm",
+      "version": "0.3.2",
+      "bom-ref": "3547fea26f8309a4ac8021d330966687"
+    },
+    {
+      "type": "application",
+      "name": "libpsl",
+      "purl": "pkg:rpm/libpsl@0.21.1-3.amzn2023.0.2?arch=X86_64&epoch=0&upstream=libpsl-0.21.1-3.amzn2023.0.2.src.rpm",
+      "version": "0.21.1",
+      "bom-ref": "d52ed1f48cb9661e55bf60e046fdc56d"
+    },
+    {
+      "type": "application",
+      "name": "bind-libs",
+      "purl": "pkg:rpm/bind-libs@9.16.42-1.amzn2023.0.4?arch=X86_64&epoch=32&upstream=bind-libs-9.16.42-1.amzn2023.0.4.src.rpm",
+      "version": "9.16.42",
+      "bom-ref": "b2c2f43095f278be9eae4ada59eecfbd"
+    },
+    {
+      "type": "application",
+      "name": "libcomps",
+      "purl": "pkg:rpm/libcomps@0.1.18-1.amzn2023.0.2?arch=X86_64&epoch=0&upstream=libcomps-0.1.18-1.amzn2023.0.2.src.rpm",
+      "version": "0.1.18",
+      "bom-ref": "413fd563e8ad649863d945b7bc6cd6f1"
+    },
+    {
+      "type": "application",
+      "name": "dnf",
+      "purl": "pkg:rpm/dnf@4.12.0-2.amzn2023.0.4?arch=NOARCH&epoch=0&upstream=dnf-4.12.0-2.amzn2023.0.4.src.rpm",
+      "version": "4.12.0",
+      "bom-ref": "803512e324b46441cba618eabd1ebf26"
+    },
+    {
+      "type": "application",
+      "name": "perl-Storable",
+      "purl": "pkg:rpm/perl-Storable@3.21-458.amzn2023.0.2?arch=X86_64&epoch=1&upstream=perl-Storable-3.21-458.amzn2023.0.2.src.rpm",
+      "version": "3.21",
+      "bom-ref": "757a6f686d96ef8326fe38283c84cd6c"
+    },
+    {
+      "type": "application",
+      "name": "net-tools",
+      "purl": "pkg:rpm/net-tools@2.0-0.59.20160912git.amzn2023.0.3?arch=X86_64&epoch=0&upstream=net-tools-2.0-0.59.20160912git.amzn2023.0.3.src.rpm",
+      "version": "2.0",
+      "bom-ref": "4f854e9cacd27e913698e64a06c4a43f"
+    },
+    {
+      "type": "application",
+      "name": "iproute",
+      "purl": "pkg:rpm/iproute@5.10.0-2.amzn2023.0.5?arch=X86_64&epoch=0&upstream=iproute-5.10.0-2.amzn2023.0.5.src.rpm",
+      "version": "5.10.0",
+      "bom-ref": "686dff903b61169a94f3d0c8f1a4b8d1"
+    },
+    {
+      "type": "application",
+      "name": "dnf-plugin-release-notification",
+      "purl": "pkg:rpm/dnf-plugin-release-notification@1.2-1.amzn2023.0.2?arch=NOARCH&epoch=0&upstream=dnf-plugin-release-notification-1.2-1.amzn2023.0.2.src.rpm",
+      "version": "1.2",
+      "bom-ref": "dbeff446a7d11e86973aed9273dccf6d"
+    },
+    {
+      "type": "application",
+      "name": "lua-libs",
+      "purl": "pkg:rpm/lua-libs@5.4.4-3.amzn2023.0.2?arch=X86_64&epoch=0&upstream=lua-libs-5.4.4-3.amzn2023.0.2.src.rpm",
+      "version": "5.4.4",
+      "bom-ref": "29da213ed8284524c191ddddc9012f1b"
+    },
+    {
+      "type": "application",
+      "name": "strace",
+      "purl": "pkg:rpm/strace@5.16-2.amzn2023.0.3?arch=X86_64&epoch=0&upstream=strace-5.16-2.amzn2023.0.3.src.rpm",
+      "version": "5.16",
+      "bom-ref": "a80de5458199259dabae9fe69783649e"
+    },
+    {
+      "type": "application",
+      "name": "perl-Exporter",
+      "purl": "pkg:rpm/perl-Exporter@5.74-459.amzn2023.0.2?arch=NOARCH&epoch=0&upstream=perl-Exporter-5.74-459.amzn2023.0.2.src.rpm",
+      "version": "5.74",
+      "bom-ref": "2af23d3eb705df4ad081b44c023885d0"
+    },
+    {
+      "type": "application",
+      "name": "perl-mro",
+      "purl": "pkg:rpm/perl-mro@1.23-477.amzn2023.0.5?arch=X86_64&epoch=0&upstream=perl-mro-1.23-477.amzn2023.0.5.src.rpm",
+      "version": "1.23",
+      "bom-ref": "db9c9a49fc914dbc938fbec068212939"
+    },
+    {
+      "type": "application",
+      "name": "openssl-libs",
+      "purl": "pkg:rpm/openssl-libs@3.0.8-1.amzn2023.0.7?arch=X86_64&epoch=1&upstream=openssl-libs-3.0.8-1.amzn2023.0.7.src.rpm",
+      "version": "3.0.8",
+      "bom-ref": "e9eab55e0b41826b9837d7268114c653"
+    },
+    {
+      "type": "application",
+      "name": "procps-ng",
+      "purl": "pkg:rpm/procps-ng@3.3.17-1.amzn2023.0.2?arch=X86_64&epoch=0&upstream=procps-ng-3.3.17-1.amzn2023.0.2.src.rpm",
+      "version": "3.3.17",
+      "bom-ref": "dbc96aaaba132afc410a110d2ca4133c"
+    },
+    {
+      "type": "application",
+      "name": "ec2-instance-connect",
+      "purl": "pkg:rpm/ec2-instance-connect@1.1-19.amzn2023?arch=NOARCH&epoch=0&upstream=ec2-instance-connect-1.1-19.amzn2023.src.rpm",
+      "version": "1.1",
+      "bom-ref": "44b88be1ca763cba52a2f3eddffc55c2"
+    },
+    {
+      "type": "application",
+      "name": "device-mapper-libs",
+      "purl": "pkg:rpm/device-mapper-libs@1.02.185-1.amzn2023.0.4?arch=X86_64&epoch=0&upstream=device-mapper-libs-1.02.185-1.amzn2023.0.4.src.rpm",
+      "version": "1.02.185",
+      "bom-ref": "979f5ae7a561e0e67475f94272ac095e"
+    },
+    {
+      "type": "application",
+      "name": "slang",
+      "purl": "pkg:rpm/slang@2.3.2-9.amzn2023.0.3?arch=X86_64&epoch=0&upstream=slang-2.3.2-9.amzn2023.0.3.src.rpm",
+      "version": "2.3.2",
+      "bom-ref": "c2cba22b816db3db49782e983e77b480"
+    },
+    {
+      "type": "application",
+      "name": "perl-IO",
+      "purl": "pkg:rpm/perl-IO@1.43-477.amzn2023.0.5?arch=X86_64&epoch=0&upstream=perl-IO-1.43-477.amzn2023.0.5.src.rpm",
+      "version": "1.43",
+      "bom-ref": "0526e09483c033b448b4435775d940f0"
+    },
+    {
+      "type": "application",
+      "name": "rpm-plugin-selinux",
+      "purl": "pkg:rpm/rpm-plugin-selinux@4.16.1.3-12.amzn2023.0.6?arch=X86_64&epoch=0&upstream=rpm-plugin-selinux-4.16.1.3-12.amzn2023.0.6.src.rpm",
+      "version": "4.16.1.3",
+      "bom-ref": "758d3e02254f24cb50ba04d01490bfcc"
+    },
+    {
+      "type": "application",
+      "name": "vim-minimal",
+      "purl": "pkg:rpm/vim-minimal@9.0.1592-1.amzn2023.0.1?arch=X86_64&epoch=2&upstream=vim-minimal-9.0.1592-1.amzn2023.0.1.src.rpm",
+      "version": "9.0.1592",
+      "bom-ref": "dd279e99e2f43138f06a85f67333679d"
+    },
+    {
+      "type": "application",
+      "name": "quota",
+      "purl": "pkg:rpm/quota@4.06-4.amzn2023.0.2?arch=X86_64&epoch=1&upstream=quota-4.06-4.amzn2023.0.2.src.rpm",
+      "version": "4.06",
+      "bom-ref": "1de221b50f6feee60e0ff3138412cae2"
+    },
+    {
+      "type": "application",
+      "name": "systemd-resolved",
+      "purl": "pkg:rpm/systemd-resolved@252.4-1161.amzn2023.0.4?arch=X86_64&epoch=0&upstream=systemd-resolved-252.4-1161.amzn2023.0.4.src.rpm",
+      "version": "252.4",
+      "bom-ref": "a742c525cfb2752e30db139692c4b1ac"
+    },
+    {
+      "type": "application",
+      "name": "python3-policycoreutils",
+      "purl": "pkg:rpm/python3-policycoreutils@3.4-6.amzn2023.0.2?arch=NOARCH&epoch=0&upstream=python3-policycoreutils-3.4-6.amzn2023.0.2.src.rpm",
+      "version": "3.4",
+      "bom-ref": "73fcacf173988321a79291472513c649"
+    },
+    {
+      "type": "application",
+      "name": "tbb",
+      "purl": "pkg:rpm/tbb@2020.3-7.amzn2023.0.2?arch=X86_64&epoch=0&upstream=tbb-2020.3-7.amzn2023.0.2.src.rpm",
+      "version": "2020.3",
+      "bom-ref": "7eb8f8437a7a826577ddd589efcd5bdf"
+    },
+    {
+      "type": "application",
+      "name": "glibc-common",
+      "purl": "pkg:rpm/glibc-common@2.34-52.amzn2023.0.5?arch=X86_64&epoch=0&upstream=glibc-common-2.34-52.amzn2023.0.5.src.rpm",
+      "version": "2.34",
+      "bom-ref": "b105cf80dbb7a23536879e5f6ac61883"
+    },
+    {
+      "type": "application",
+      "name": "setup",
+      "purl": "pkg:rpm/setup@2.13.7-3.amzn2023.0.2?arch=NOARCH&epoch=0&upstream=setup-2.13.7-3.amzn2023.0.2.src.rpm",
+      "version": "2.13.7",
+      "bom-ref": "58cc76258d88f2fc655943c3568e5ed1"
+    },
+    {
+      "type": "application",
+      "name": "parted",
+      "purl": "pkg:rpm/parted@3.4-2.amzn2023.0.2?arch=X86_64&epoch=0&upstream=parted-3.4-2.amzn2023.0.2.src.rpm",
+      "version": "3.4",
+      "bom-ref": "a59982d60725e738cf423d49d4b57ba1"
+    },
+    {
+      "type": "library",
+      "name": "dbus-python",
+      "purl": "pkg:pypi/dbus-python@1.2.18",
+      "version": "1.2.18",
+      "properties": [
+        {
+          "name": "amazon:inspector:path",
+          "value": "/usr/lib64/python3.9/site-packages/dbus_python-1.2.18-py3.9.egg-info/PKG-INFO"
+        }
+      ],
+      "bom-ref": "37772de9a607f1cf243b3c992191f91c"
+    },
+    {
+      "type": "application",
+      "name": "bash-completion",
+      "purl": "pkg:rpm/bash-completion@2.11-2.amzn2023.0.2?arch=NOARCH&epoch=1&upstream=bash-completion-2.11-2.amzn2023.0.2.src.rpm",
+      "version": "2.11",
+      "bom-ref": "4cddfa173595c6e27e9793b7b110092d"
+    },
+    {
+      "type": "application",
+      "name": "libeconf",
+      "purl": "pkg:rpm/libeconf@0.4.0-1.amzn2023.0.3?arch=X86_64&epoch=0&upstream=libeconf-0.4.0-1.amzn2023.0.3.src.rpm",
+      "version": "0.4.0",
+      "bom-ref": "e7d362b4384489d6f32ff3eef68eba4f"
+    },
+    {
+      "type": "application",
+      "name": "libsemanage",
+      "purl": "pkg:rpm/libsemanage@3.4-5.amzn2023.0.2?arch=X86_64&epoch=0&upstream=libsemanage-3.4-5.amzn2023.0.2.src.rpm",
+      "version": "3.4",
+      "bom-ref": "cf377eded0fdc800a08cbc1dc61114bd"
+    },
+    {
+      "type": "application",
+      "name": "psacct",
+      "purl": "pkg:rpm/psacct@6.6.4-9.amzn2023.0.2?arch=X86_64&epoch=0&upstream=psacct-6.6.4-9.amzn2023.0.2.src.rpm",
+      "version": "6.6.4",
+      "bom-ref": "252b9027b0f82ac50c1354a0dd27ceec"
+    },
+    {
+      "type": "application",
+      "name": "sysstat",
+      "purl": "pkg:rpm/sysstat@12.5.6-1.amzn2023.0.3?arch=X86_64&epoch=0&upstream=sysstat-12.5.6-1.amzn2023.0.3.src.rpm",
+      "version": "12.5.6",
+      "bom-ref": "290f918adad514f5cae3e5b235959d5c"
+    },
+    {
+      "type": "application",
+      "name": "util-linux-core",
+      "purl": "pkg:rpm/util-linux-core@2.37.4-1.amzn2023.0.3?arch=X86_64&epoch=0&upstream=util-linux-core-2.37.4-1.amzn2023.0.3.src.rpm",
+      "version": "2.37.4",
+      "bom-ref": "b5ab5817065b2328ff82de072bd9b7c6"
+    },
+    {
+      "type": "application",
+      "name": "lmdb-libs",
+      "purl": "pkg:rpm/lmdb-libs@0.9.29-1.amzn2023.0.3?arch=X86_64&epoch=0&upstream=lmdb-libs-0.9.29-1.amzn2023.0.3.src.rpm",
+      "version": "0.9.29",
+      "bom-ref": "dfc3bf7c4db54acbd9b17c2e8ba3f200"
+    },
+    {
+      "type": "application",
+      "name": "audit",
+      "purl": "pkg:rpm/audit@3.0.6-1.amzn2023.0.2?arch=X86_64&epoch=0&upstream=audit-3.0.6-1.amzn2023.0.2.src.rpm",
+      "version": "3.0.6",
+      "bom-ref": "b36592f667aa9e137f47c4c7837d2616"
+    },
+    {
+      "type": "application",
+      "name": "gpm-libs",
+      "purl": "pkg:rpm/gpm-libs@1.20.7-26.amzn2023.amzn2023.0.3?arch=X86_64&epoch=0&upstream=gpm-libs-1.20.7-26.amzn2023.amzn2023.0.3.src.rpm",
+      "version": "1.20.7",
+      "bom-ref": "38abe9165868b7232d94af670c22b738"
+    },
+    {
+      "type": "application",
+      "name": "dwz",
+      "purl": "pkg:rpm/dwz@0.14-6.amzn2023.0.2?arch=X86_64&epoch=0&upstream=dwz-0.14-6.amzn2023.0.2.src.rpm",
+      "version": "0.14",
+      "bom-ref": "46d9ecb95d34a2f22cff578efcb1533e"
+    },
+    {
+      "type": "application",
+      "name": "libtevent",
+      "purl": "pkg:rpm/libtevent@0.13.0-1.amzn2023.0.2?arch=X86_64&epoch=0&upstream=libtevent-0.13.0-1.amzn2023.0.2.src.rpm",
+      "version": "0.13.0",
+      "bom-ref": "6fa32981a0e730e5400aedf8f983747a"
+    },
+    {
+      "type": "application",
+      "name": "libxcrypt",
+      "purl": "pkg:rpm/libxcrypt@4.4.33-7.amzn2023?arch=X86_64&epoch=0&upstream=libxcrypt-4.4.33-7.amzn2023.src.rpm",
+      "version": "4.4.33",
+      "bom-ref": "0eafb738bf77c8133b542927d6e5123c"
+    },
+    {
+      "type": "application",
+      "name": "libselinux",
+      "purl": "pkg:rpm/libselinux@3.4-5.amzn2023.0.2?arch=X86_64&epoch=0&upstream=libselinux-3.4-5.amzn2023.0.2.src.rpm",
+      "version": "3.4",
+      "bom-ref": "4a04b0757836dc1e87c514f2e5b0b7fc"
+    },
+    {
+      "type": "application",
+      "name": "readline",
+      "purl": "pkg:rpm/readline@8.1-2.amzn2023.0.2?arch=X86_64&epoch=0&upstream=readline-8.1-2.amzn2023.0.2.src.rpm",
+      "version": "8.1",
+      "bom-ref": "302f4ecb2ba5171bdc56ec904a5a921c"
+    },
+    {
+      "type": "application",
+      "name": "systemd-libs",
+      "purl": "pkg:rpm/systemd-libs@252.4-1161.amzn2023.0.4?arch=X86_64&epoch=0&upstream=systemd-libs-252.4-1161.amzn2023.0.4.src.rpm",
+      "version": "252.4",
+      "bom-ref": "05e26c53ce2e818f520440b85fb951d3"
+    },
+    {
+      "type": "application",
+      "name": "rsync",
+      "purl": "pkg:rpm/rsync@3.2.6-1.amzn2023.0.3?arch=X86_64&epoch=0&upstream=rsync-3.2.6-1.amzn2023.0.3.src.rpm",
+      "version": "3.2.6",
+      "bom-ref": "2b25ac2e8dbf6518f3a62223f3649b4b"
+    },
+    {
+      "type": "application",
+      "name": "nss-softokn-freebl",
+      "purl": "pkg:rpm/nss-softokn-freebl@3.90.0-3.amzn2023.0.3?arch=X86_64&epoch=0&upstream=nss-softokn-freebl-3.90.0-3.amzn2023.0.3.src.rpm",
+      "version": "3.90.0",
+      "bom-ref": "daad9e60630cf1a886f55e1ac513ff39"
+    },
+    {
+      "type": "application",
+      "name": "libmodulemd",
+      "purl": "pkg:rpm/libmodulemd@2.13.0-2.amzn2023.0.2?arch=X86_64&epoch=0&upstream=libmodulemd-2.13.0-2.amzn2023.0.2.src.rpm",
+      "version": "2.13.0",
+      "bom-ref": "3c33f779c6c4a31355723944e0002d10"
+    },
+    {
+      "type": "application",
+      "name": "pam",
+      "purl": "pkg:rpm/pam@1.5.1-8.amzn2023.0.3?arch=X86_64&epoch=0&upstream=pam-1.5.1-8.amzn2023.0.3.src.rpm",
+      "version": "1.5.1",
+      "bom-ref": "da20647e64907884d6d83d426273d95a"
+    },
+    {
+      "type": "application",
+      "name": "libuser",
+      "purl": "pkg:rpm/libuser@0.63-4.amzn2023.0.2?arch=X86_64&epoch=0&upstream=libuser-0.63-4.amzn2023.0.2.src.rpm",
+      "version": "0.63",
+      "bom-ref": "48842478263613ec3c63995b9b552c9e"
+    },
+    {
+      "type": "application",
+      "name": "hwdata",
+      "purl": "pkg:rpm/hwdata@0.353-1.amzn2023.0.3?arch=NOARCH&epoch=0&upstream=hwdata-0.353-1.amzn2023.0.3.src.rpm",
+      "version": "0.353",
+      "bom-ref": "c785180cda943d0cb9ee36f5648fdcfc"
+    },
+    {
+      "type": "application",
+      "name": "ec2-instance-connect-selinux",
+      "purl": "pkg:rpm/ec2-instance-connect-selinux@1.1-19.amzn2023?arch=NOARCH&epoch=0&upstream=ec2-instance-connect-selinux-1.1-19.amzn2023.src.rpm",
+      "version": "1.1",
+      "bom-ref": "a14e17fd1305065f39b6e95d30d8b75e"
+    },
+    {
+      "type": "application",
+      "name": "amazon-chrony-config",
+      "purl": "pkg:rpm/amazon-chrony-config@4.3-1.amzn2023.0.4?arch=NOARCH&epoch=0&upstream=amazon-chrony-config-4.3-1.amzn2023.0.4.src.rpm",
+      "version": "4.3",
+      "bom-ref": "a35ec0b79c3c6293fc6a037ea937ce51"
+    },
+    {
+      "type": "application",
+      "name": "perl-PathTools",
+      "purl": "pkg:rpm/perl-PathTools@3.78-459.amzn2023.0.2?arch=X86_64&epoch=0&upstream=perl-PathTools-3.78-459.amzn2023.0.2.src.rpm",
+      "version": "3.78",
+      "bom-ref": "27f6b88f8da0051a0b2faf763e0e97d7"
+    },
+    {
+      "type": "application",
+      "name": "rpm-build-libs",
+      "purl": "pkg:rpm/rpm-build-libs@4.16.1.3-12.amzn2023.0.6?arch=X86_64&epoch=0&upstream=rpm-build-libs-4.16.1.3-12.amzn2023.0.6.src.rpm",
+      "version": "4.16.1.3",
+      "bom-ref": "a8fe0bb5374aa142c083170c95b3f58d"
+    },
+    {
+      "type": "application",
+      "name": "glib2",
+      "purl": "pkg:rpm/glib2@2.74.7-688.amzn2023.0.1?arch=X86_64&epoch=0&upstream=glib2-2.74.7-688.amzn2023.0.1.src.rpm",
+      "version": "2.74.7",
+      "bom-ref": "3e127a10d2cfc3dc949486b17e0d4637"
+    },
+    {
+      "type": "application",
+      "name": "systemd-udev",
+      "purl": "pkg:rpm/systemd-udev@252.4-1161.amzn2023.0.4?arch=X86_64&epoch=0&upstream=systemd-udev-252.4-1161.amzn2023.0.4.src.rpm",
+      "version": "252.4",
+      "bom-ref": "4e4c5971e8630ec1c9f2a545872ad39d"
+    },
+    {
+      "type": "application",
+      "name": "ncurses",
+      "purl": "pkg:rpm/ncurses@6.2-4.20200222.amzn2023.0.4?arch=X86_64&epoch=0&upstream=ncurses-6.2-4.20200222.amzn2023.0.4.src.rpm",
+      "version": "6.2",
+      "bom-ref": "f00fec6732f2b1781f23e6bfc7ed6f8d"
+    },
+    {
+      "type": "application",
+      "name": "libcap-ng",
+      "purl": "pkg:rpm/libcap-ng@0.8.2-4.amzn2023.0.2?arch=X86_64&epoch=0&upstream=libcap-ng-0.8.2-4.amzn2023.0.2.src.rpm",
+      "version": "0.8.2",
+      "bom-ref": "a337dca14a757421ce54b81d206d87f8"
+    },
+    {
+      "type": "application",
+      "name": "perl-Encode",
+      "purl": "pkg:rpm/perl-Encode@3.15-462.amzn2023.0.2?arch=X86_64&epoch=4&upstream=perl-Encode-3.15-462.amzn2023.0.2.src.rpm",
+      "version": "3.15",
+      "bom-ref": "9b459a6c45bcf0e115897e82d8339cd5"
+    },
+    {
+      "type": "application",
+      "name": "python3-docutils",
+      "purl": "pkg:rpm/python3-docutils@0.16-4.amzn2023.0.2?arch=NOARCH&epoch=0&upstream=python3-docutils-0.16-4.amzn2023.0.2.src.rpm",
+      "version": "0.16",
+      "bom-ref": "7b4745f007872dbef9e057175a344088"
+    },
+    {
+      "type": "application",
+      "name": "libsolv",
+      "purl": "pkg:rpm/libsolv@0.7.22-1.amzn2023.0.2?arch=X86_64&epoch=0&upstream=libsolv-0.7.22-1.amzn2023.0.2.src.rpm",
+      "version": "0.7.22",
+      "bom-ref": "f246301d523121769a9f1eed99c939b7"
+    },
+    {
+      "type": "application",
+      "name": "perl-SelectSaver",
+      "purl": "pkg:rpm/perl-SelectSaver@1.02-477.amzn2023.0.5?arch=NOARCH&epoch=0&upstream=perl-SelectSaver-1.02-477.amzn2023.0.5.src.rpm",
+      "version": "1.02",
+      "bom-ref": "6c0c4bad24bed1bb8b71d432e3420ca6"
+    },
+    {
+      "type": "application",
+      "name": "python3-pip",
+      "purl": "pkg:rpm/python3-pip@21.3.1-2.amzn2023.0.5?arch=NOARCH&epoch=0&upstream=python3-pip-21.3.1-2.amzn2023.0.5.src.rpm",
+      "version": "21.3.1",
+      "bom-ref": "76f84a7f89d47a3a4cc3e78a4c8c455e"
+    },
+    {
+      "type": "application",
+      "name": "perl-File-Path",
+      "purl": "pkg:rpm/perl-File-Path@2.18-2.amzn2023.0.2?arch=NOARCH&epoch=0&upstream=perl-File-Path-2.18-2.amzn2023.0.2.src.rpm",
+      "version": "2.18",
+      "bom-ref": "210f0dea9ebae738f7d6828c28d891fc"
+    },
+    {
+      "type": "application",
+      "name": "acl",
+      "purl": "pkg:rpm/acl@2.3.1-2.amzn2023.0.2?arch=X86_64&epoch=0&upstream=acl-2.3.1-2.amzn2023.0.2.src.rpm",
+      "version": "2.3.1",
+      "bom-ref": "683ff37951c4d5dcb2bbc08e0ff0a840"
+    },
+    {
+      "type": "application",
+      "name": "ncurses-base",
+      "purl": "pkg:rpm/ncurses-base@6.2-4.20200222.amzn2023.0.4?arch=NOARCH&epoch=0&upstream=ncurses-base-6.2-4.20200222.amzn2023.0.4.src.rpm",
+      "version": "6.2",
+      "bom-ref": "bb9986488fe57206c14be82bb989cbb3"
+    },
+    {
+      "type": "application",
+      "name": "cpio",
+      "purl": "pkg:rpm/cpio@2.13-13.amzn2023.0.2?arch=X86_64&epoch=0&upstream=cpio-2.13-13.amzn2023.0.2.src.rpm",
+      "version": "2.13",
+      "bom-ref": "5f1ee1c338855ec7b4bf3aaaceaa2432"
+    },
+    {
+      "type": "application",
+      "name": "mpfr",
+      "purl": "pkg:rpm/mpfr@4.1.0-7.amzn2023.0.2?arch=X86_64&epoch=0&upstream=mpfr-4.1.0-7.amzn2023.0.2.src.rpm",
+      "version": "4.1.0",
+      "bom-ref": "48d985cca81435c912bf815b598c4e3a"
+    },
+    {
+      "type": "application",
+      "name": "python3-netifaces",
+      "purl": "pkg:rpm/python3-netifaces@0.10.6-13.amzn2023.0.2?arch=X86_64&epoch=0&upstream=python3-netifaces-0.10.6-13.amzn2023.0.2.src.rpm",
+      "version": "0.10.6",
+      "bom-ref": "62d1e84649bb6b529df6ef277e600bd5"
+    },
+    {
+      "type": "application",
+      "name": "perl-Pod-Perldoc",
+      "purl": "pkg:rpm/perl-Pod-Perldoc@3.28.01-459.amzn2023.0.3?arch=NOARCH&epoch=0&upstream=perl-Pod-Perldoc-3.28.01-459.amzn2023.0.3.src.rpm",
+      "version": "3.28.01",
+      "bom-ref": "10f3bbf15d41fb0da7e406d59ab45a41"
+    },
+    {
+      "type": "application",
+      "name": "ec2-hibinit-agent",
+      "purl": "pkg:rpm/ec2-hibinit-agent@1.0.4-0.amzn2023.0.2?arch=NOARCH&epoch=0&upstream=ec2-hibinit-agent-1.0.4-0.amzn2023.0.2.src.rpm",
+      "version": "1.0.4",
+      "bom-ref": "dc18fd1e7af6dea653308c77cbe04905"
+    },
+    {
+      "type": "application",
+      "name": "python3-urllib3",
+      "purl": "pkg:rpm/python3-urllib3@1.25.10-5.amzn2023.0.2?arch=NOARCH&epoch=0&upstream=python3-urllib3-1.25.10-5.amzn2023.0.2.src.rpm",
+      "version": "1.25.10",
+      "bom-ref": "d6c28600130ab9d2d2f9698a5ff94dce"
+    },
+    {
+      "type": "application",
+      "name": "libtasn1",
+      "purl": "pkg:rpm/libtasn1@4.19.0-1.amzn2023.0.4?arch=X86_64&epoch=0&upstream=libtasn1-4.19.0-1.amzn2023.0.4.src.rpm",
+      "version": "4.19.0",
+      "bom-ref": "10c9756401b102c6587575046a9e31a7"
+    },
+    {
+      "type": "application",
+      "name": "python3-configobj",
+      "purl": "pkg:rpm/python3-configobj@5.0.6-23.amzn2023.0.3?arch=NOARCH&epoch=0&upstream=python3-configobj-5.0.6-23.amzn2023.0.3.src.rpm",
+      "version": "5.0.6",
+      "bom-ref": "24c5224cfb50d006f9fe33d51e39296b"
+    },
+    {
+      "type": "application",
+      "name": "publicsuffix-list-dafsa",
+      "purl": "pkg:rpm/publicsuffix-list-dafsa@20221208-60.amzn2023?arch=NOARCH&epoch=0&upstream=publicsuffix-list-dafsa-20221208-60.amzn2023.src.rpm",
+      "version": "20221208",
+      "bom-ref": "2f99230ed40e066e0cfc895a34156678"
+    },
+    {
+      "type": "application",
+      "name": "fonts-srpm-macros",
+      "purl": "pkg:rpm/fonts-srpm-macros@2.0.5-5.amzn2023.0.2?arch=NOARCH&epoch=1&upstream=fonts-srpm-macros-2.0.5-5.amzn2023.0.2.src.rpm",
+      "version": "2.0.5",
+      "bom-ref": "49e16a8b620bbaed2c9fc0145f653860"
+    },
+    {
+      "type": "application",
+      "name": "vim-data",
+      "purl": "pkg:rpm/vim-data@9.0.1592-1.amzn2023.0.1?arch=NOARCH&epoch=2&upstream=vim-data-9.0.1592-1.amzn2023.0.1.src.rpm",
+      "version": "9.0.1592",
+      "bom-ref": "17ab5ffad973ff600f474bc5ff01a93a"
+    },
+    {
+      "type": "application",
+      "name": "hunspell-en-GB",
+      "purl": "pkg:rpm/hunspell-en-GB@0.20140811.1-18.amzn2023.0.3?arch=NOARCH&epoch=0&upstream=hunspell-en-GB-0.20140811.1-18.amzn2023.0.3.src.rpm",
+      "version": "0.20140811.1",
+      "bom-ref": "c8c98ecaccc562603adf96a52d6048b5"
+    },
+    {
+      "type": "application",
+      "name": "pcre2",
+      "purl": "pkg:rpm/pcre2@10.40-1.amzn2023.0.3?arch=X86_64&epoch=0&upstream=pcre2-10.40-1.amzn2023.0.3.src.rpm",
+      "version": "10.40",
+      "bom-ref": "0e6ae1dbfcc264e3495c93be8c5c9c54"
+    },
+    {
+      "type": "application",
+      "name": "findutils",
+      "purl": "pkg:rpm/findutils@4.8.0-2.amzn2023.0.2?arch=X86_64&epoch=1&upstream=findutils-4.8.0-2.amzn2023.0.2.src.rpm",
+      "version": "4.8.0",
+      "bom-ref": "878a9e20f5c16bd7cab658912158be3e"
+    },
+    {
+      "type": "application",
+      "name": "amazon-rpm-config",
+      "purl": "pkg:rpm/amazon-rpm-config@228-3.amzn2023.0.2?arch=NOARCH&epoch=0&upstream=amazon-rpm-config-228-3.amzn2023.0.2.src.rpm",
+      "version": "228",
+      "bom-ref": "ff56143aee60772c84d6143aed1e1873"
+    },
+    {
+      "type": "application",
+      "name": "chrony",
+      "purl": "pkg:rpm/chrony@4.3-1.amzn2023.0.4?arch=X86_64&epoch=0&upstream=chrony-4.3-1.amzn2023.0.4.src.rpm",
+      "version": "4.3",
+      "bom-ref": "6616e08172f3385ccc082031121b2e1d"
+    },
+    {
+      "type": "application",
+      "name": "python3-daemon",
+      "purl": "pkg:rpm/python3-daemon@2.3.0-4.amzn2023.0.2?arch=NOARCH&epoch=0&upstream=python3-daemon-2.3.0-4.amzn2023.0.2.src.rpm",
+      "version": "2.3.0",
+      "bom-ref": "e3c3724909a1e0ff159865271e986eca"
+    },
+    {
+      "type": "application",
+      "name": "device-mapper",
+      "purl": "pkg:rpm/device-mapper@1.02.185-1.amzn2023.0.4?arch=X86_64&epoch=0&upstream=device-mapper-1.02.185-1.amzn2023.0.4.src.rpm",
+      "version": "1.02.185",
+      "bom-ref": "03cc239716c80d4cf8a35d1bd16ea8d6"
+    },
+    {
+      "type": "application",
+      "name": "libpath_utils",
+      "purl": "pkg:rpm/libpath_utils@0.2.1-47.amzn2023.0.2?arch=X86_64&epoch=0&upstream=libpath_utils-0.2.1-47.amzn2023.0.2.src.rpm",
+      "version": "0.2.1",
+      "bom-ref": "76d1d547d0836b247b339edcf3fb276a"
+    },
+    {
+      "type": "application",
+      "name": "openssh-clients",
+      "purl": "pkg:rpm/openssh-clients@8.7p1-8.amzn2023.0.8?arch=X86_64&epoch=0&upstream=openssh-clients-8.7p1-8.amzn2023.0.8.src.rpm",
+      "version": "8.7p1",
+      "bom-ref": "44bad3c40a33b9b75dd449717fad0629"
+    },
+    {
+      "type": "application",
+      "name": "python3-dnf",
+      "purl": "pkg:rpm/python3-dnf@4.12.0-2.amzn2023.0.4?arch=NOARCH&epoch=0&upstream=python3-dnf-4.12.0-2.amzn2023.0.4.src.rpm",
+      "version": "4.12.0",
+      "bom-ref": "ad8348ec4663f3c628ee5bec9b1bb041"
+    },
+    {
+      "type": "application",
+      "name": "dbus",
+      "purl": "pkg:rpm/dbus@1.12.28-1.amzn2023.0.1?arch=X86_64&epoch=1&upstream=dbus-1.12.28-1.amzn2023.0.1.src.rpm",
+      "version": "1.12.28",
+      "bom-ref": "a903d80eacd7f24eb64bd9fd5f29db90"
+    },
+    {
+      "type": "application",
+      "name": "libev",
+      "purl": "pkg:rpm/libev@4.33-3.amzn2023.0.2?arch=X86_64&epoch=0&upstream=libev-4.33-3.amzn2023.0.2.src.rpm",
+      "version": "4.33",
+      "bom-ref": "69e382c180752fcbfbf530122e7688e8"
+    },
+    {
+      "type": "application",
+      "name": "perl-Term-ANSIColor",
+      "purl": "pkg:rpm/perl-Term-ANSIColor@5.01-459.amzn2023.0.2?arch=NOARCH&epoch=0&upstream=perl-Term-ANSIColor-5.01-459.amzn2023.0.2.src.rpm",
+      "version": "5.01",
+      "bom-ref": "fad46db23ace31b8af9c80abfcd434a8"
+    },
+    {
+      "type": "application",
+      "name": "perl-Pod-Simple",
+      "purl": "pkg:rpm/perl-Pod-Simple@3.42-2.amzn2023.0.2?arch=NOARCH&epoch=1&upstream=perl-Pod-Simple-3.42-2.amzn2023.0.2.src.rpm",
+      "version": "3.42",
+      "bom-ref": "cd129812aefd638de2e1ada5637d88a0"
+    },
+    {
+      "type": "application",
+      "name": "ca-certificates",
+      "purl": "pkg:rpm/ca-certificates@2023.2.60-1.0.amzn2023.0.3?arch=NOARCH&epoch=0&upstream=ca-certificates-2023.2.60-1.0.amzn2023.0.3.src.rpm",
+      "version": "2023.2.60",
+      "bom-ref": "0cb65a728767b10e61c094364bff7218"
+    },
+    {
+      "type": "library",
+      "name": "support-info",
+      "purl": "pkg:pypi/support-info@1.0",
+      "version": "1.0",
+      "properties": [
+        {
+          "name": "amazon:inspector:path",
+          "value": "/usr/lib/python3.9/site-packages/support_info-1.0-py3.9.egg-info/PKG-INFO"
+        }
+      ],
+      "bom-ref": "d96c45df3e93f308174563c056831885"
+    },
+    {
+      "type": "application",
+      "name": "libblkid",
+      "purl": "pkg:rpm/libblkid@2.37.4-1.amzn2023.0.3?arch=X86_64&epoch=0&upstream=libblkid-2.37.4-1.amzn2023.0.3.src.rpm",
+      "version": "2.37.4",
+      "bom-ref": "90390cc3a22f649baa0f1e455a5d9797"
+    },
+    {
+      "type": "application",
+      "name": "perl-Scalar-List-Utils",
+      "purl": "pkg:rpm/perl-Scalar-List-Utils@1.56-459.amzn2023.0.2?arch=X86_64&epoch=4&upstream=perl-Scalar-List-Utils-1.56-459.amzn2023.0.2.src.rpm",
+      "version": "1.56",
+      "bom-ref": "16fd4cd57420d28fb295927a14f3ccf2"
+    },
+    {
+      "type": "application",
+      "name": "libunistring",
+      "purl": "pkg:rpm/libunistring@0.9.10-10.amzn2023.0.2?arch=X86_64&epoch=0&upstream=libunistring-0.9.10-10.amzn2023.0.2.src.rpm",
+      "version": "0.9.10",
+      "bom-ref": "f8b86be2ff3f9ef15f8477d536876516"
+    },
+    {
+      "type": "application",
+      "name": "chkconfig",
+      "purl": "pkg:rpm/chkconfig@1.15-2.amzn2023.0.2?arch=X86_64&epoch=0&upstream=chkconfig-1.15-2.amzn2023.0.2.src.rpm",
+      "version": "1.15",
+      "bom-ref": "a0bdaa5d7e3b08d4853ef7db6ef9a586"
+    },
+    {
+      "type": "application",
+      "name": "lsof",
+      "purl": "pkg:rpm/lsof@4.94.0-1.amzn2023.0.2?arch=X86_64&epoch=0&upstream=lsof-4.94.0-1.amzn2023.0.2.src.rpm",
+      "version": "4.94.0",
+      "bom-ref": "7597b3860437ead7532606773251fc2c"
+    },
+    {
+      "type": "application",
+      "name": "perl-Getopt-Std",
+      "purl": "pkg:rpm/perl-Getopt-Std@1.12-477.amzn2023.0.5?arch=NOARCH&epoch=0&upstream=perl-Getopt-Std-1.12-477.amzn2023.0.5.src.rpm",
+      "version": "1.12",
+      "bom-ref": "ddc9a949e81fca8fb5614d21fd2dd58e"
+    },
+    {
+      "type": "application",
+      "name": "perl-subs",
+      "purl": "pkg:rpm/perl-subs@1.03-477.amzn2023.0.5?arch=NOARCH&epoch=0&upstream=perl-subs-1.03-477.amzn2023.0.5.src.rpm",
+      "version": "1.03",
+      "bom-ref": "207f91497f1b18f2c7d6c1119af21972"
+    },
+    {
+      "type": "application",
+      "name": "libcollection",
+      "purl": "pkg:rpm/libcollection@0.7.0-47.amzn2023.0.2?arch=X86_64&epoch=0&upstream=libcollection-0.7.0-47.amzn2023.0.2.src.rpm",
+      "version": "0.7.0",
+      "bom-ref": "b7064adea1598b6511d686e3be98ed27"
+    },
+    {
+      "type": "application",
+      "name": "crontabs",
+      "purl": "pkg:rpm/crontabs@1.11-24.20190603git.amzn2023.0.2?arch=NOARCH&epoch=0&upstream=crontabs-1.11-24.20190603git.amzn2023.0.2.src.rpm",
+      "version": "1.11",
+      "bom-ref": "e4472f60826f2a1dac1da8cc180f0c42"
+    },
+    {
+      "type": "application",
+      "name": "nettle",
+      "purl": "pkg:rpm/nettle@3.8-1.amzn2023.0.2?arch=X86_64&epoch=0&upstream=nettle-3.8-1.amzn2023.0.2.src.rpm",
+      "version": "3.8",
+      "bom-ref": "4895dfd0bbf353f841cfec3c24ada88c"
+    },
+    {
+      "type": "library",
+      "name": "python-daemon",
+      "purl": "pkg:pypi/python-daemon@2.3.0",
+      "version": "2.3.0",
+      "properties": [
+        {
+          "name": "amazon:inspector:path",
+          "value": "/usr/lib/python3.9/site-packages/python_daemon-2.3.0-py3.9.egg-info/PKG-INFO"
+        }
+      ],
+      "bom-ref": "9e9291de98efe6600018add31030ba45"
+    },
+    {
+      "type": "application",
+      "name": "protobuf-c",
+      "purl": "pkg:rpm/protobuf-c@1.4.1-2.amzn2023.0.3?arch=X86_64&epoch=0&upstream=protobuf-c-1.4.1-2.amzn2023.0.3.src.rpm",
+      "version": "1.4.1",
+      "bom-ref": "a3c7362f320b0acbc0b804c00eab2923"
+    },
+    {
+      "type": "application",
+      "name": "libkcapi",
+      "purl": "pkg:rpm/libkcapi@1.4.0-105.amzn2023.0.1?arch=X86_64&epoch=0&upstream=libkcapi-1.4.0-105.amzn2023.0.1.src.rpm",
+      "version": "1.4.0",
+      "bom-ref": "cf665f061feb901a3ba8a40c6616ecc2"
+    },
+    {
+      "type": "application",
+      "name": "bind-utils",
+      "purl": "pkg:rpm/bind-utils@9.16.42-1.amzn2023.0.4?arch=X86_64&epoch=32&upstream=bind-utils-9.16.42-1.amzn2023.0.4.src.rpm",
+      "version": "9.16.42",
+      "bom-ref": "d660388d975504165a9502f0435d1f23"
+    },
+    {
+      "type": "application",
+      "name": "os-prober",
+      "purl": "pkg:rpm/os-prober@1.77-7.amzn2023.0.3?arch=X86_64&epoch=0&upstream=os-prober-1.77-7.amzn2023.0.3.src.rpm",
+      "version": "1.77",
+      "bom-ref": "372d63f33d44a7d7ff664be360a31574"
+    },
+    {
+      "type": "application",
+      "name": "perl-Errno",
+      "purl": "pkg:rpm/perl-Errno@1.30-477.amzn2023.0.5?arch=X86_64&epoch=0&upstream=perl-Errno-1.30-477.amzn2023.0.5.src.rpm",
+      "version": "1.30",
+      "bom-ref": "676a8d25a21d82b0c8c50497ea629be8"
+    },
+    {
+      "type": "application",
+      "name": "python3-chardet",
+      "purl": "pkg:rpm/python3-chardet@4.0.0-1.amzn2023.0.2?arch=NOARCH&epoch=0&upstream=python3-chardet-4.0.0-1.amzn2023.0.2.src.rpm",
+      "version": "4.0.0",
+      "bom-ref": "f6f8013a3bcaba8631d4a415fa9f405c"
+    },
+    {
+      "type": "application",
+      "name": "lm_sensors-libs",
+      "purl": "pkg:rpm/lm_sensors-libs@3.6.0-8.amzn2023.0.3?arch=X86_64&epoch=0&upstream=lm_sensors-libs-3.6.0-8.amzn2023.0.3.src.rpm",
+      "version": "3.6.0",
+      "bom-ref": "9a619b784b5361f6db2dc4e06d5ef559"
+    },
+    {
+      "type": "application",
+      "name": "pciutils-libs",
+      "purl": "pkg:rpm/pciutils-libs@3.7.0-3.amzn2023.0.2?arch=X86_64&epoch=0&upstream=pciutils-libs-3.7.0-3.amzn2023.0.2.src.rpm",
+      "version": "3.7.0",
+      "bom-ref": "b0ba79dd1d6a6a397a3a097c23753b3e"
+    }
+  ],
+  "vulnerabilities": [
+    {
+      "id": "CVE-2023-43804",
+      "affects": [
+        {
+          "ref": "d6c28600130ab9d2d2f9698a5ff94dce"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2023-42755",
+      "affects": [
+        {
+          "ref": "9ed530db935cb9e60e8142f158a9b321"
+        },
+        {
+          "ref": "b1a5c6a527e46d545b764e65dc5ad4c5"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2023-48234",
+      "affects": [
+        {
+          "ref": "dd279e99e2f43138f06a85f67333679d"
+        },
+        {
+          "ref": "17ab5ffad973ff600f474bc5ff01a93a"
+        },
+        {
+          "ref": "abc14ecd0cb417e1f8f91b6f2a8ad534"
+        },
+        {
+          "ref": "1fcb82808eb4eb5a68869b79fe028ab1"
+        },
+        {
+          "ref": "0521b32f8be6269e937ddefbf3117211"
+        },
+        {
+          "ref": "6a30d04ae7a08dcc6d88b63fd1d92b8d"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2023-48231",
+      "affects": [
+        {
+          "ref": "dd279e99e2f43138f06a85f67333679d"
+        },
+        {
+          "ref": "17ab5ffad973ff600f474bc5ff01a93a"
+        },
+        {
+          "ref": "abc14ecd0cb417e1f8f91b6f2a8ad534"
+        },
+        {
+          "ref": "1fcb82808eb4eb5a68869b79fe028ab1"
+        },
+        {
+          "ref": "0521b32f8be6269e937ddefbf3117211"
+        },
+        {
+          "ref": "6a30d04ae7a08dcc6d88b63fd1d92b8d"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2023-46246",
+      "affects": [
+        {
+          "ref": "dd279e99e2f43138f06a85f67333679d"
+        },
+        {
+          "ref": "17ab5ffad973ff600f474bc5ff01a93a"
+        },
+        {
+          "ref": "abc14ecd0cb417e1f8f91b6f2a8ad534"
+        },
+        {
+          "ref": "1fcb82808eb4eb5a68869b79fe028ab1"
+        },
+        {
+          "ref": "0521b32f8be6269e937ddefbf3117211"
+        },
+        {
+          "ref": "6a30d04ae7a08dcc6d88b63fd1d92b8d"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2023-49083",
+      "affects": [
+        {
+          "ref": "ad777ced36cd64acd450072d210ee7c9"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2023-4751",
+      "affects": [
+        {
+          "ref": "dd279e99e2f43138f06a85f67333679d"
+        },
+        {
+          "ref": "17ab5ffad973ff600f474bc5ff01a93a"
+        },
+        {
+          "ref": "abc14ecd0cb417e1f8f91b6f2a8ad534"
+        },
+        {
+          "ref": "1fcb82808eb4eb5a68869b79fe028ab1"
+        },
+        {
+          "ref": "0521b32f8be6269e937ddefbf3117211"
+        },
+        {
+          "ref": "6a30d04ae7a08dcc6d88b63fd1d92b8d"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2023-48233",
+      "affects": [
+        {
+          "ref": "dd279e99e2f43138f06a85f67333679d"
+        },
+        {
+          "ref": "17ab5ffad973ff600f474bc5ff01a93a"
+        },
+        {
+          "ref": "abc14ecd0cb417e1f8f91b6f2a8ad534"
+        },
+        {
+          "ref": "1fcb82808eb4eb5a68869b79fe028ab1"
+        },
+        {
+          "ref": "0521b32f8be6269e937ddefbf3117211"
+        },
+        {
+          "ref": "6a30d04ae7a08dcc6d88b63fd1d92b8d"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2023-48232",
+      "affects": [
+        {
+          "ref": "dd279e99e2f43138f06a85f67333679d"
+        },
+        {
+          "ref": "17ab5ffad973ff600f474bc5ff01a93a"
+        },
+        {
+          "ref": "abc14ecd0cb417e1f8f91b6f2a8ad534"
+        },
+        {
+          "ref": "1fcb82808eb4eb5a68869b79fe028ab1"
+        },
+        {
+          "ref": "0521b32f8be6269e937ddefbf3117211"
+        },
+        {
+          "ref": "6a30d04ae7a08dcc6d88b63fd1d92b8d"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2023-2430",
+      "affects": [
+        {
+          "ref": "9ed530db935cb9e60e8142f158a9b321"
+        },
+        {
+          "ref": "b1a5c6a527e46d545b764e65dc5ad4c5"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2023-5090",
+      "affects": [
+        {
+          "ref": "9ed530db935cb9e60e8142f158a9b321"
+        },
+        {
+          "ref": "b1a5c6a527e46d545b764e65dc5ad4c5"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2023-46316",
+      "affects": [
+        {
+          "ref": "4700391ccf060e8fefdbc851644884c4"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2023-48235",
+      "affects": [
+        {
+          "ref": "dd279e99e2f43138f06a85f67333679d"
+        },
+        {
+          "ref": "17ab5ffad973ff600f474bc5ff01a93a"
+        },
+        {
+          "ref": "abc14ecd0cb417e1f8f91b6f2a8ad534"
+        },
+        {
+          "ref": "1fcb82808eb4eb5a68869b79fe028ab1"
+        },
+        {
+          "ref": "0521b32f8be6269e937ddefbf3117211"
+        },
+        {
+          "ref": "6a30d04ae7a08dcc6d88b63fd1d92b8d"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2023-4734",
+      "affects": [
+        {
+          "ref": "dd279e99e2f43138f06a85f67333679d"
+        },
+        {
+          "ref": "17ab5ffad973ff600f474bc5ff01a93a"
+        },
+        {
+          "ref": "abc14ecd0cb417e1f8f91b6f2a8ad534"
+        },
+        {
+          "ref": "1fcb82808eb4eb5a68869b79fe028ab1"
+        },
+        {
+          "ref": "0521b32f8be6269e937ddefbf3117211"
+        },
+        {
+          "ref": "6a30d04ae7a08dcc6d88b63fd1d92b8d"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2023-5717",
+      "affects": [
+        {
+          "ref": "9ed530db935cb9e60e8142f158a9b321"
+        },
+        {
+          "ref": "b1a5c6a527e46d545b764e65dc5ad4c5"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2023-4750",
+      "affects": [
+        {
+          "ref": "dd279e99e2f43138f06a85f67333679d"
+        },
+        {
+          "ref": "17ab5ffad973ff600f474bc5ff01a93a"
+        },
+        {
+          "ref": "abc14ecd0cb417e1f8f91b6f2a8ad534"
+        },
+        {
+          "ref": "1fcb82808eb4eb5a68869b79fe028ab1"
+        },
+        {
+          "ref": "0521b32f8be6269e937ddefbf3117211"
+        },
+        {
+          "ref": "6a30d04ae7a08dcc6d88b63fd1d92b8d"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2023-5535",
+      "affects": [
+        {
+          "ref": "dd279e99e2f43138f06a85f67333679d"
+        },
+        {
+          "ref": "17ab5ffad973ff600f474bc5ff01a93a"
+        },
+        {
+          "ref": "abc14ecd0cb417e1f8f91b6f2a8ad534"
+        },
+        {
+          "ref": "1fcb82808eb4eb5a68869b79fe028ab1"
+        },
+        {
+          "ref": "0521b32f8be6269e937ddefbf3117211"
+        },
+        {
+          "ref": "6a30d04ae7a08dcc6d88b63fd1d92b8d"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2023-6111",
+      "affects": [
+        {
+          "ref": "9ed530db935cb9e60e8142f158a9b321"
+        },
+        {
+          "ref": "b1a5c6a527e46d545b764e65dc5ad4c5"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2023-39192",
+      "affects": [
+        {
+          "ref": "9ed530db935cb9e60e8142f158a9b321"
+        },
+        {
+          "ref": "b1a5c6a527e46d545b764e65dc5ad4c5"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2023-46813",
+      "affects": [
+        {
+          "ref": "9ed530db935cb9e60e8142f158a9b321"
+        },
+        {
+          "ref": "b1a5c6a527e46d545b764e65dc5ad4c5"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2023-5678",
+      "affects": [
+        {
+          "ref": "3966b17bdaf90346de6ee82f3e3f8ef4"
+        },
+        {
+          "ref": "e9eab55e0b41826b9837d7268114c653"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2023-45853",
+      "affects": [
+        {
+          "ref": "7931793e5c9b8a74bd81b3356fc03db8"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2023-34324",
+      "affects": [
+        {
+          "ref": "9ed530db935cb9e60e8142f158a9b321"
+        },
+        {
+          "ref": "b1a5c6a527e46d545b764e65dc5ad4c5"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2023-48236",
+      "affects": [
+        {
+          "ref": "dd279e99e2f43138f06a85f67333679d"
+        },
+        {
+          "ref": "17ab5ffad973ff600f474bc5ff01a93a"
+        },
+        {
+          "ref": "abc14ecd0cb417e1f8f91b6f2a8ad534"
+        },
+        {
+          "ref": "1fcb82808eb4eb5a68869b79fe028ab1"
+        },
+        {
+          "ref": "0521b32f8be6269e937ddefbf3117211"
+        },
+        {
+          "ref": "6a30d04ae7a08dcc6d88b63fd1d92b8d"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2023-5363",
+      "affects": [
+        {
+          "ref": "3966b17bdaf90346de6ee82f3e3f8ef4"
+        },
+        {
+          "ref": "e9eab55e0b41826b9837d7268114c653"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2023-5345",
+      "affects": [
+        {
+          "ref": "9ed530db935cb9e60e8142f158a9b321"
+        },
+        {
+          "ref": "b1a5c6a527e46d545b764e65dc5ad4c5"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2023-4813",
+      "affects": [
+        {
+          "ref": "8220cf9e4c6f1fa2d50299be7848c1a7"
+        },
+        {
+          "ref": "b2649f6fe1eb9297c14aa897b21cf372"
+        },
+        {
+          "ref": "b105cf80dbb7a23536879e5f6ac61883"
+        },
+        {
+          "ref": "61aa58745fc6cad83af72448bc81ddd7"
+        },
+        {
+          "ref": "0ab252afd63197f58d419ae053078871"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2023-42754",
+      "affects": [
+        {
+          "ref": "9ed530db935cb9e60e8142f158a9b321"
+        },
+        {
+          "ref": "b1a5c6a527e46d545b764e65dc5ad4c5"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2023-5441",
+      "affects": [
+        {
+          "ref": "dd279e99e2f43138f06a85f67333679d"
+        },
+        {
+          "ref": "17ab5ffad973ff600f474bc5ff01a93a"
+        },
+        {
+          "ref": "abc14ecd0cb417e1f8f91b6f2a8ad534"
+        },
+        {
+          "ref": "1fcb82808eb4eb5a68869b79fe028ab1"
+        },
+        {
+          "ref": "0521b32f8be6269e937ddefbf3117211"
+        },
+        {
+          "ref": "6a30d04ae7a08dcc6d88b63fd1d92b8d"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2023-38039",
+      "affects": [
+        {
+          "ref": "c34f2ee5c12ead4b9c45c0d5b8f83f74"
+        },
+        {
+          "ref": "7c71178566e709bf5f045d4a076ff7b9"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2023-5344",
+      "affects": [
+        {
+          "ref": "dd279e99e2f43138f06a85f67333679d"
+        },
+        {
+          "ref": "17ab5ffad973ff600f474bc5ff01a93a"
+        },
+        {
+          "ref": "abc14ecd0cb417e1f8f91b6f2a8ad534"
+        },
+        {
+          "ref": "1fcb82808eb4eb5a68869b79fe028ab1"
+        },
+        {
+          "ref": "0521b32f8be6269e937ddefbf3117211"
+        },
+        {
+          "ref": "6a30d04ae7a08dcc6d88b63fd1d92b8d"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2023-4881",
+      "affects": [
+        {
+          "ref": "9ed530db935cb9e60e8142f158a9b321"
+        },
+        {
+          "ref": "b1a5c6a527e46d545b764e65dc5ad4c5"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2023-39193",
+      "affects": [
+        {
+          "ref": "9ed530db935cb9e60e8142f158a9b321"
+        },
+        {
+          "ref": "b1a5c6a527e46d545b764e65dc5ad4c5"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2023-4781",
+      "affects": [
+        {
+          "ref": "dd279e99e2f43138f06a85f67333679d"
+        },
+        {
+          "ref": "17ab5ffad973ff600f474bc5ff01a93a"
+        },
+        {
+          "ref": "abc14ecd0cb417e1f8f91b6f2a8ad534"
+        },
+        {
+          "ref": "1fcb82808eb4eb5a68869b79fe028ab1"
+        },
+        {
+          "ref": "0521b32f8be6269e937ddefbf3117211"
+        },
+        {
+          "ref": "6a30d04ae7a08dcc6d88b63fd1d92b8d"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2023-4738",
+      "affects": [
+        {
+          "ref": "dd279e99e2f43138f06a85f67333679d"
+        },
+        {
+          "ref": "17ab5ffad973ff600f474bc5ff01a93a"
+        },
+        {
+          "ref": "abc14ecd0cb417e1f8f91b6f2a8ad534"
+        },
+        {
+          "ref": "1fcb82808eb4eb5a68869b79fe028ab1"
+        },
+        {
+          "ref": "0521b32f8be6269e937ddefbf3117211"
+        },
+        {
+          "ref": "6a30d04ae7a08dcc6d88b63fd1d92b8d"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2023-4623",
+      "affects": [
+        {
+          "ref": "9ed530db935cb9e60e8142f158a9b321"
+        },
+        {
+          "ref": "b1a5c6a527e46d545b764e65dc5ad4c5"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2023-4733",
+      "affects": [
+        {
+          "ref": "dd279e99e2f43138f06a85f67333679d"
+        },
+        {
+          "ref": "17ab5ffad973ff600f474bc5ff01a93a"
+        },
+        {
+          "ref": "abc14ecd0cb417e1f8f91b6f2a8ad534"
+        },
+        {
+          "ref": "1fcb82808eb4eb5a68869b79fe028ab1"
+        },
+        {
+          "ref": "0521b32f8be6269e937ddefbf3117211"
+        },
+        {
+          "ref": "6a30d04ae7a08dcc6d88b63fd1d92b8d"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2023-4735",
+      "affects": [
+        {
+          "ref": "dd279e99e2f43138f06a85f67333679d"
+        },
+        {
+          "ref": "17ab5ffad973ff600f474bc5ff01a93a"
+        },
+        {
+          "ref": "abc14ecd0cb417e1f8f91b6f2a8ad534"
+        },
+        {
+          "ref": "1fcb82808eb4eb5a68869b79fe028ab1"
+        },
+        {
+          "ref": "0521b32f8be6269e937ddefbf3117211"
+        },
+        {
+          "ref": "6a30d04ae7a08dcc6d88b63fd1d92b8d"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2023-39189",
+      "affects": [
+        {
+          "ref": "9ed530db935cb9e60e8142f158a9b321"
+        },
+        {
+          "ref": "b1a5c6a527e46d545b764e65dc5ad4c5"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2023-1579",
+      "affects": [
+        {
+          "ref": "3278c30b76da51140dd6fcca0e143693"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2023-45322",
+      "affects": [
+        {
+          "ref": "76f7f163b04c69c5c24ac66fc5bc06e6"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2023-48237",
+      "affects": [
+        {
+          "ref": "dd279e99e2f43138f06a85f67333679d"
+        },
+        {
+          "ref": "17ab5ffad973ff600f474bc5ff01a93a"
+        },
+        {
+          "ref": "abc14ecd0cb417e1f8f91b6f2a8ad534"
+        },
+        {
+          "ref": "1fcb82808eb4eb5a68869b79fe028ab1"
+        },
+        {
+          "ref": "0521b32f8be6269e937ddefbf3117211"
+        },
+        {
+          "ref": "6a30d04ae7a08dcc6d88b63fd1d92b8d"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2023-21264",
+      "affects": [
+        {
+          "ref": "9ed530db935cb9e60e8142f158a9b321"
+        },
+        {
+          "ref": "b1a5c6a527e46d545b764e65dc5ad4c5"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2023-5752",
+      "affects": [
+        {
+          "ref": "76f84a7f89d47a3a4cc3e78a4c8c455e"
+        },
+        {
+          "ref": "a1f20890a500f4b373e3657b6ad9ee30"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2023-4527",
+      "affects": [
+        {
+          "ref": "8220cf9e4c6f1fa2d50299be7848c1a7"
+        },
+        {
+          "ref": "b2649f6fe1eb9297c14aa897b21cf372"
+        },
+        {
+          "ref": "b105cf80dbb7a23536879e5f6ac61883"
+        },
+        {
+          "ref": "61aa58745fc6cad83af72448bc81ddd7"
+        },
+        {
+          "ref": "0ab252afd63197f58d419ae053078871"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2023-4693",
+      "affects": [
+        {
+          "ref": "cfed3eaea9243e9b3e85539f1be038c2"
+        },
+        {
+          "ref": "a6d9a153b7a5d6e512691e489ab0d8ad"
+        },
+        {
+          "ref": "203f14fa2ee9c1ffb30ca1de7cfaf8b6"
+        },
+        {
+          "ref": "a73d845f4a0af305a5847ecd9efce9ad"
+        },
+        {
+          "ref": "36713d9a9750211e48ca02686f3c6096"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2023-4752",
+      "affects": [
+        {
+          "ref": "dd279e99e2f43138f06a85f67333679d"
+        },
+        {
+          "ref": "17ab5ffad973ff600f474bc5ff01a93a"
+        },
+        {
+          "ref": "abc14ecd0cb417e1f8f91b6f2a8ad534"
+        },
+        {
+          "ref": "1fcb82808eb4eb5a68869b79fe028ab1"
+        },
+        {
+          "ref": "0521b32f8be6269e937ddefbf3117211"
+        },
+        {
+          "ref": "6a30d04ae7a08dcc6d88b63fd1d92b8d"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2023-4692",
+      "affects": [
+        {
+          "ref": "cfed3eaea9243e9b3e85539f1be038c2"
+        },
+        {
+          "ref": "a6d9a153b7a5d6e512691e489ab0d8ad"
+        },
+        {
+          "ref": "203f14fa2ee9c1ffb30ca1de7cfaf8b6"
+        },
+        {
+          "ref": "a73d845f4a0af305a5847ecd9efce9ad"
+        },
+        {
+          "ref": "36713d9a9750211e48ca02686f3c6096"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2023-4806",
+      "affects": [
+        {
+          "ref": "8220cf9e4c6f1fa2d50299be7848c1a7"
+        },
+        {
+          "ref": "b2649f6fe1eb9297c14aa897b21cf372"
+        },
+        {
+          "ref": "b105cf80dbb7a23536879e5f6ac61883"
+        },
+        {
+          "ref": "61aa58745fc6cad83af72448bc81ddd7"
+        },
+        {
+          "ref": "0ab252afd63197f58d419ae053078871"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2023-4921",
+      "affects": [
+        {
+          "ref": "9ed530db935cb9e60e8142f158a9b321"
+        },
+        {
+          "ref": "b1a5c6a527e46d545b764e65dc5ad4c5"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2023-5197",
+      "affects": [
+        {
+          "ref": "9ed530db935cb9e60e8142f158a9b321"
+        },
+        {
+          "ref": "b1a5c6a527e46d545b764e65dc5ad4c5"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2023-5156",
+      "affects": [
+        {
+          "ref": "8220cf9e4c6f1fa2d50299be7848c1a7"
+        },
+        {
+          "ref": "b2649f6fe1eb9297c14aa897b21cf372"
+        },
+        {
+          "ref": "b105cf80dbb7a23536879e5f6ac61883"
+        },
+        {
+          "ref": "61aa58745fc6cad83af72448bc81ddd7"
+        },
+        {
+          "ref": "0ab252afd63197f58d419ae053078871"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2023-4911",
+      "affects": [
+        {
+          "ref": "8220cf9e4c6f1fa2d50299be7848c1a7"
+        },
+        {
+          "ref": "b2649f6fe1eb9297c14aa897b21cf372"
+        },
+        {
+          "ref": "b105cf80dbb7a23536879e5f6ac61883"
+        },
+        {
+          "ref": "61aa58745fc6cad83af72448bc81ddd7"
+        },
+        {
+          "ref": "0ab252afd63197f58d419ae053078871"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2023-23583",
+      "affects": [
+        {
+          "ref": "f4f67faded74e4cecc6e0b9340043234"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2023-44487",
+      "affects": [
+        {
+          "ref": "175ca6cb426c4ba45fafd779a492bff3"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2023-4244",
+      "affects": [
+        {
+          "ref": "9ed530db935cb9e60e8142f158a9b321"
+        },
+        {
+          "ref": "b1a5c6a527e46d545b764e65dc5ad4c5"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2023-42752",
+      "affects": [
+        {
+          "ref": "9ed530db935cb9e60e8142f158a9b321"
+        },
+        {
+          "ref": "b1a5c6a527e46d545b764e65dc5ad4c5"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2023-48795",
+      "affects": [
+        {
+          "ref": "79d263a7484b1fa58879c61751a7ad2c"
+        },
+        {
+          "ref": "44bad3c40a33b9b75dd449717fad0629"
+        },
+        {
+          "ref": "94b963e2b349bd65df05c920ae16afdf"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2023-42753",
+      "affects": [
+        {
+          "ref": "9ed530db935cb9e60e8142f158a9b321"
+        },
+        {
+          "ref": "b1a5c6a527e46d545b764e65dc5ad4c5"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2023-3341",
+      "affects": [
+        {
+          "ref": "b2c2f43095f278be9eae4ada59eecfbd"
+        },
+        {
+          "ref": "d660388d975504165a9502f0435d1f23"
+        },
+        {
+          "ref": "de73ae64e146dbbf3c40d85b5c9c88cb"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2023-4641",
+      "affects": [
+        {
+          "ref": "789c683a0f9de7bff6574e0a97b65026"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2023-23931",
+      "affects": [
+        {
+          "ref": "ad777ced36cd64acd450072d210ee7c9"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2023-45871",
+      "affects": [
+        {
+          "ref": "9ed530db935cb9e60e8142f158a9b321"
+        },
+        {
+          "ref": "b1a5c6a527e46d545b764e65dc5ad4c5"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2023-42756",
+      "affects": [
+        {
+          "ref": "9ed530db935cb9e60e8142f158a9b321"
+        },
+        {
+          "ref": "b1a5c6a527e46d545b764e65dc5ad4c5"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2023-47038",
+      "affects": [
+        {
+          "ref": "0526e09483c033b448b4435775d940f0"
+        },
+        {
+          "ref": "db9c9a49fc914dbc938fbec068212939"
+        },
+        {
+          "ref": "6c0c4bad24bed1bb8b71d432e3420ca6"
+        },
+        {
+          "ref": "207f91497f1b18f2c7d6c1119af21972"
+        },
+        {
+          "ref": "ddc9a949e81fca8fb5614d21fd2dd58e"
+        },
+        {
+          "ref": "854e59740bc0fabd23cfe496e498ac1f"
+        },
+        {
+          "ref": "3999a704301ee352101c4c94ab11ee1a"
+        },
+        {
+          "ref": "a2afe090186ad9f28fd9a1cc8fd7ea05"
+        },
+        {
+          "ref": "ac8d8f578e9be18ba9345b43a5cd616e"
+        },
+        {
+          "ref": "f735ca28b4b75a800b28eced2ab434e6"
+        },
+        {
+          "ref": "2c0a9752b47316af36fb37318a7f49d7"
+        },
+        {
+          "ref": "676a8d25a21d82b0c8c50497ea629be8"
+        },
+        {
+          "ref": "ea1e9cae3c6492b772ab707d859273da"
+        },
+        {
+          "ref": "77ab66bb6f292e31d6ab0dc56f882737"
+        },
+        {
+          "ref": "31ecc60b68d3c03c51b1310e6a05048b"
+        },
+        {
+          "ref": "a5b48d3f9ec75c95f03b6d9ff19e8778"
+        },
+        {
+          "ref": "0aca2238043eb411f67daad1c68f92ea"
+        },
+        {
+          "ref": "bf2bc858d970b3e220cc31ac7b4d5db8"
+        },
+        {
+          "ref": "313a91d204c483c0cbc819c4eb8d86c4"
+        },
+        {
+          "ref": "e99c1497e1156f2b9bb5ed5ca7b1b277"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2023-38545",
+      "affects": [
+        {
+          "ref": "c34f2ee5c12ead4b9c45c0d5b8f83f74"
+        },
+        {
+          "ref": "7c71178566e709bf5f045d4a076ff7b9"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2023-38546",
+      "affects": [
+        {
+          "ref": "c34f2ee5c12ead4b9c45c0d5b8f83f74"
+        },
+        {
+          "ref": "7c71178566e709bf5f045d4a076ff7b9"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2023-39191",
+      "affects": [
+        {
+          "ref": "9ed530db935cb9e60e8142f158a9b321"
+        },
+        {
+          "ref": "b1a5c6a527e46d545b764e65dc5ad4c5"
+        }
+      ]
+    }
+  ]
+}
