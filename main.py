@@ -1,10 +1,13 @@
 import json
 import os
 from write_data import NeptuneAnalyticsSBOMWriter
+import logging
+
+logging.basicConfig(level=logging.INFO)
 
 
 def main():
-    writer = NeptuneAnalyticsSBOMWriter("g-3zdiljkuw3", "us-west-2")
+    writer = NeptuneAnalyticsSBOMWriter("foo", "us-west-2")
     directory = "./test/"
     for f in os.listdir(directory):
         if f.endswith(".json") or f.endswith(".txt"):
