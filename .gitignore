@@ -159,5 +159,10 @@ cython_debug/
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
 #.idea/
 
-examples/
+examples/*
 test/
+
+*.whl
+.DS_Store
+
+/examples/SPDX/*.txt

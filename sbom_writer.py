@@ -4,6 +4,7 @@ import logging
 import uuid
 from itertools import islice
 from enum import Enum
+from packaging.version import parse
 
 
 class BomType(Enum):
@@ -40,7 +41,11 @@ class NeptuneAnalyticsSBOMWriter:
     graph_identifier = None
 
     def __init__(self, graph_identifier: str, region: str) -> None:
-        self.client = boto3.client("neptune-graph", region_name=region)
+        self.client = boto3.client(
+            "p8-dp-sdk",
+            region_name=region,
+            endpoint_url="https://data.us-east-1-alpha.p8.neptune.aws.dev",
+        )
         self.graph_identifier = graph_identifier
 
     def __determine_filetype(self, bom: str) -> BomType:
@@ -91,7 +96,7 @@ class Writer:
         id: str = None,
     ):
         params = []
-        logging.info(f"Writing {label} nodes")
+        logging.info(f"Writing {label}s")
         if len(objs) == 0:
             return
 
@@ -142,7 +147,7 @@ class Writer:
             self.execute_query({"props": res}, query)
 
     def write_rel(self, rels: list, label: str):
-        logging.info(f"Writing {label} edges")
+        logging.info(f"Writing {label}s")
         if len(rels) == 0:
             return
 
@@ -166,7 +171,7 @@ class Writer:
     def write_rel_match_on_property(
         self, rels: list, label: str, from_property: str, to_property: str
     ):
-        logging.info(f"Writing {label} edges")
+        logging.info(f"Writing {label}s")
         if len(rels) == 0:
             return
 
@@ -191,12 +196,23 @@ class Writer:
             res = list(map(dict, set(tuple(sorted(sub.items())) for sub in chunk)))
             self.execute_query({"rels": res}, query)
 
+    def parse_version(self, c: map, keyname: str):
+        try:
+            version = ".".join(c[keyname].split("-")[0].split(".")[:3])
+            ver = parse(version)
+            c["majorVersion"] = ver.major
+            c["minorVersion"] = ver.minor
+            c["buildVersion"] = ver.micro
+        except ValueError:
+            logger.warning(f"Error parsing version {c[keyname]}")
+        return c
+
     def execute_query(self, params, query):
         resp = self.client.execute_query(
             queryString=query,
-            parameters=params,
-            language="OPEN_CYPHER",
+            parameters=json.dumps(params),
             graphIdentifier=self.graph_identifier,
+            language="open_cypher",
         )
         if not resp["ResponseMetadata"]["HTTPStatusCode"] == 200:
             print(f"An error occurred on query: {query}")
@@ -258,13 +274,19 @@ class CycloneDXWriter(Writer):
         return document_id
 
     def __write_components(self, components: list, document_id: str):
+        for c in components:
+            if "version" in c:
+                c = self.parse_version(c, "version")
+
         self.write_objects(components, NodeLabels.COMPONENT.value, "name")
         describes_edges = [
             {"fromId": document_id, "toId": f"{NodeLabels.COMPONENT.value}_{c['name']}"}
             for c in components
         ]
+        logging.info("Writing DESCRIBES edges")
         self.write_rel(describes_edges, EdgeLabels.DESCRIBES.value)
 
+        logging.info("Writing component -> externalReferences")
         refs = []
         refers_to_edges = []
         for c in components:
@@ -304,10 +326,9 @@ class CycloneDXWriter(Writer):
 
     def __write_vulnerabilities(self, vulnerabilities: list):
         affects_edges = []
-        vuls = []
         for v in vulnerabilities:
             if "ratings" in v and len(v["ratings"]) > 0:
-                vuls.append({**v, **v["ratings"][0]})
+                v = {**v, **v["ratings"][0]}
             for a in v["affects"]:
                 affects_edges.append(
                     {
@@ -316,7 +337,7 @@ class CycloneDXWriter(Writer):
                     }
                 )
 
-        self.write_objects(vuls, NodeLabels.VULNERABILITY.value, "id")
+        self.write_objects(vulnerabilities, NodeLabels.VULNERABILITY.value, "id")
         self.write_rel_match_on_property(
             affects_edges, EdgeLabels.AFFECTS.value, "id", "bom-ref"
         )
@@ -353,6 +374,9 @@ class SPDXWriter(Writer):
 
     def __write_packages(self, packages: list):
         for c in packages:
+            if "versionInfo" in c:
+                c = self.parse_version(c, "versionInfo")
+
             if "externalRefs" in c:
                 for r in c["externalRefs"]:
                     if r["referenceType"] == "purl":
@@ -387,44 +411,47 @@ class SPDXWriter(Writer):
         described_by_edges = []
         contains_edges = []
         for d in relationships:
-            if d["relationshipType"] == "DESCRIBES":
-                describes_edges.append(
-                    {
-                        "to": d["relatedSpdxElement"],
-                        "from": document_id,
-                    }
-                )
-            elif d["relationshipType"] == "DEPENDS_ON":
-                depends_on_edges.append(
-                    {
-                        "to": d["relatedSpdxElement"],
-                        "from": document_id,
-                    }
-                )
-            elif d["relationshipType"] == "DEPENDENCY_OF":
-                dependency_of_edges.append(
-                    {
-                        "to": d["relatedSpdxElement"],
-                        "from": document_id,
-                    }
-                )
-            elif d["relationshipType"] == "DESCRIBED_BY":
-                described_by_edges.append(
-                    {
-                        "to": d["relatedSpdxElement"],
-                        "from": document_id,
-                    }
-                )
-            elif d["relationshipType"] == "CONTAINS":
-                contains_edges.append(
-                    {
-                        "to": d["relatedSpdxElement"],
-                        "from": document_id,
-                    }
-                )
-            else:
-                logging.warning(f"Unknown relationship type {d['relationshipType']}")
-                continue
+            match d["relationshipType"]:
+                case "DESCRIBES":
+                    describes_edges.append(
+                        {
+                            "to": d["relatedSpdxElement"],
+                            "from": document_id,
+                        }
+                    )
+                case "DEPENDS_ON":
+                    depends_on_edges.append(
+                        {
+                            "to": d["relatedSpdxElement"],
+                            "from": document_id,
+                        }
+                    )
+                case "DEPENDENCY_OF":
+                    dependency_of_edges.append(
+                        {
+                            "to": d["relatedSpdxElement"],
+                            "from": document_id,
+                        }
+                    )
+                case "DESCRIBED_BY":
+                    described_by_edges.append(
+                        {
+                            "to": d["relatedSpdxElement"],
+                            "from": document_id,
+                        }
+                    )
+                case "CONTAINS":
+                    contains_edges.append(
+                        {
+                            "to": d["relatedSpdxElement"],
+                            "from": document_id,
+                        }
+                    )
+                case _:
+                    logging.warning(
+                        f"Unknown relationship type {d['relationshipType']}"
+                    )
+                    continue
 
         if len(describes_edges) > 0:
             self.write_rel_match_on_property(
