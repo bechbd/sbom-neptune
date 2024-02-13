@@ -1,10 +1,8 @@
 import boto3
-import json
 import logging
 import uuid
 from itertools import islice
 from enum import Enum
-from packaging.version import parse
 
 
 class BomType(Enum):
@@ -41,14 +39,29 @@ class NeptuneAnalyticsSBOMWriter:
     graph_identifier = None
 
     def __init__(self, graph_identifier: str, region: str) -> None:
-        self.client = boto3.client(
-            "p8-dp-sdk",
-            region_name=region,
-            endpoint_url="https://data.us-east-1-alpha.p8.neptune.aws.dev",
-        )
+        """The purpose of this function is to initialize the NeptuneAnalyticsSBOMWriter class.
+        This function initializes the NeptuneAnalyticsSBOMWriter class.
+        It takes in a graph_identifier and a region as parameters.
+        It sets the client to a boto3 client for the neptune-graph service in the specified region.
+        It sets the graph_identifier to the graph_identifier passed in.
+        It returns nothing.
+
+        Args:
+            graph_identifier (str): The graph identifier
+            region (str): The aws region for the neptune-graph service
+        """
+        self.client = boto3.client("neptune-graph", region_name=region)
         self.graph_identifier = graph_identifier
 
     def __determine_filetype(self, bom: str) -> BomType:
+        """This determines if the file is an SPDX or CycloneDX file based on the json structure
+
+        Args:
+            bom (str): The BOM element
+
+        Returns:
+            BomType: The type of BOM
+        """
         if "spdxVersion" in bom:
             logging.info("Identified file as SPDX")
             return BomType.SPDX
@@ -60,6 +73,14 @@ class NeptuneAnalyticsSBOMWriter:
             return BomType.UNKNOWN
 
     def write_sbom(self, bom: str) -> bool:
+        """Writes out the SBOM
+
+        Args:
+            bom (str): The string of the SBOM data file
+
+        Returns:
+            bool: True if successful, False if not
+        """
         bom_type = self.__determine_filetype(bom)
         res = False
         if bom_type == BomType.CYDX:
@@ -80,24 +101,54 @@ class Writer:
     batch_size = 200
 
     def __init__(self, graph_identifier: str, client: boto3.client) -> None:
+        """This initializes a base writer class
+
+        Args:
+            graph_identifier (str): The graph identifier
+            client (boto3.client): The neptune-graph boto3 client
+        """
         self.client = client
         self.graph_identifier = graph_identifier
 
-    def chunk(arr_range, arr_size):
+    def chunk(arr_range, arr_size: int):
+        """Chunks the array into multiple arrays of the specified size
+
+        Args:
+            arr_range (array): The incoming array
+            arr_size (int): The chunk size
+
+        Returns:
+            array: An array of arrays
+        """
         arr_range = iter(arr_range)
         return iter(lambda: tuple(islice(arr_range, arr_size)), ())
 
-    def write_objects(
+    def write_nodes(
         self,
-        objs: object,
+        nodes: object,
         label: str,
         keyName: str,
         create_uuid_if_key_not_exists: bool = False,
         id: str = None,
     ):
+        """Writes our the provided nodes
+
+        Args:
+            nodes (object): The nodes to write
+            label (str): The label to associate with the nodes
+            keyName (str): The name of the property to use as the key for matching
+            create_uuid_if_key_not_exists (bool, optional): Whether or not to create a UUID if the key does not exist. Defaults to False.
+            id (str, optional): The specific ID to match. Defaults to None.
+
+        Raises:
+            AttributeError: Raises an error if the key property name does not exist
+
+        Returns:
+            Nothing
+        """ """"""
         params = []
-        logging.info(f"Writing {label}s")
-        if len(objs) == 0:
+        logging.info(f"Writing {label} nodes")
+        if len(nodes) == 0:
             return
 
         query = (
@@ -107,10 +158,10 @@ class Writer:
             + label
             + """ {`~id`: p.__id})
                 SET """
-            + self.__create_property_map_str(objs[0])
+            + self.__create_property_map_str(nodes[0])
         )
 
-        for o in objs:
+        for o in nodes:
             if keyName in o:
                 params.append(
                     {
@@ -147,7 +198,13 @@ class Writer:
             self.execute_query({"props": res}, query)
 
     def write_rel(self, rels: list, label: str):
-        logging.info(f"Writing {label}s")
+        """Writes the provided relationships
+
+        Args:
+            rels (list): The relationships to write
+            label (str): The label to associate with the relationship
+        """
+        logging.info(f"Writing {label} edges")
         if len(rels) == 0:
             return
 
@@ -171,7 +228,15 @@ class Writer:
     def write_rel_match_on_property(
         self, rels: list, label: str, from_property: str, to_property: str
     ):
-        logging.info(f"Writing {label}s")
+        """Writes the provided relationships where you match on the provided key
+
+        Args:
+            rels (list): The list of relationships to write
+            label (str): The label to associate with the relationship
+            from_property (str): The property to match on the From node
+            to_property (str): The property to match on the To node
+        """
+        logging.info(f"Writing {label} edges")
         if len(rels) == 0:
             return
 
@@ -196,29 +261,35 @@ class Writer:
             res = list(map(dict, set(tuple(sorted(sub.items())) for sub in chunk)))
             self.execute_query({"rels": res}, query)
 
-    def parse_version(self, c: map, keyname: str):
-        try:
-            version = ".".join(c[keyname].split("-")[0].split(".")[:3])
-            ver = parse(version)
-            c["majorVersion"] = ver.major
-            c["minorVersion"] = ver.minor
-            c["buildVersion"] = ver.micro
-        except ValueError:
-            logger.warning(f"Error parsing version {c[keyname]}")
-        return c
-
-    def execute_query(self, params, query):
+    def execute_query(self, params: map, query: str) -> map:
         resp = self.client.execute_query(
             queryString=query,
-            parameters=json.dumps(params),
+            parameters=params,
+            language="OPEN_CYPHER",
             graphIdentifier=self.graph_identifier,
-            language="open_cypher",
         )
+        """_summary_
+        
+        Args:
+            params (map): A map of the parameters
+            query (str): The query to execute
+
+        Returns:
+            map: The response object from the boto3 client
+        """
         if not resp["ResponseMetadata"]["HTTPStatusCode"] == 200:
             print(f"An error occurred on query: {query}")
         return resp
 
-    def __cleanup_map(self, props: dict) -> str:
+    def __cleanup_map(self, props: dict) -> dict:
+        """This removes all the lists and dict properties from the map
+
+        Args:
+            props (dict): The dictionary to clean
+
+        Returns:
+            dict: The cleaned dictionary
+        """
         """
         This should remove all the lists and dict properties from the map
         """
@@ -229,8 +300,14 @@ class Writer:
         return result
 
     def __create_property_map_str(self, props: dict, exclude_list: list = []) -> str:
-        """
-        This should not be needed but there is a bug in P8 that prevents Maps from working
+        """This should not be needed but there is a bug that prevents Maps from working when not strings
+
+        Args:
+            props (dict): The input dictionary
+            exclude_list (list, optional): The fields to exclude. Defaults to [].
+
+        Returns:
+            str: The string of the cleaned input dictionary
         """
         result = []
         for k in props.keys():
@@ -245,19 +322,36 @@ class Writer:
 
 
 class CycloneDXWriter(Writer):
-    def write_document(self, bom):
+
+    def write_document(self, bom: dict):
+        """Writes the CycloneDX document
+
+        Args:
+            bom (dict): The dict of the CycloneDX document
+
+        Returns:
+            bool: True if successful, False if not
+        """
         logging.info("Writing bom metadata")
         document_id = self.__write_bom(bom)
 
         if "components" in bom:
             self.__write_components(bom["components"], document_id)
         if "dependencies" in bom:
-            self.__write_dependencies(bom["dependencies"], document_id)
+            self.__write_dependencies(bom["dependencies"])
         if "vulnerabilities" in bom:
             self.__write_vulnerabilities(bom["vulnerabilities"])
         return True
 
     def __write_bom(self, bom):
+        """Writes the BOM metadata
+
+        Args:
+            bom (str): The string of the CycloneDX document
+
+        Returns:
+            str: The document ID
+        """
         if "serialNumber" in bom:
             document_id = f"{NodeLabels.DOCUMENT.value}_{bom['serialNumber']}"
         else:
@@ -269,24 +363,24 @@ class CycloneDXWriter(Writer):
         document["spec_version"] = document.pop("specVersion")
         document["created_timestamp"] = document.pop("timestamp")
 
-        self.write_objects([document], NodeLabels.DOCUMENT.value, None, id=document_id)
+        self.write_nodes([document], NodeLabels.DOCUMENT.value, None, id=document_id)
 
         return document_id
 
     def __write_components(self, components: list, document_id: str):
-        for c in components:
-            if "version" in c:
-                c = self.parse_version(c, "version")
+        """Writes the components of the BOM to the graph
 
-        self.write_objects(components, NodeLabels.COMPONENT.value, "name")
+        Args:
+            components (list): The components to write
+            document_id (str): The document to link the components to
+        """
+        self.write_nodes(components, NodeLabels.COMPONENT.value, "name")
         describes_edges = [
             {"fromId": document_id, "toId": f"{NodeLabels.COMPONENT.value}_{c['name']}"}
             for c in components
         ]
-        logging.info("Writing DESCRIBES edges")
         self.write_rel(describes_edges, EdgeLabels.DESCRIBES.value)
 
-        logging.info("Writing component -> externalReferences")
         refs = []
         refers_to_edges = []
         for c in components:
@@ -301,10 +395,15 @@ class CycloneDXWriter(Writer):
                         for r in c["externalReferences"]
                     ]
                 )
-        self.write_objects(refs, NodeLabels.REFERENCE.value, "url")
+        self.write_nodes(refs, NodeLabels.REFERENCE.value, "url")
         self.write_rel(refers_to_edges, EdgeLabels.REFERS_TO.value)
 
-    def __write_dependencies(self, dependencies: list, document_id: str):
+    def __write_dependencies(self, dependencies: list):
+        """Writes the dependencies and relationships to the graph
+
+        Args:
+            dependencies (list): The dependencies to write
+        """
         deps = []
         depends_on_edges = []
         for d in dependencies:
@@ -325,10 +424,16 @@ class CycloneDXWriter(Writer):
         )
 
     def __write_vulnerabilities(self, vulnerabilities: list):
+        """Writes the vulnerabilities to the graph
+
+        Args:
+            vulnerabilities (list): The vulnerabilities to write
+        """
         affects_edges = []
+        vuls = []
         for v in vulnerabilities:
             if "ratings" in v and len(v["ratings"]) > 0:
-                v = {**v, **v["ratings"][0]}
+                vuls.append({**v, **v["ratings"][0]})
             for a in v["affects"]:
                 affects_edges.append(
                     {
@@ -337,14 +442,22 @@ class CycloneDXWriter(Writer):
                     }
                 )
 
-        self.write_objects(vulnerabilities, NodeLabels.VULNERABILITY.value, "id")
+        self.write_nodes(vuls, NodeLabels.VULNERABILITY.value, "id")
         self.write_rel_match_on_property(
             affects_edges, EdgeLabels.AFFECTS.value, "id", "bom-ref"
         )
 
 
 class SPDXWriter(Writer):
-    def write_document(self, bom):
+    def write_document(self, bom: dict) -> bool:
+        """This writes the SPDX document
+
+        Args:
+            bom (dict): The dict of the BOM
+
+        Returns:
+            bool: True if successful, False if not
+        """
         logging.info("Writing bom metadata")
 
         document_id = self.__write_bom(bom)
@@ -359,7 +472,15 @@ class SPDXWriter(Writer):
 
         return True
 
-    def __write_bom(self, bom):
+    def __write_bom(self, bom: dict) -> str:
+        """Write the BOM node
+
+        Args:
+            bom (dict): The dict of the BOM
+
+        Returns:
+            str: The document id
+        """
         document_id = f"{NodeLabels.DOCUMENT.value}_{uuid.uuid4()}"
         document = {**bom, **bom["creationInfo"]}
 
@@ -368,22 +489,24 @@ class SPDXWriter(Writer):
         document["createdTimestamp"] = document.pop("created")
         document["bomFormat"] = "SPDX"
 
-        self.write_objects([document], NodeLabels.DOCUMENT.value, None, id=document_id)
+        self.write_nodes([document], NodeLabels.DOCUMENT.value, None, id=document_id)
 
         return document_id
 
     def __write_packages(self, packages: list):
-        for c in packages:
-            if "versionInfo" in c:
-                c = self.parse_version(c, "versionInfo")
+        """Writes the pacakges of the BOM to the graph
 
+        Args:
+            packages (list): The packages to write
+        """
+        for c in packages:
             if "externalRefs" in c:
                 for r in c["externalRefs"]:
                     if r["referenceType"] == "purl":
                         c["purl"] = r["referenceLocator"]
                         break
 
-        self.write_objects(packages, NodeLabels.COMPONENT.value, "name")
+        self.write_nodes(packages, NodeLabels.COMPONENT.value, "name")
 
         logging.info("Writing component -> externalReferences")
         refs = []
@@ -400,10 +523,16 @@ class SPDXWriter(Writer):
                         for r in c["externalRefs"]
                     ]
                 )
-        self.write_objects(refs, NodeLabels.REFERENCE.value, "referenceLocator")
+        self.write_nodes(refs, NodeLabels.REFERENCE.value, "referenceLocator")
         self.write_rel(refers_to_edges, EdgeLabels.REFERS_TO.value)
 
     def __write_relationships(self, relationships: list, document_id: str):
+        """Writes the relationships of the BOM to the graph
+
+        Args:
+            relationships (list): The relationships to write
+            document_id (str): The document id to link the relationships to
+        """
         logging.info("Writing relationship edges")
         describes_edges = []
         depends_on_edges = []
@@ -411,47 +540,44 @@ class SPDXWriter(Writer):
         described_by_edges = []
         contains_edges = []
         for d in relationships:
-            match d["relationshipType"]:
-                case "DESCRIBES":
-                    describes_edges.append(
-                        {
-                            "to": d["relatedSpdxElement"],
-                            "from": document_id,
-                        }
-                    )
-                case "DEPENDS_ON":
-                    depends_on_edges.append(
-                        {
-                            "to": d["relatedSpdxElement"],
-                            "from": document_id,
-                        }
-                    )
-                case "DEPENDENCY_OF":
-                    dependency_of_edges.append(
-                        {
-                            "to": d["relatedSpdxElement"],
-                            "from": document_id,
-                        }
-                    )
-                case "DESCRIBED_BY":
-                    described_by_edges.append(
-                        {
-                            "to": d["relatedSpdxElement"],
-                            "from": document_id,
-                        }
-                    )
-                case "CONTAINS":
-                    contains_edges.append(
-                        {
-                            "to": d["relatedSpdxElement"],
-                            "from": document_id,
-                        }
-                    )
-                case _:
-                    logging.warning(
-                        f"Unknown relationship type {d['relationshipType']}"
-                    )
-                    continue
+            if d["relationshipType"] == "DESCRIBES":
+                describes_edges.append(
+                    {
+                        "to": d["relatedSpdxElement"],
+                        "from": document_id,
+                    }
+                )
+            elif d["relationshipType"] == "DEPENDS_ON":
+                depends_on_edges.append(
+                    {
+                        "to": d["relatedSpdxElement"],
+                        "from": document_id,
+                    }
+                )
+            elif d["relationshipType"] == "DEPENDENCY_OF":
+                dependency_of_edges.append(
+                    {
+                        "to": d["relatedSpdxElement"],
+                        "from": document_id,
+                    }
+                )
+            elif d["relationshipType"] == "DESCRIBED_BY":
+                described_by_edges.append(
+                    {
+                        "to": d["relatedSpdxElement"],
+                        "from": document_id,
+                    }
+                )
+            elif d["relationshipType"] == "CONTAINS":
+                contains_edges.append(
+                    {
+                        "to": d["relatedSpdxElement"],
+                        "from": document_id,
+                    }
+                )
+            else:
+                logging.warning(f"Unknown relationship type {d['relationshipType']}")
+                continue
 
         if len(describes_edges) > 0:
             self.write_rel_match_on_property(

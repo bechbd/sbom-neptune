@@ -16,12 +16,12 @@ From the base directory you first need to install the python requirements
 pip install -r requirements.txt
 ```
 
-Next you need to add one or more CycloneDX JSON file(s) into the `/examples/CycloneDX` directory.
+Next you need to add one or more CycloneDX JSON file(s) into the `/examples/CycloneDX` directory or SPDX files to the `/examples/SPDX` directory
 
 In the `main.py` change this line to be your graph id and region
 
 ```
-writer = NeptuneAnalyticsSBOMWriter("g-s9dng7po95", "us-west-2")
+writer = NeptuneAnalyticsSBOMWriter("<Graph ID>", "<AWS Region>")
 ```
 
 Run the python file: `python3 main.py`
